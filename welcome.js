@@ -1,6 +1,14 @@
 // Welcome page JavaScript
 
-
+// Loading Screen
+window.addEventListener('load', () => {
+  const loadingScreen = document.querySelector('.loading-screen');
+  if (loadingScreen) {
+    setTimeout(() => {
+      loadingScreen.classList.add('hidden');
+    }, 1000);
+  }
+});
 
 // Scroll Animation
 const observerOptions = {
@@ -16,95 +24,70 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+// Observe both fade-in and text-reveal elements
+document.querySelectorAll('.fade-in, .text-reveal').forEach(el => observer.observe(el));
 
-// Extension Functions
-async function openExtension() {
-
-  try {
-    // Get current timer state from background
-    const response = await chrome.runtime.sendMessage({ action: 'getState' });
+// Particle System
+function createParticles() {
+  const heroSection = document.querySelector('.hero');
+  if (!heroSection) return;
+  
+  const particleCount = 50;
+  
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
     
-    if (response) {
-      const isTimerRunning = response.isRunning || false;
+    // Random position
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    particle.style.left = `${x}%`;
+    particle.style.top = `${y}%`;
+    
+    // Random animation delay and duration
+    const delay = Math.random() * 6;
+    const duration = Math.random() * 6 + 3;
+    particle.style.animationDelay = `${delay}s`;
+    particle.style.animationDuration = `${duration}s`;
+    
+    // Random size
+    const size = Math.random() * 3 + 1;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    
+    heroSection.appendChild(particle);
+  }
+}
+
+// Enhanced Button Effects
+function addButtonEffects() {
+  const buttons = document.querySelectorAll('.btn');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      // Create ripple effect
+      const ripple = document.createElement('span');
+      const rect = button.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
       
-      // Check if timer is not running (neither countdown nor stopwatch)
-      if (!isTimerRunning) {
-        // Switch to focus mode and start timer
-        await chrome.runtime.sendMessage({ action: 'switchMode', mode: 'focus' });
-        await chrome.runtime.sendMessage({ action: 'start' });
-      }
-    }
-    
-    // Open popup to show the timer
-    if (chrome.action) {
-      chrome.action.openPopup();
-    }
-  } catch (error) {
-    console.error('Error starting focus session:', error);
-    // Fallback: just open the popup
-    if (chrome.action) {
-      chrome.action.openPopup();
-    }
-  }
-}
-
-async function openTodolist() {
-  try {
-    // 尝试打开侧边栏
-    await chrome.runtime.sendMessage({ action: 'openSidePanel' });
-  } catch (error) {
-    console.error('Error opening sidebar todolist:', error);
-    // Fallback: open popup
-    if (chrome.action) {
-      chrome.action.openPopup();
-    }
-  }
-}
-
-function openSettings() {
-  if (chrome && chrome.runtime) {
-    chrome.runtime.openOptionsPage();
-  } else {
-    window.open('options.html', '_blank');
-  }
-}
-
-async function openHistory() {
-  if (chrome && chrome.tabs) {
-    const historyUrl = chrome.runtime.getURL('history.html');
-    
-    // Query all tabs to find if history page is already open
-    const tabs = await chrome.tabs.query({});
-    const existingTab = tabs.find(tab => tab.url === historyUrl);
-    
-    if (existingTab) {
-      // If history page is already open, switch to that tab
-      await chrome.tabs.update(existingTab.id, { active: true });
-      await chrome.windows.update(existingTab.windowId, { focused: true });
-    } else {
-      // If not open, create a new tab
-      chrome.tabs.create({ url: historyUrl });
-    }
-  } else {
-    window.open('history.html', '_blank');
-  }
-}
-
-function rateExtension() {
-  if (chrome && chrome.tabs) {
-    chrome.tabs.create({ 
-      url: 'https://chromewebstore.google.com/detail/study-timer/baefifnjmlmfcdkmbkdbjiijlpggkoic/reviews?' 
+      ripple.style.width = ripple.style.height = `${size}px`;
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+      ripple.classList.add('btn-ripple');
+      
+      button.appendChild(ripple);
+      
+      // Remove ripple after animation
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
     });
-  } else {
-    window.open('https://chromewebstore.google.com/detail/study-timer/baefifnjmlmfcdkmbkdbjiijlpggkoic/reviews?', '_blank');
-  }
+  });
 }
 
-// Track visit
-if (chrome && chrome.runtime) {
-  chrome.runtime.sendMessage({ action: 'welcomePageVisited' });
-}
+
 
 
 
@@ -156,107 +139,18 @@ function initCarousel() {
 
 // Add event listeners for all buttons and links
 document.addEventListener('DOMContentLoaded', async () => {
-  if (typeof i18n !== 'undefined') {
-    try { await i18n.init(); i18n.translatePage(); } catch (e) {}
-  }
-  
-
-  
   // Initialize carousel
   initCarousel();
   
-
+  // Create particles
+  createParticles();
   
-  // Hero section buttons
-  const heroStartBtn = document.getElementById('heroStartBtn');
-  const heroTodolistBtn = document.getElementById('heroTodolistBtn');
+  // Add button effects
+  addButtonEffects();
   
-  if (heroStartBtn) {
-    heroStartBtn.addEventListener('click', openExtension);
-  }
-  
-  if (heroTodolistBtn) {
-    heroTodolistBtn.addEventListener('click', openTodolist);
-  }
-  
-  // CTA section buttons
-  const ctaStartBtn = document.getElementById('ctaStartBtn');
-  const ctaHistoryBtn = document.getElementById('ctaHistoryBtn');
-  
-  if (ctaStartBtn) {
-    ctaStartBtn.addEventListener('click', openExtension);
-  }
-  
-  if (ctaHistoryBtn) {
-    ctaHistoryBtn.addEventListener('click', openHistory);
-  }
-  
-  // Footer links
-  const footerSettingsLink = document.getElementById('footerSettingsLink');
-  const footerHistoryLink = document.getElementById('footerHistoryLink');
-  const footerRateLink = document.getElementById('footerRateLink');
-  const footerSupportLink = document.getElementById('footerSupportLink');
-  
-  if (footerSettingsLink) {
-    footerSettingsLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      openSettings();
-    });
-  }
-  
-  if (footerHistoryLink) {
-    footerHistoryLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      openHistory();
-    });
-  }
-  
-  if (footerRateLink) {
-    footerRateLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      rateExtension();
-    });
-  }
-  
-  if (footerSupportLink) {
-    footerSupportLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      // 打开sponsor.html页面
-      chrome.tabs.create({ url: chrome.runtime.getURL('sponsor.html') });
-    });
-  }
+  // Hero section buttons - no longer needed as they are simple links
+  // CTA section buttons - no longer needed as they are simple links
+  // Footer links - no longer needed as simple links
 });
 
-// First Time Guide Modal
-(function() {
-  const GUIDE_SHOWN_KEY = 'firstGuideShown';
-  const modal = document.getElementById('firstGuideModal');
-  const completeBtn = document.getElementById('guideCompleteBtn');
-  
-  // Check if guide has been shown before
-  const hasShownGuide = localStorage.getItem(GUIDE_SHOWN_KEY);
-  
-  if (!hasShownGuide) {
-    // Show modal after a short delay for better UX
-    setTimeout(() => {
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
-    }, 500);
-  }
-  
-  // Handle complete button click
-  if (completeBtn) {
-    completeBtn.addEventListener('click', () => {
-      // Add closing animation
-      modal.style.opacity = '0';
-      
-      setTimeout(() => {
-        modal.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
-        
-        // Mark guide as shown
-        localStorage.setItem(GUIDE_SHOWN_KEY, 'true');
-      }, 300);
-    });
-  }
-})();
+

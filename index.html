@@ -28,30 +28,182 @@
       background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
       position: relative;
       overflow: hidden;
+      transition: all 0.5s ease;
     }
-
+    
+    /* Hero Background Particles */
     .hero::before {
       content: '';
       position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(67, 97, 238, 0.15) 0%, transparent 70%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(67, 97, 238, 0.2) 0%, transparent 70%);
       border-radius: 50%;
-      top: -250px;
-      right: -250px;
-      animation: pulse 8s ease-in-out infinite;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 12s ease-in-out infinite;
     }
-
+    
     .hero::after {
       content: '';
       position: absolute;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(72, 149, 239, 0.1) 0%, transparent 70%);
+      width: 1000px;
+      height: 1000px;
+      background: radial-gradient(circle, rgba(72, 149, 239, 0.15) 0%, transparent 70%);
       border-radius: 50%;
-      bottom: -200px;
-      left: -200px;
-      animation: pulse 6s ease-in-out infinite reverse;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 10s ease-in-out infinite reverse;
+    }
+    
+    /* Floating Particles */
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: rgba(67, 97, 238, 0.6);
+      border-radius: 50%;
+      animation: floatParticle 6s ease-in-out infinite;
+    }
+    
+    @keyframes floatParticle {
+      0%, 100% {
+        transform: translateY(0px) translateX(0px);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translateY(-30px) translateX(10px);
+        opacity: 0.8;
+      }
+    }
+    
+    /* Loading Animation */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+    
+    .loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+    .loading-logo {
+      width: 100px;
+      height: 100px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    
+    /* Text Reveal Animation */
+    .text-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .text-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Enhanced Button Effects */
+    .btn-primary {
+      background: linear-gradient(135deg, #4361ee 0%, #4895ef 100%);
+      color: white;
+      box-shadow: 0 12px 35px rgba(67, 97, 238, 0.4);
+      padding: 18px 48px;
+      font-size: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 25px 60px rgba(67, 97, 238, 0.7);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(-4px) scale(0.98);
+    }
+    
+    /* Button Ripple Effect */
+    .btn {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      transform: scale(0);
+      animation: ripple-animation 0.6s linear;
+      pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+    
+    /* Enhanced Feature Card Effects */
+    .feature-card:hover .feature-title {
+      transform: translateY(-5px);
+      color: #ffffff;
+    }
+    
+    .feature-card:hover .feature-desc {
+      color: #c4c7cc;
+    }
+    
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #0a0a0a;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(67, 97, 238, 0.6);
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(72, 149, 239, 0.8);
+    }
+
+
+
+    /* Additional Hero effects */
+    .hero-content::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+      opacity: 0.5;
+      z-index: -1;
     }
 
     @keyframes pulse {
@@ -64,100 +216,6 @@
       z-index: 1;
       max-width: 900px;
       padding: 40px 20px;
-    }
-
-    /* Hero Decorative Images */
-    .hero-decoration {
-      position: absolute;
-      pointer-events: none;
-    }
-
-    /* Left Timer Images Group - Vertical layout */
-    .hero-decoration.left-group {
-      left: 3%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 200px;
-      height: auto;
-      z-index: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 35px;
-      align-items: center;
-    }
-
-    .left-img {
-      width: 100%;
-      height: auto;
-      border-radius: 14px;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(67, 97, 238, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      opacity: 0;
-      filter: blur(0.3px);
-    }
-
-    .left-img.top {
-      width: 85%;
-      transform: rotate(-6deg);
-      animation: fadeInUp 1.2s ease-out 0.4s forwards;
-    }
-
-    .left-img.middle {
-      width: 100%;
-      transform: rotate(-8deg);
-      animation: fadeInUp 1.2s ease-out 0.6s forwards;
-    }
-
-    .left-img.bottom {
-      width: 90%;
-      transform: rotate(-4deg);
-      animation: fadeInUp 1.2s ease-out 0.8s forwards;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px) rotate(var(--rotate, 0deg));
-      }
-      to {
-        opacity: 0.013;
-        transform: translateY(0) rotate(var(--rotate, 0deg));
-      }
-    }
-
-    /* Right TodoList Image - Larger, more prominent */
-    .hero-decoration.right {
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 420px;
-      height: auto;
-      z-index: 0;
-      opacity: 0;
-      animation: fadeInRight 1.5s ease-out 0.3s forwards;
-    }
-
-    .hero-decoration.right img {
-      width: 100%;
-      height: auto;
-      border-radius: 24px 0 0 24px;
-      box-shadow: -30px 0 80px rgba(0, 0, 0, 0.7), -15px 0 40px rgba(67, 97, 238, 0.4);
-      border: 2px solid rgba(255, 255, 255, 0.12);
-      border-right: none;
-      opacity: 0.04;
-      mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.3) 100%);
-      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.3) 100%);
-    }
-
-    @keyframes fadeInRight {
-      from {
-        opacity: 0;
-        transform: translateY(-50%) translateX(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(-50%) translateX(0);
-      }
     }
 
     .logo {
@@ -180,21 +238,26 @@
     }
 
     .hero-title {
-      font-size: 64px;
-      font-weight: 800;
-      margin-bottom: 20px;
+      font-size: 72px;
+      font-weight: 900;
+      margin-bottom: 24px;
       background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      letter-spacing: -2px;
+      letter-spacing: -2.5px;
+      line-height: 1.1;
     }
 
     .hero-subtitle {
-      font-size: 24px;
+      font-size: 26px;
       color: #9ca3af;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       font-weight: 300;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-cta {
@@ -221,12 +284,43 @@
     .btn-primary {
       background: linear-gradient(135deg, #4361ee 0%, #4895ef 100%);
       color: white;
-      box-shadow: 0 10px 30px rgba(67, 97, 238, 0.4);
+      box-shadow: 0 12px 35px rgba(67, 97, 238, 0.4);
+      padding: 18px 48px;
+      font-size: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+
+    .btn-primary:hover::before {
+      width: 300px;
+      height: 300px;
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(67, 97, 238, 0.6);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(67, 97, 238, 0.6);
+    }
+
+    .btn-primary:active {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary span {
+      position: relative;
+      z-index: 1;
     }
 
     .btn-secondary {
@@ -278,47 +372,99 @@
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
+      gap: 32px;
+      margin-top: 80px;
     }
 
     .feature-card {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 24px;
-      padding: 40px;
-      transition: all 0.4s ease;
+      padding: 40px 30px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, rgba(67, 97, 238, 0.8), rgba(72, 149, 239, 0.8));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .feature-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
     }
 
     .feature-card:hover {
-      transform: translateY(-10px);
-      border-color: rgba(67, 97, 238, 0.5);
-      box-shadow: 0 20px 60px rgba(67, 97, 238, 0.2);
-      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(72, 149, 239, 0.05) 100%);
+      transform: translateY(-12px) scale(1.02);
+      border-color: rgba(67, 97, 238, 0.4);
+      box-shadow: 0 25px 70px rgba(67, 97, 238, 0.25), 0 10px 30px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, rgba(67, 97, 238, 0.12) 0%, rgba(72, 149, 239, 0.08) 100%);
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-card:hover::after {
+      opacity: 1;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.1) rotate(5deg);
+      filter: drop-shadow(0 15px 30px rgba(67, 97, 238, 0.3));
     }
 
     .feature-icon {
-      font-size: 56px;
-      margin-bottom: 24px;
+      font-size: 64px;
+      margin-bottom: 28px;
       display: block;
+      filter: drop-shadow(0 10px 20px rgba(67, 97, 238, 0.2));
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .feature-icon {
+      font-size: 64px;
+      margin-bottom: 28px;
+      display: block;
+      filter: drop-shadow(0 10px 20px rgba(67, 97, 238, 0.2));
     }
 
     .feature-title {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 16px;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
       color: #ffffff;
+      letter-spacing: -0.5px;
     }
 
     .feature-desc {
       font-size: 16px;
       color: #9ca3af;
-      line-height: 1.7;
+      line-height: 1.8;
+      font-weight: 400;
     }
 
     /* Product Showcase */
     .product-showcase {
-      margin-top: 80px;
+      margin-top: 120px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -327,22 +473,25 @@
     .showcase-image-wrapper {
       max-width: 1000px;
       width: 100%;
-      border-radius: 24px;
+      border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 30px 80px rgba(67, 97, 238, 0.3);
+      box-shadow: 0 40px 100px rgba(67, 97, 238, 0.35);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-      padding: 20px;
-      backdrop-filter: blur(10px);
-      transition: all 0.5s ease;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+      padding: 25px;
+      backdrop-filter: blur(20px);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
+      transform: translateY(0);
     }
 
     .showcase-image-wrapper:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 40px 100px rgba(67, 97, 238, 0.4);
-      border-color: rgba(67, 97, 238, 0.3);
+      transform: translateY(-15px);
+      box-shadow: 0 60px 150px rgba(67, 97, 238, 0.5);
+      border-color: rgba(67, 97, 238, 0.4);
     }
+
+
 
     .carousel-images {
       position: relative;
@@ -639,28 +788,51 @@
 
     /* CTA Section */
     .cta {
-      padding: 120px 20px;
+      padding: 140px 20px;
       background: #000000;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(67, 97, 238, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 15s ease-in-out infinite;
+    }
+
+    .cta .container {
+      position: relative;
+      z-index: 1;
     }
 
     .cta-title {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 30px;
+      font-size: 56px;
+      font-weight: 800;
+      margin-bottom: 25px;
       background: linear-gradient(135deg, #4361ee 0%, #4895ef 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      letter-spacing: -2px;
+      line-height: 1.1;
     }
 
     .cta-subtitle {
-      font-size: 20px;
+      font-size: 22px;
       color: #9ca3af;
-      margin-bottom: 50px;
-      max-width: 600px;
+      margin-bottom: 60px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      font-weight: 300;
     }
 
     /* Footer */
@@ -880,33 +1052,6 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      .guide-modal {
-        padding: 20px;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .guide-content {
-        max-width: 380px;
-        padding: 25px 18px;
-        border-radius: 20px;
-      }
-
-      .guide-image-wrapper {
-        padding: 10px;
-        margin-bottom: 18px;
-      }
-
-      .guide-btn {
-        padding: 14px 28px;
-        font-size: 16px;
-      }
-
-      .btn-icon {
-        font-size: 20px;
-      }
-    }
 
     /* Responsive */
     @media (max-width: 1400px) {
@@ -1036,6 +1181,33 @@
       .footer-links {
         justify-content: center;
       }
+
+      /* Loading screen adjustments */
+      .loading-logo {
+        width: 80px;
+        height: 80px;
+      }
+
+      /* Button adjustments for mobile */
+      .btn-primary {
+        padding: 16px 36px;
+        font-size: 18px;
+      }
+
+      /* Particle system adjustments for mobile */
+      .particle {
+        width: 1.5px !important;
+        height: 1.5px !important;
+      }
+
+      /* CTA section adjustments */
+      .cta {
+        padding: 80px 20px;
+      }
+
+      .cta-subtitle {
+        font-size: 18px;
+      }
     }
 
     /* Scroll Animation */
@@ -1052,31 +1224,26 @@
   </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-logo">
+        <img src="resource/icon128.png" alt="MeTenk Logo">
+      </div>
+    </div>
   <!-- Hero Section -->
   <section class="hero">
-    <!-- Decorative Images -->
-    <div class="hero-decoration left-group">
-      <img src="resource/timer-35.png" alt="Timer 35" class="left-img top">
-      <img src="resource/timer-guide.png" alt="Timer Guide" class="left-img middle">
-      <img src="resource/timer-45.png" alt="Timer 45" class="left-img bottom">
-    </div>
-    <div class="hero-decoration right">
-      <img src="resource/todolist-guide.png" alt="TodoList Guide">
-    </div>
-    
     <div class="hero-content">
       <div class="logo">
         <img src="resource/icon128.png" alt="MeTenk Logo">
       </div>
-      <h1 class="hero-title" data-i18n="app_title">MeTenk</h1>
+      <h1 class="hero-title">MeTenk</h1>
+      <p class="hero-subtitle">Focus, Productivity, and Peace of Mind</p>
       <div class="hero-cta">
         <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" target="_blank" id="heroStartBtn" class="btn btn-primary">
-          <img src="resource/chromeicon.png" alt="Chrome Icon" style="width: 16px; height: 16px; margin-right: 8px;">
+          <img src="resource/chromeicon.png" alt="Chrome Icon" style="width: 18px; height: 18px; margin-right: 10px;">
           <span>Download for Chrome</span>
         </a>
-
       </div>
-    </div>
     </div>
   </section>
 
@@ -1084,39 +1251,39 @@
   <section class="features">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title" data-i18n="welcome_features_title">Powerful Yet Simple</h2>
-        <p class="section-subtitle" data-i18n="welcome_features_subtitle">Everything you need to stay focused and productive, nothing you don't.</p>
+        <h2 class="section-title">Powerful Yet Simple</h2>
+        <p class="section-subtitle">Everything you need to stay focused and productive, nothing you don't.</p>
       </div>
       <div class="features-grid">
         <div class="feature-card fade-in">
           <span class="feature-icon">⏱️</span>
-          <h3 class="feature-title" data-i18n="welcome_feature_timer_title">Smart Timer</h3>
-          <p class="feature-desc" data-i18n="welcome_feature_timer_desc">Customizable Pomodoro sessions with elegant circular progress. Choose from presets or create your own rhythm.</p>
+          <h3 class="feature-title">Smart Timer</h3>
+          <p class="feature-desc">Customizable Pomodoro sessions with elegant circular progress. Choose from presets or create your own rhythm.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">📝</span>
-          <h3 class="feature-title" data-i18n="welcome_feature_task_title">Task Management</h3>
-          <p class="feature-desc" data-i18n="welcome_feature_task_desc">Integrated TodoList with drag & drop, completion tracking, and seamless workflow integration.</p>
+          <h3 class="feature-title">Task Management</h3>
+          <p class="feature-desc">Integrated TodoList with drag & drop, completion tracking, and seamless workflow integration.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">📊</span>
-          <h3 class="feature-title" data-i18n="welcome_feature_insights_title">Progress Insights</h3>
-          <p class="feature-desc" data-i18n="welcome_feature_insights_desc">Beautiful charts and statistics to track your productivity patterns and celebrate achievements.</p>
+          <h3 class="feature-title">Progress Insights</h3>
+          <p class="feature-desc">Beautiful charts and statistics to track your productivity patterns and celebrate achievements.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">🎨</span>
-          <h3 class="feature-title" data-i18n="welcome_feature_themes_title">Elegant Themes</h3>
-          <p class="feature-desc" data-i18n="welcome_feature_themes_desc">Multiple beautiful themes to match your style. From classic blue to elegant silver.</p>
+          <h3 class="feature-title">Elegant Themes</h3>
+          <p class="feature-desc">Multiple beautiful themes to match your style. From classic blue to elegant silver.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">🌟</span>
-          <h3 class="feature-title" data-i18n="welcome_feature_motivated_title">Stay Motivated</h3>
-          <p class="feature-desc" data-i18n="welcome_feature_motivated_desc">Inspiring quotes and gentle reminders to keep you motivated throughout your journey.</p>
+          <h3 class="feature-title">Stay Motivated</h3>
+          <p class="feature-desc">Inspiring quotes and gentle reminders to keep you motivated throughout your journey.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">🌐</span>
-          <h3 class="feature-title" data-i18n="welcome_feature_global_title">Global Ready</h3>
-          <p class="feature-desc" data-i18n="welcome_feature_global_desc">Multi-language support including English, Chinese, Spanish, Arabic, and more.</p>
+          <h3 class="feature-title">Global Ready</h3>
+          <p class="feature-desc">Multi-language support including English, Chinese, Spanish, Arabic, and more.</p>
         </div>
       </div>
       
@@ -1156,34 +1323,20 @@
       <div class="footer-content">
         <div class="footer-brand">Metenk</div>
         <div class="footer-links">
-          <a href="#" class="footer-link" id="footerSettingsLink" data-i18n="settings_title">Settings</a>
-          <a href="#" class="footer-link" id="footerHistoryLink" data-i18n="history_title">History</a>
-          <a href="#" class="footer-link" id="footerSupportLink" data-i18n="welcome_footer_support">Support</a>
-          <a href="#" class="footer-link" id="footerRateLink" data-i18n="rate_us">Rate Us</a>
+          <a href="#" class="footer-link" id="footerSettingsLink">Settings</a>
+          <a href="#" class="footer-link" id="footerHistoryLink">History</a>
+          <a href="#" class="footer-link" id="footerSupportLink">Support</a>
+          <a href="#" class="footer-link" id="footerRateLink">Rate Us</a>
         </div>
-        <div class="footer-copyright" data-i18n="welcome_footer_copyright">
+        <div class="footer-copyright">
           © 2025 Metenk. Crafted with focus and dedication.
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- First Time Guide Modal -->
-  <div id="firstGuideModal" class="guide-modal">
-    <div class="guide-overlay"></div>
-    <div class="guide-content">
-      <div class="guide-image-wrapper">
-        <img src="resource/first-guide.png" alt="First Time Guide" class="guide-image">
-      </div>
-      <button id="guideCompleteBtn" class="guide-btn">
-        <span class="btn-icon">✓</span>
-        <span class="btn-text" data-i18n="welcome_guide_completed">Completed</span>
-      </button>
-    </div>
-  </div>
 
-  <script src="translations.js"></script>
-  <script src="i18n.js"></script>
+
   <script src="welcome.js"></script>
 </body>
 </html>
