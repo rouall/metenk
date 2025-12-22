@@ -90,6 +90,96 @@ var _hmt = _hmt || [];
       }
     }
     
+    /* Shooting Stars */
+    .shooting-star {
+      position: absolute;
+      width: 0.3px;
+      height: 0.3px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 0.5px 0.2px rgba(255, 255, 255, 0.4);
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .shooting-star::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0.3px;
+      width: 10px;
+      height: 0.3px;
+      background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.2) 30%,
+        rgba(255, 255, 255, 0.05) 60%,
+        transparent 100%);
+      transform: translateY(-50%);
+    }
+    
+    @keyframes shootingStar {
+      0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(-45deg);
+      }
+      10% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-1000px, 1000px) rotate(-45deg);
+      }
+    }
+    
+    @keyframes shootingStarFast {
+      0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(-45deg);
+      }
+      10% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-1200px, 1200px) rotate(-45deg);
+      }
+    }
+    
+    @keyframes shootingStarSlow {
+      0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(-45deg);
+      }
+      15% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-800px, 800px) rotate(-45deg);
+      }
+    }
+    
+    .shooting-star.active {
+      animation: shootingStar 2.5s ease-in forwards;
+    }
+    
+    .shooting-star.fast {
+      animation: shootingStarFast 1.8s ease-in forwards;
+    }
+    
+    .shooting-star.slow {
+      animation: shootingStarSlow 3s ease-in forwards;
+    }
+    
     /* Loading Animation */
     .loading-screen {
       position: fixed;

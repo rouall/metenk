@@ -59,6 +59,59 @@ function createParticles() {
   }
 }
 
+// Shooting Stars System
+function createShootingStar() {
+  const heroSection = document.querySelector('.hero');
+  if (!heroSection) return;
+  
+  const star = document.createElement('div');
+  star.className = 'shooting-star';
+  
+  // Random starting position (top and right edge of viewport)
+  const startX = Math.random() * 30 + 70; // 70-100% from left
+  const startY = Math.random() * 50; // 0-50% from top
+  
+  star.style.left = `${startX}%`;
+  star.style.top = `${startY}%`;
+  
+  // Random animation speed variant
+  const speedVariant = Math.random();
+  if (speedVariant < 0.3) {
+    star.classList.add('fast');
+  } else if (speedVariant > 0.7) {
+    star.classList.add('slow');
+  } else {
+    star.classList.add('active');
+  }
+  
+  heroSection.appendChild(star);
+  
+  // Remove after animation completes
+  setTimeout(() => {
+    star.remove();
+  }, 3500);
+}
+
+// Create shooting stars at random intervals
+function startShootingStars() {
+  // Create first few stars with delays
+  setTimeout(() => createShootingStar(), 1500);
+  setTimeout(() => createShootingStar(), 3000);
+  
+  // Then create stars at random intervals
+  setInterval(() => {
+    const random = Math.random();
+    if (random > 0.3) { // 70% chance
+      createShootingStar();
+      
+      // 20% chance for a second star shortly after
+      if (random > 0.8) {
+        setTimeout(() => createShootingStar(), 500);
+      }
+    }
+  }, 2500); // Check every 2.5 seconds
+}
+
 // Enhanced Button Effects
 function addButtonEffects() {
   const buttons = document.querySelectorAll('.btn');
@@ -144,6 +197,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   // Create particles
   createParticles();
+  
+  // Start shooting stars
+  startShootingStars();
   
   // Add button effects
   addButtonEffects();
