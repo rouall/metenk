@@ -230,6 +230,250 @@ var _hmt = _hmt || [];
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
+    /* Modern browser button styles - Simple version */
+    .browser-btn {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(20px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+      text-decoration: none;
+      border: none;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 
+                  0 4px 16px rgba(255, 255, 255, 0.05);
+    }
+    
+    .browser-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      border-radius: 22px;
+    }
+    
+    .browser-btn.chrome::before {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.2) 0%, rgba(52, 168, 83, 0.2) 100%);
+    }
+    
+    .browser-btn.edge::before {
+      background: linear-gradient(135deg, rgba(0, 120, 212, 0.2) 0%, rgba(40, 160, 240, 0.2) 100%);
+    }
+    
+    .browser-btn:hover::before {
+      opacity: 1;
+    }
+    
+    .browser-btn:hover {
+      transform: translateY(-8px) scale(1.05);
+      background: rgba(0, 0, 0, 0.35);
+    }
+    
+    .browser-btn.chrome:hover {
+      box-shadow: 0 20px 60px rgba(66, 133, 244, 0.3), 
+                  0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    
+    .browser-btn.edge:hover {
+      box-shadow: 0 20px 60px rgba(0, 120, 212, 0.3), 
+                  0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    
+    .browser-btn:active {
+      transform: translateY(-4px) scale(1.02);
+    }
+    
+    .browser-btn img {
+      width: 32px;
+      height: 32px;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.2));
+    }
+    
+    .browser-btn:hover img {
+      transform: scale(1.1) rotate(5deg);
+    }
+    
+    .browser-btn.chrome:hover img {
+      filter: drop-shadow(0 6px 20px rgba(66, 133, 244, 0.4));
+    }
+    
+    .browser-btn.edge:hover img {
+      filter: drop-shadow(0 6px 20px rgba(0, 120, 212, 0.4));
+    }
+    
+    @keyframes breathe {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.02);
+      }
+    }
+    
+    /* Enhanced breathing animation for Chrome (black glass) */
+    .browser-btn.chrome.breathing {
+      animation: breatheBlackChrome 4s ease-in-out infinite;
+    }
+    
+    @keyframes breatheBlackChrome {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 
+                    0 4px 16px rgba(255, 255, 255, 0.05);
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 
+                    0 6px 20px rgba(255, 255, 255, 0.08);
+      }
+    }
+    
+    /* Enhanced breathing animation for Edge (black glass) */
+    .browser-btn.edge.breathing {
+      animation: breatheBlack 4s ease-in-out infinite;
+    }
+    
+    @keyframes breatheBlack {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 
+                    0 4px 16px rgba(255, 255, 255, 0.05);
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 
+                    0 6px 20px rgba(255, 255, 255, 0.08);
+      }
+    }
+    
+    .browser-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      border-radius: 22px;
+    }
+    
+    .browser-btn.chrome::before {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.2) 0%, rgba(52, 168, 83, 0.2) 100%);
+    }
+    
+    .browser-btn.edge::before {
+      background: linear-gradient(135deg, rgba(0, 120, 212, 0.2) 0%, rgba(40, 160, 240, 0.2) 100%);
+    }
+    
+    .browser-btn:hover::before {
+      opacity: 1;
+    }
+    
+    .browser-btn:hover {
+      transform: translateY(-8px) scale(1.05);
+      animation: none;
+    }
+    
+    /* Chrome button hover effects */
+    .browser-btn.chrome:hover {
+      background: rgba(0, 0, 0, 0.35);
+      box-shadow: 0 20px 60px rgba(66, 133, 244, 0.3), 
+                  0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Edge button hover effects */
+    .browser-btn.edge:hover {
+      background: rgba(0, 0, 0, 0.35);
+      box-shadow: 0 20px 60px rgba(0, 120, 212, 0.3), 
+                  0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    
+    .browser-btn:active {
+      transform: translateY(-4px) scale(1.02);
+    }
+    
+    .browser-btn img {
+      width: 32px;
+      height: 32px;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+    }
+    
+    .browser-btn:hover img {
+      transform: scale(1.1) rotate(5deg);
+    }
+    
+    /* Enhanced image filters for better contrast */
+    .browser-btn.chrome img {
+      filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.2));
+    }
+    
+    .browser-btn.edge img {
+      filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.2));
+    }
+    
+    .browser-btn.chrome:hover img {
+      filter: drop-shadow(0 6px 20px rgba(66, 133, 244, 0.4));
+    }
+    
+    .browser-btn.edge:hover img {
+      filter: drop-shadow(0 6px 20px rgba(0, 120, 212, 0.4));
+    }
+    
+    /* Browser buttons container */
+    .browser-buttons {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Enhanced tooltip styles */
+    .browser-btn::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .browser-btn:hover::after {
+      opacity: 1;
+      visibility: visible;
+      bottom: -40px;
+    }
+    
+    
     .btn-primary:hover {
       transform: translateY(-8px) scale(1.05);
       box-shadow: 0 25px 60px rgba(67, 97, 238, 0.7);
@@ -1294,6 +1538,54 @@ var _hmt = _hmt || [];
         padding: 16px 36px;
         font-size: 18px;
       }
+      
+      /* Browser buttons mobile adjustments */
+      .browser-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 18px;
+      }
+      
+      .browser-btn img {
+        width: 24px;
+        height: 24px;
+      }
+      
+      .browser-buttons {
+        gap: 16px;
+      }
+      
+      .browser-btn::after {
+        font-size: 11px;
+        padding: 6px 10px;
+      }
+      
+      /* Mobile breathing animations */
+      @keyframes breatheBlackChrome {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25), 
+                      0 3px 12px rgba(255, 255, 255, 0.03);
+        }
+        50% {
+          transform: scale(1.01);
+          box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3), 
+                      0 4px 14px rgba(255, 255, 255, 0.05);
+        }
+      }
+      
+      @keyframes breatheBlack {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25), 
+                      0 3px 12px rgba(255, 255, 255, 0.03);
+        }
+        50% {
+          transform: scale(1.01);
+          box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3), 
+                      0 4px 14px rgba(255, 255, 255, 0.05);
+        }
+      }
 
       /* Particle system adjustments for mobile */
       .particle {
@@ -1340,10 +1632,20 @@ var _hmt = _hmt || [];
       <h1 class="hero-title">MeTenk</h1>
       <p class="hero-subtitle">Focus, Todo list, Timer, Productivity</p>
       <div class="hero-cta">
-        <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" target="_blank" id="heroStartBtn" class="btn btn-primary">
-          <img src="resource/chromeicon.png" alt="Chrome Icon" style="width: 18px; height: 18px; margin-right: 10px;">
-          <span>Install MeTenk</span>
-        </a>
+        <div class="browser-buttons">
+          <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
+             target="_blank" 
+             class="browser-btn chrome" 
+             data-tooltip="Install for Chrome">
+            <img src="resource/chromeicon.png" alt="Chrome">
+          </a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
+             target="_blank" 
+             class="browser-btn edge" 
+             data-tooltip="Install for Edge">
+            <img src="resource/edge_browser_logo_icon_152998.png" alt="Edge">
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1409,11 +1711,20 @@ var _hmt = _hmt || [];
   <section class="cta">
     <div class="container">
       <div class="hero-cta fade-in">
-        <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" target="_blank" id="ctaStartBtn" class="btn btn-primary">
-          <img src="resource/chromeicon.png" alt="Chrome Icon" style="width: 16px; height: 16px; margin-right: 8px;">
-          <span>Install MeTenk</span>
-        </a>
-
+        <div class="browser-buttons">
+          <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
+             target="_blank" 
+             class="browser-btn chrome" 
+             data-tooltip="Install for Chrome">
+            <img src="resource/chromeicon.png" alt="Chrome">
+          </a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
+             target="_blank" 
+             class="browser-btn edge" 
+             data-tooltip="Install for Edge">
+            <img src="resource/edge_browser_logo_icon_152998.png" alt="Edge">
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1424,6 +1735,7 @@ var _hmt = _hmt || [];
       <div class="footer-content">
         <div class="footer-brand">Metenk</div>
         <div class="footer-links">
+          <a href="https://metenk.com/privacy-policy.html" class="footer-link" target="_blank">Privacy Policy</a>
           <a href="about.html" class="footer-link" id="footerAboutLink">About</a>
         </div>
         <div class="footer-copyright">
