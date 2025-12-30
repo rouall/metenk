@@ -1,15 +1,5 @@
 // Welcome page JavaScript
 
-// Loading Screen
-window.addEventListener('load', () => {
-  const loadingScreen = document.querySelector('.loading-screen');
-  if (loadingScreen) {
-    setTimeout(() => {
-      loadingScreen.classList.add('hidden');
-    }, 1000);
-  }
-});
-
 // Scroll Animation
 const observerOptions = {
   threshold: 0.1,
