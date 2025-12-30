@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us - MeTenk</title>
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 10px 30px rgba(67, 97, 238, 0.3));
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #9ca3af;
+            font-weight: 300;
+        }
+
+        .content {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 50px 40px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(67, 97, 238, 0.8), rgba(72, 149, 239, 0.8));
+            border-radius: 24px 24px 0 0;
+        }
+
+        .coffee-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .coffee-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            display: block;
+            animation: steam 2s ease-in-out infinite;
+        }
+
+        @keyframes steam {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .coffee-title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .coffee-description {
+            font-size: 18px;
+            color: #9ca3af;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .payment-methods {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .payment-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        .qr-section {
+            margin-bottom: 40px;
+        }
+
+        .qr-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .qr-codes {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .qr-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .qr-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .qr-image:hover {
+            border-color: rgba(67, 97, 238, 0.4);
+            background: rgba(67, 97, 238, 0.1);
+            transform: scale(1.05);
+        }
+
+        .qr-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .qr-placeholder {
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        .qr-placeholder span {
+            font-size: 32px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .qr-placeholder p {
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        .qr-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .online-payments {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+        }
+
+        .payment-subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .payment-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .payment-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #4361ee 0%, #4895ef 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(67, 97, 238, 0.3);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .payment-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(67, 97, 238, 0.5);
+        }
+
+        .payment-btn.stripe {
+            background: linear-gradient(135deg, #635bff 0%, #4f46e5 100%);
+        }
+
+        .payment-btn.crypto {
+            background: linear-gradient(135deg, #f7931a 0%, #ff6b35 100%);
+        }
+
+        .back-link {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .back-link:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(-5px);
+        }
+
+        .thank-you {
+            text-align: center;
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 16px;
+            border: 1px solid rgba(67, 97, 238, 0.2);
+        }
+
+        .thank-you-text {
+            font-size: 16px;
+            color: #e5e7eb;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 15px;
+            }
+
+            .title {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+
+            .coffee-icon {
+                font-size: 48px;
+            }
+
+            .coffee-title {
+                font-size: 28px;
+            }
+
+            .coffee-description {
+                font-size: 16px;
+            }
+
+            .payment-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .payment-btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .qr-codes {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .qr-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .qr-placeholder span {
+                font-size: 24px;
+            }
+
+            .qr-placeholder p {
+                font-size: 12px;
+            }
+
+            .back-link {
+                top: 20px;
+                left: 20px;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">
+        ← Back to Home
+    </a>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="resource/icon128.png" alt="MeTenk Logo">
+            </div>
+            <h1 class="title">Support MeTenk</h1>
+        </div>
+
+        <div class="content">
+            <div class="coffee-section">
+                <span class="coffee-icon">☕</span>
+                <h2 class="coffee-title">Buy us a coffee</h2>
+            </div>
+
+            <div class="payment-methods">
+                <!-- QR Code Section -->
+                <div class="qr-section">
+                    <div class="qr-codes">
+                        <div class="qr-item">
+                            <div class="qr-image">
+                                <img src="resource/sponsorscan/wechat-scan.png" alt="WeChat Pay QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="qr-placeholder" style="display: none;">
+                                    <span>💰</span>
+                                    <p>WeChat Pay<br>QR Code</p>
+                                </div>
+                            </div>
+                            <p class="qr-label">WeChat Pay</p>
+                        </div>
+                        <div class="qr-item">
+                            <div class="qr-image">
+                                <img src="resource/sponsorscan/alipay-scan.png" alt="Alipay QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="qr-placeholder" style="display: none;">
+                                    <span>💳</span>
+                                    <p>Alipay<br>QR Code</p>
+                                </div>
+                            </div>
+                            <p class="qr-label">Alipay</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online Payment Buttons -->
+                <div class="online-payments">
+                    <div class="payment-buttons">
+                        <a href="https://buy.stripe.com/cNi4gr5gs2tIaDz3QY5c400" target="_blank" class="payment-btn stripe">
+                            💳 Stripe
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thank-you">
+                <p class="thank-you-text">
+                    Your support means the world to us! It helps us dedicate more time to improving MeTenk and adding new features that enhance your productivity journey. Thank you for being part of our community! 🙏<br><br>
+                    Contact: colintenk@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple page functionality - no amount selection needed
+    </script>
+</body>
+</html>
