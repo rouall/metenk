@@ -1,5 +1,35 @@
 // Welcome page JavaScript
 
+// Toast notification function
+function showFirefoxToast() {
+  // Remove existing toast if any
+  const existingToast = document.querySelector('.toast');
+  if (existingToast) {
+    existingToast.remove();
+  }
+  
+  // Create new toast
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = 'Firefox extension is under development 🦊';
+  
+  // Add to page
+  document.body.appendChild(toast);
+  
+  // Show toast
+  setTimeout(() => {
+    toast.classList.add('show');
+  }, 10);
+  
+  // Hide and remove toast after 3 seconds
+  setTimeout(() => {
+    toast.classList.add('hide');
+    setTimeout(() => {
+      toast.remove();
+    }, 300);
+  }, 3000);
+}
+
 // Scroll Animation
 const observerOptions = {
   threshold: 0.1,

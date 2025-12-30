@@ -296,6 +296,50 @@ var _hmt = _hmt || [];
       }
     }
     
+    /* Firefox button styles */
+    .browser-btn.firefox::before {
+      background: linear-gradient(135deg, rgba(255, 149, 0, 0.2) 0%, rgba(255, 95, 21, 0.2) 100%);
+    }
+    
+    .browser-btn.firefox:hover {
+      background: rgba(0, 0, 0, 0.35);
+      box-shadow: 0 20px 60px rgba(255, 149, 0, 0.3), 
+                  0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    
+    .browser-btn.firefox:hover img {
+      filter: drop-shadow(0 6px 20px rgba(255, 149, 0, 0.4));
+    }
+    
+    /* Toast notification styles */
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, rgba(255, 149, 0, 0.95) 0%, rgba(255, 95, 21, 0.95) 100%);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      z-index: 10000;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.3s ease;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .toast.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .toast.hide {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    
     /* Enhanced breathing animation for Chrome (black glass) */
     .browser-btn.chrome.breathing {
       animation: breatheBlackChrome 4s ease-in-out infinite;
@@ -372,6 +416,12 @@ var _hmt = _hmt || [];
     .browser-btn.edge:hover {
       background: rgba(0, 0, 0, 0.35);
       box-shadow: 0 20px 60px rgba(0, 120, 212, 0.3), 
+                  0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    
+    .browser-btn.firefox:hover {
+      background: rgba(0, 0, 0, 0.35);
+      box-shadow: 0 20px 60px rgba(255, 149, 0, 0.3), 
                   0 8px 32px rgba(0, 0, 0, 0.4);
     }
     
@@ -1606,6 +1656,12 @@ var _hmt = _hmt || [];
              data-tooltip="Install for Edge">
             <img src="resource/edge_browser_logo_icon_152998.png" alt="Edge">
           </a>
+          <a href="#" 
+             onclick="showFirefoxToast(); return false;" 
+             class="browser-btn firefox" 
+             data-tooltip="Coming Soon for Firefox">
+            <img src="resource/firefox_browser_logo_icon_152991.png" alt="Firefox">
+          </a>
         </div>
       </div>
     </div>
@@ -1684,6 +1740,12 @@ var _hmt = _hmt || [];
              class="browser-btn edge" 
              data-tooltip="Install for Edge">
             <img src="resource/edge_browser_logo_icon_152998.png" alt="Edge">
+          </a>
+          <a href="#" 
+             onclick="showFirefoxToast(); return false;" 
+             class="browser-btn firefox" 
+             data-tooltip="Coming Soon for Firefox">
+            <img src="resource/firefox_browser_logo_icon_152991.png" alt="Firefox">
           </a>
         </div>
       </div>
