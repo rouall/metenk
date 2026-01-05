@@ -1,5 +1,73 @@
 // Welcome page JavaScript
 
+// Random Background Image based on time
+function setRandomBackground() {
+  const hour = new Date().getHours();
+  
+  // Night backgrounds (18:00 - 6:00)
+  const nightBackgrounds = [
+    'resource/bgbg-night-1.png',
+    'resource/bgbg-night-2.png',
+    'resource/bgbg-night-3.png',
+    'resource/bgbg-night-4.png'
+  ];
+  
+  // Day backgrounds (6:00 - 18:00)
+  const dayBackgrounds = [
+    'resource/bgbg.png',
+    'resource/bgbg-1.png',
+    'resource/bgbg-2.jpg',
+    'resource/bgbg-3.png',
+    'resource/bgbg-4.png'
+  ];
+  
+  // Determine if it's night or day
+  const isNight = hour >= 18 || hour < 6;
+  const backgrounds = isNight ? nightBackgrounds : dayBackgrounds;
+  
+  // Calculate time slot (every 2 hours)
+  // Night: 18-20, 20-22, 22-24, 0-2, 2-4, 4-6 (6 slots)
+  // Day: 6-8, 8-10, 10-12, 12-14, 14-16, 16-18 (6 slots)
+  let timeSlot;
+  if (isNight) {
+    if (hour >= 18) {
+      timeSlot = Math.floor((hour - 18) / 2);
+    } else {
+      timeSlot = Math.floor((hour + 6) / 2);
+    }
+  } else {
+    timeSlot = Math.floor((hour - 6) / 2);
+  }
+  
+  // Use date to create a daily seed for shuffling
+  const today = new Date();
+  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  
+  // Simple seeded shuffle to get consistent order for the day
+  function seededShuffle(array, seed) {
+    const shuffled = [...array];
+    let currentSeed = seed;
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      currentSeed = (currentSeed * 9301 + 49297) % 233280;
+      const j = Math.floor((currentSeed / 233280) * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+  
+  // Get shuffled backgrounds for today
+  const shuffledBgs = seededShuffle(backgrounds, dateSeed + (isNight ? 1 : 0));
+  
+  // Select background based on time slot (cycle through if more slots than images)
+  const bgIndex = timeSlot % shuffledBgs.length;
+  const selectedBg = shuffledBgs[bgIndex];
+  
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroSection.style.backgroundImage = `url('${selectedBg}')`;
+  }
+}
+
 // Toast notification function
 function showFirefoxToast() {
   // Remove existing toast if any
@@ -212,6 +280,9 @@ function initCarousel() {
 
 // Add event listeners for all buttons and links
 document.addEventListener('DOMContentLoaded', async () => {
+  // Set random background
+  setRandomBackground();
+  
   // Initialize carousel
   initCarousel();
   

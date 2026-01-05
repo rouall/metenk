@@ -36,10 +36,23 @@ var _hmt = _hmt || [];
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+      background: center center / cover no-repeat;
       position: relative;
       overflow: hidden;
       transition: all 0.5s ease;
+    }
+    
+    /* Frosted Glass Overlay */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 0;
     }
     
     /* Hero Background Particles */
@@ -54,6 +67,7 @@ var _hmt = _hmt || [];
       left: 50%;
       transform: translate(-50%, -50%);
       animation: pulse 12s ease-in-out infinite;
+      z-index: 1;
     }
     
     .hero::after {
@@ -67,6 +81,7 @@ var _hmt = _hmt || [];
       left: 50%;
       transform: translate(-50%, -50%);
       animation: pulse 10s ease-in-out infinite reverse;
+      z-index: 1;
     }
     
     /* Floating Particles */
@@ -77,6 +92,7 @@ var _hmt = _hmt || [];
       background: rgba(67, 97, 238, 0.6);
       border-radius: 50%;
       animation: floatParticle 6s ease-in-out infinite;
+      z-index: 2;
     }
     
     @keyframes floatParticle {
@@ -582,9 +598,10 @@ var _hmt = _hmt || [];
 
     .hero-content {
       text-align: center;
-      z-index: 1;
+      z-index: 3;
       max-width: 900px;
       padding: 40px 20px;
+      position: relative;
     }
 
     .logo {
@@ -1636,6 +1653,7 @@ var _hmt = _hmt || [];
 <body>
   <!-- Hero Section -->
   <section class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="logo">
         <img src="resource/icon128.png" alt="MeTenk Logo">
