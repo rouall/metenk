@@ -1174,7 +1174,7 @@ var _hmt = _hmt || [];
 
     /* CTA Section */
     .cta {
-      padding: 140px 20px;
+      padding: 60px 20px;
       background: #000000;
       text-align: center;
       position: relative;
@@ -1238,10 +1238,47 @@ var _hmt = _hmt || [];
       gap: 30px;
     }
 
+    .footer-brand-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
     .footer-brand {
       font-size: 24px;
       font-weight: 700;
       color: #ffffff;
+    }
+
+    .footer-browser-buttons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .footer-browser-buttons .browser-btn {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-browser-buttons .browser-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .footer-browser-buttons .browser-btn img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(1.2);
     }
 
     .footer-links {
@@ -1564,6 +1601,25 @@ var _hmt = _hmt || [];
         text-align: center;
       }
 
+      .footer-brand-section {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .footer-browser-buttons {
+        gap: 12px;
+      }
+
+      .footer-browser-buttons .browser-btn {
+        width: 36px;
+        height: 36px;
+      }
+
+      .footer-browser-buttons .browser-btn img {
+        width: 18px;
+        height: 18px;
+      }
+
       .footer-links {
         justify-content: center;
       }
@@ -1629,7 +1685,7 @@ var _hmt = _hmt || [];
 
       /* CTA section adjustments */
       .cta {
-        padding: 80px 20px;
+        padding: 40px 20px;
       }
 
       .cta-subtitle {
@@ -1674,10 +1730,10 @@ var _hmt = _hmt || [];
              data-tooltip="Install for Edge">
             <img src="resource/edge_browser_logo_icon_152998.png" alt="Edge">
           </a>
-          <a href="#" 
-             onclick="showFirefoxToast(); return false;" 
+          <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
+             target="_blank"
              class="browser-btn firefox" 
-             data-tooltip="Coming Soon for Firefox">
+             data-tooltip="Download for Firefox">
             <img src="resource/firefox_browser_logo_icon_152991.png" alt="Firefox">
           </a>
         </div>
@@ -1742,39 +1798,33 @@ var _hmt = _hmt || [];
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta">
-    <div class="container">
-      <div class="hero-cta fade-in">
-        <div class="browser-buttons">
-          <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
-             target="_blank" 
-             class="browser-btn chrome" 
-             data-tooltip="Install for Chrome">
-            <img src="resource/chromeicon.png" alt="Chrome">
-          </a>
-          <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
-             target="_blank" 
-             class="browser-btn edge" 
-             data-tooltip="Install for Edge">
-            <img src="resource/edge_browser_logo_icon_152998.png" alt="Edge">
-          </a>
-          <a href="#" 
-             onclick="showFirefoxToast(); return false;" 
-             class="browser-btn firefox" 
-             data-tooltip="Coming Soon for Firefox">
-            <img src="resource/firefox_browser_logo_icon_152991.png" alt="Firefox">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-brand">Metenk</div>
+        <div class="footer-brand-section">
+          <div class="footer-brand">Metenk</div>
+          <div class="footer-browser-buttons">
+            <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
+               target="_blank" 
+               class="browser-btn chrome" 
+               data-tooltip="Install for Chrome">
+              <img src="resource/chromeicon.png" alt="Chrome">
+            </a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
+               target="_blank" 
+               class="browser-btn edge" 
+               data-tooltip="Install for Edge">
+              <img src="resource/edge_browser_logo_icon_152998.png" alt="Edge">
+            </a>
+            <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
+               target="_blank"
+               class="browser-btn firefox" 
+               data-tooltip="Download for Firefox">
+              <img src="resource/firefox_browser_logo_icon_152991.png" alt="Firefox">
+            </a>
+          </div>
+        </div>
         <div class="footer-links">
           <a href="https://metenk.com/privacy-policy.html" class="footer-link" target="_blank">Privacy Policy</a>
           <a href="about.html" class="footer-link" id="footerAboutLink">About</a>
