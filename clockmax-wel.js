@@ -45,15 +45,6 @@
     }
   }
 
-  function rotateFeatures() {
-    var views = document.querySelectorAll('.feature-view');
-    var activeView = document.querySelector('.feature-view.active');
-    var nextIndex = Array.from(views).indexOf(activeView) + 1;
-    if (nextIndex >= views.length) nextIndex = 0;
-    activeView.classList.remove('active');
-    views[nextIndex].classList.add('active');
-  }
-
   function init() {
     if (browserAPI && browserAPI.storage) {
       browserAPI.storage.local.get(['theme'], function(result) {
@@ -76,8 +67,6 @@
 
     updateClock();
     setInterval(updateClock, 1000);
-
-    setInterval(rotateFeatures, 5000);
 
     var startBtn = document.getElementById('startBtn');
     if (startBtn) {
