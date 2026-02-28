@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  var browserAPI = typeof browser !== 'undefined' ? browser : chrome;
+  var browserAPI = typeof browser !== 'undefined' ? browser : (typeof chrome !== 'undefined' ? chrome : null);
 
   function getSystemTheme() {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
@@ -67,6 +67,9 @@
 
     updateClock();
     setInterval(updateClock, 1000);
+
+    // Force initial update after a short delay to ensure Firefox renders correctly
+    setTimeout(updateClock, 100);
 
     var startBtn = document.getElementById('startBtn');
     if (startBtn) {
