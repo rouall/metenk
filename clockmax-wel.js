@@ -98,6 +98,88 @@
         }
       });
     }
+
+    initCarousel();
+  }
+
+  function initCarousel() {
+    var slides = document.querySelectorAll('.carousel-slide');
+    var indicators = document.querySelectorAll('.indicator');
+    var prevBtn = document.querySelector('.carousel-prev');
+    var nextBtn = document.querySelector('.carousel-next');
+    
+    if (!slides.length) return;
+    
+    var currentSlide = 0;
+    var slideCount = slides.length;
+    var autoPlayInterval;
+    
+    function goToSlide(index) {
+      if (index < 0) index = slideCount - 1;
+      if (index >= slideCount) index = 0;
+      
+      slides.forEach(function(slide, i) {
+        slide.classList.remove('active', 'prev');
+        if (i === currentSlide && i !== index) {
+          slide.classList.add('prev');
+        }
+      });
+      
+      indicators.forEach(function(indicator, i) {
+        indicator.classList.toggle('active', i === index);
+      });
+      
+      slides[index].classList.add('active');
+      currentSlide = index;
+    }
+    
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+    
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+    
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(nextSlide, 4000);
+    }
+    
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+    }
+    
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        prevSlide();
+        stopAutoPlay();
+        startAutoPlay();
+      });
+    }
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        nextSlide();
+        stopAutoPlay();
+        startAutoPlay();
+      });
+    }
+    
+    indicators.forEach(function(indicator, index) {
+      indicator.addEventListener('click', function() {
+        goToSlide(index);
+        stopAutoPlay();
+        startAutoPlay();
+      });
+    });
+    
+    var carousel = document.querySelector('.preview-carousel');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', stopAutoPlay);
+      carousel.addEventListener('mouseleave', startAutoPlay);
+    }
+    
+    startAutoPlay();
   }
 
   if (document.readyState === 'loading') {
