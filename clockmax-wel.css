@@ -125,8 +125,7 @@ body {
 .hero-gradient {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 100% 80% at 70% 20%, var(--glow-primary), transparent 50%),
-              radial-gradient(ellipse 80% 60% at 20% 80%, var(--glow-accent), transparent 50%);
+  background: radial-gradient(ellipse 100% 80% at 70% 20%, var(--glow-primary), transparent 50%);
 }
 
 .hero-glow {
