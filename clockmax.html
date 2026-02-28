@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clock Max - Welcome</title>
+  <link rel="stylesheet" href="css/clockmax-wel.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="welcome-container">
+    <div class="hero-section">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+      </div>
+      
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Released</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="title-line">Master Your Time</span>
+          <span class="title-line gradient-text">With Clock Max</span>
+        </h1>
+        
+        <p class="hero-subtitle">The ultimate time management suite designed for professionals who value every second.</p>
+        <p class="hero-tagline">Bring your phone's alarm and time tools to your browser — all in one elegant extension.</p>
+        
+        <div class="hero-cta">
+          <button class="cta-primary" id="startBtn">
+            <span>Get Started Free</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <div class="cta-meta">
+            <span class="meta-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              4.9 Rating
+            </span>
+            <span class="meta-divider">•</span>
+            <span class="meta-item">100K+ Users</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-card main-card">
+          <div class="card-header">
+            <div class="card-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="card-title">Clock Max</span>
+          </div>
+          <div class="card-content">
+            
+            <div class="feature-view active" id="view-clock">
+              <div class="clock-preview">
+                <div class="analog-clock">
+                  <div class="clock-face-large">
+                    <div class="clock-markers">
+                      <span class="marker m12">12</span>
+                      <span class="marker m3">3</span>
+                      <span class="marker m6">6</span>
+                      <span class="marker m9">9</span>
+                    </div>
+                    <div class="clock-hand hour" id="preview-hour"></div>
+                    <div class="clock-hand minute" id="preview-minute"></div>
+                    <div class="clock-hand second" id="preview-second"></div>
+                    <div class="clock-center"></div>
+                  </div>
+                </div>
+                <div class="digital-time" id="digital-time">00:00:00</div>
+              </div>
+            </div>
+
+            <div class="feature-view" id="view-timer">
+              <div class="timer-preview">
+                <div class="timer-display">
+                  <span class="timer-label">25:00</span>
+                  <div class="timer-progress">
+                    <div class="progress-ring">
+                      <svg width="140" height="140" viewBox="0 0 140 140">
+                        <circle cx="70" cy="70" r="60" fill="none" stroke="var(--border)" stroke-width="8"/>
+                        <circle cx="70" cy="70" r="60" fill="none" stroke="var(--primary)" stroke-width="8" stroke-linecap="round" stroke-dasharray="377" stroke-dashoffset="94" id="timer-progress-circle"/>
+                      </svg>
+                      <div class="progress-text">25:00</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timer-controls">
+                  <div class="control-btn start">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <div class="control-btn pause">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-view" id="view-stopwatch">
+              <div class="stopwatch-preview">
+                <div class="stopwatch-display">
+                  <span id="stopwatch-time">00:00.00</span>
+                </div>
+                <div class="stopwatch-laps">
+                  <div class="lap-item">
+                    <span class="lap-number">1</span>
+                    <span class="lap-time">01:25.36</span>
+                  </div>
+                  <div class="lap-item">
+                    <span class="lap-number">2</span>
+                    <span class="lap-time">02:51.72</span>
+                  </div>
+                </div>
+                <div class="stopwatch-controls">
+                  <div class="control-btn lap">Lap</div>
+                  <div class="control-btn reset">Reset</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-view" id="view-todo">
+              <div class="todo-preview">
+                <div class="todo-header">
+                  <h4>Todo List</h4>
+                  <span class="todo-count">3 items</span>
+                </div>
+                <div class="todo-items">
+                  <div class="todo-item completed">
+                    <div class="todo-checkbox checked"></div>
+                    <span class="todo-text">Morning workout</span>
+                  </div>
+                  <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <span class="todo-text">Team meeting</span>
+                  </div>
+                  <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <span class="todo-text">Project deadline</span>
+                  </div>
+                </div>
+                <div class="todo-input">
+                  <input type="text" placeholder="Add new task..."/>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features-section">
+      <div class="features-header">
+        <h2 class="features-title">Everything You Need</h2>
+        <p class="features-subtitle">Powerful features designed to boost your productivity</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon alarm-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="13" r="8"/>
+                <path d="M12 9v4l2 2"/>
+                <path d="M5 3L2 6"/>
+                <path d="M22 6l-3-3"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-title">Smart Alarms</h3>
+          <p class="feature-desc">Flexible scheduling with daily, weekly, monthly, and yearly options. Custom sounds and intelligent snooze.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon world-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-title">World Clock</h3>
+          <p class="feature-desc">Track multiple time zones simultaneously. Perfect for global teams and travelers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon timer-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-title">Precision Timer</h3>
+          <p class="feature-desc">High-precision stopwatch, countdown timers, and multi-timer support. Ideal for workouts, cooking, and focus sessions.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon todo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="feature-title">Task Manager</h3>
+          <p class="feature-desc">Built-in todo list to keep your tasks organized. Simple yet powerful task tracking.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <div class="footer-content">
+        <span class="footer-brand">Clock Max</span>
+        <span class="footer-divider">|</span>
+        <span class="footer-copy">Made with by MeTenk</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/clockmax-wel.js"></script>
+</body>
+</html>
