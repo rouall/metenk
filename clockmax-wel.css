@@ -296,11 +296,9 @@ body {
 }
 
 .visual-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
+  background: transparent;
+  border: none;
   border-radius: 16px;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 }
 
 .main-card {
@@ -310,7 +308,6 @@ body {
   transform: translate(-50%, -50%);
   width: 320px;
   padding: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .card-header {
