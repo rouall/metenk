@@ -141,34 +141,20 @@
     if (prevBtn) {
       prevBtn.addEventListener('click', function() {
         prevSlide();
-        stopAutoPlay();
-        startAutoPlay();
       });
     }
-    
+
     if (nextBtn) {
       nextBtn.addEventListener('click', function() {
         nextSlide();
-        stopAutoPlay();
-        startAutoPlay();
       });
     }
-    
+
     indicators.forEach(function(indicator, index) {
       indicator.addEventListener('click', function() {
         goToSlide(index);
-        stopAutoPlay();
-        startAutoPlay();
       });
     });
-    
-    var carousel = document.querySelector('.preview-carousel');
-    if (carousel) {
-      carousel.addEventListener('mouseenter', stopAutoPlay);
-      carousel.addEventListener('mouseleave', startAutoPlay);
-    }
-    
-    startAutoPlay();
   }
 
   if (document.readyState === 'loading') {
