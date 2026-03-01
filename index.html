@@ -2040,6 +2040,50 @@ var _hmt = _hmt || [];
 
 
 
+  <script>
+    (function() {
+      const lightImages = [
+        '23ONJ.png', '2J3INK.png', '32JBEFIJ.png', '32JNJN32.png', 'DFFDFDFD3432.png',
+        'DFON23.jpg', 'DFON23OKM.png', 'DILJN23.png', 'FDOIHN323.png', 'O32N.png'
+      ];
+      
+      const nightImages = [
+        '09DSJN23.png', 'DSIJN23JH23JK.png', 'DSIOSDMKSDJN2323.png', 'DSN2398SDNUI.png',
+        'DSOIJN32KJ.png', 'SDO3287DFNIJ.png', 'SDOIN23IU23BIUNC.png', 'SDOINEWRIUB32.png', 'SDONIU23OIU23N.png'
+      ];
+      
+      function getMinuteKey() {
+        const now = new Date();
+        return now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + '-' + now.getHours() + '-' + now.getMinutes();
+      }
+      
+      function isNight() {
+        const h = new Date().getHours();
+        return h >= 18 || h < 6;
+      }
+      
+      function getImage() {
+        const key = getMinuteKey();
+        const cacheKey = 'bg_' + key;
+        let path = sessionStorage.getItem(cacheKey);
+        if (!path) {
+          const arr = isNight() ? nightImages : lightImages;
+          const name = arr[Math.floor(Math.random() * arr.length)];
+          path = 'resource/' + (isNight() ? 'night' : 'light') + '/' + name;
+          sessionStorage.setItem(cacheKey, path);
+        }
+        return path;
+      }
+      
+      function setBg() {
+        const hero = document.querySelector('.hero');
+        if (hero) hero.style.backgroundImage = 'url(' + getImage() + ')';
+      }
+      
+      setBg();
+      setInterval(setBg, 60000);
+    })();
+  </script>
   <script src="welcome.js"></script>
 </body>
 </html>
