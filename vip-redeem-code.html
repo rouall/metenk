@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free VIP Redeem Codes</title>
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <style>
+        :root {
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --text: #333;
+            --text-muted: #7f8c8d;
+            --bg: #f9f9f9;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--bg);
+        }
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 12px;
+        }
+        .lang-switch button {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            font-size: 0.85em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-switch button:first-child {
+            border-radius: 4px 0 0 4px;
+        }
+        .lang-switch button:last-child {
+            border-radius: 0 4px 4px 0;
+            border-left: none;
+        }
+        .lang-switch button.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+        .container {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+        .brand:hover {
+            opacity: 0.75;
+        }
+        .brand img {
+            width: 34px;
+            height: 34px;
+            object-fit: contain;
+        }
+        .brand span {
+            font-size: 1.15em;
+            font-weight: 700;
+            color: #2c3e50;
+            letter-spacing: 0.3px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+        }
+        .intro {
+            font-size: 1.05em;
+            color: #555;
+            margin-bottom: 28px;
+        }
+        .badge {
+            display: inline-block;
+            background: #eafaf1;
+            color: #27ae60;
+            border: 1px solid #a9dfbf;
+            border-radius: 4px;
+            padding: 4px 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .code-block {
+            background: #1e2430;
+            border: 1px solid #2d3644;
+            border-radius: 6px;
+            padding: 14px 8px;
+            margin: 24px 0;
+            overflow-x: auto;
+        }
+        .code-line {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.15s ease;
+        }
+        .code-line:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+        .code-line code {
+            font-family: 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.95em;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #7ee787;
+            white-space: nowrap;
+        }
+        .code-line .copy-icon {
+            margin-left: auto;
+            flex-shrink: 0;
+            color: #4d5a6e;
+            font-size: 0.75em;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.15s ease, color 0.15s ease;
+        }
+        .code-line:hover .copy-icon {
+            opacity: 1;
+        }
+        .code-line.copied {
+            background: rgba(126, 231, 135, 0.1);
+        }
+        .code-line.copied .copy-icon {
+            opacity: 1;
+            color: #7ee787;
+        }
+        .notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #f39c12;
+            border-radius: 4px;
+            padding: 15px 18px;
+            margin: 28px 0 20px;
+        }
+        .notice strong {
+            color: #d68910;
+        }
+        .closing {
+            color: #555;
+            font-size: 1.02em;
+        }
+        .closing a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .closing a:hover {
+            text-decoration: underline;
+        }
+        .closing a.copied {
+            color: #27ae60;
+        }
+        .footer-legal {
+            text-align: center;
+            color: #a8adb3;
+            font-size: 0.8em;
+            margin-top: 16px;
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+        <button id="btn-zh" onclick="setLang('zh')">中文</button>
+    </div>
+    <div class="container">
+        <a class="brand" href="https://metenk.com/">
+            <img src="resource/icon128.png" alt="MeTenk Logo">
+            <span>MeTenk</span>
+        </a>
+        <h1 data-i18n="title">Free VIP Redeem Codes</h1>
+
+        <div class="badge" data-i18n="badge">Limited Time Offer</div>
+
+        <p class="intro" data-i18n="intro">
+            Our team has prepared a batch of free MeTenk VIP redeem codes. Enter a code to instantly unlock all VIP features, including future updates, cloud storage, and multi-platform support.
+        </p>
+
+        <div class="code-block" id="code-block"></div>
+
+        <div class="notice">
+            <strong data-i18n="noticeTitle">This giveaway won't last long — we may close it at any time.</strong>
+        </div>
+
+        <p class="closing">
+            <span data-i18n="closing">Enjoy your VIP access! We promise to keep improving our product with care. Thank you for your support!</span><span data-i18n="contactPrefix"> If you have any suggestions, feel free to contact us at </span><a href="mailto:colintenk@gmail.com" id="email-link">colintenk@gmail.com</a>
+        </p>
+    </div>
+
+    <div class="footer-legal" data-i18n="legal">MeTenk reserves the right of final interpretation.</div>
+
+    <script>
+        const CODES = [
+            'UHBG-QZS9-UJSZ-8SH9',
+            'T5BG-WZS5-T7Y2-6KGG',
+            'EQNK-ME9X-8JCM-67B6',
+            'HMBF-3DTP-8P8T-8U74',
+            'ZGGJ-CBUP-9E6F-JXGN',
+            'RCEG-P4V3-7EGC-GCSC',
+            'EC4N-FZPG-FG87-QPE7',
+            'VNFC-K8V9-P2H5-8ND5',
+            'B78P-NWXN-FKV3-YGNZ',
+            'R3N4-WBFK-J2SS-JVA2'
+        ];
+
+        const I18N = {
+            en: {
+                docTitle: 'Free VIP Redeem Codes',
+                title: 'Free VIP Redeem Codes',
+                badge: 'Limited Time Offer',
+                intro: 'Our team has prepared a batch of free MeTenk VIP redeem codes. Enter a code to instantly unlock all VIP features, including future updates, cloud storage, and multi-platform support.',
+                noticeTitle: 'This giveaway won\'t last long — we may close it at any time.',
+                closing: 'Enjoy your VIP access! We promise to keep improving our product with care. Thank you for your support!',
+                contactPrefix: ' If you have any suggestions, feel free to contact us at ',
+                legal: 'MeTenk reserves the right of final interpretation.',
+                copy: 'Copy',
+                copied: 'Copied!'
+            },
+            zh: {
+                docTitle: '免费 VIP 兑换码',
+                title: '免费 VIP 兑换码',
+                badge: '限时活动',
+                intro: '我们团队准备了一批免费的 MeTenk 会员兑换码，输入兑换码即可立即解锁全部 VIP 功能，包括未来更新、云存储及多平台支持。',
+                noticeTitle: '赠送 VIP 时间有限，我们可能很快就会关闭。',
+                closing: '尽情享用 VIP 吧！我们保证会用心做好产品，感谢您的支持！',
+                contactPrefix: '如有任何建议，请联系我们 ',
+                legal: '最终解释权归 MeTenk 所有。',
+                copy: '复制',
+                copied: '已复制！'
+            }
+        };
+
+        let currentLang = 'en';
+
+        function renderCodes() {
+            const block = document.getElementById('code-block');
+            block.innerHTML = '';
+            CODES.forEach(code => {
+                const line = document.createElement('div');
+                line.className = 'code-line';
+                line.innerHTML =
+                    '<code>' + code + '</code>' +
+                    '<span class="copy-icon">' + I18N[currentLang].copy + '</span>';
+                line.addEventListener('click', () => copyCode(code, line));
+                block.appendChild(line);
+            });
+        }
+
+        function copyText(text, done) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+            } else {
+                fallbackCopy(text, done);
+            }
+        }
+
+        function copyCode(code, item) {
+            copyText(code, () => {
+                item.classList.add('copied');
+                item.querySelector('.copy-icon').textContent = I18N[currentLang].copied;
+                setTimeout(() => {
+                    item.classList.remove('copied');
+                    item.querySelector('.copy-icon').textContent = I18N[currentLang].copy;
+                }, 1500);
+            });
+        }
+
+        function fallbackCopy(text, done) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(ta);
+            done();
+        }
+
+        function setLang(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            document.title = I18N[lang].docTitle;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (I18N[lang][key]) el.textContent = I18N[lang][key];
+            });
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            renderCodes();
+        }
+
+        renderCodes();
+
+        const EMAIL = 'colintenk@gmail.com';
+        const emailLink = document.getElementById('email-link');
+        emailLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            copyText(EMAIL, () => {
+                emailLink.textContent = I18N[currentLang].copied;
+                emailLink.classList.add('copied');
+                setTimeout(() => {
+                    emailLink.textContent = EMAIL;
+                    emailLink.classList.remove('copied');
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
