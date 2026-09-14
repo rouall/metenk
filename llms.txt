@@ -1,0 +1,23 @@
+# MeTenk
+
+> MeTenk builds free, privacy-first productivity tools for the web. Our flagship product is a browser extension combining a Pomodoro focus timer, to-do list, and reminders for Chrome, Edge, and Firefox. All data stays local on the user's device — we do not sell or upload user data.
+
+MeTenk (https://metenk.com/) is the official website for the MeTenk productivity extension and related tools by an independent team focused on safety, practicality, minimalism, and efficiency.
+
+## Products
+
+- [MeTenk — Focus, Todo List & Pomodoro Timer](https://metenk.com/): Free browser extension for Chrome, Edge, and Firefox. Pomodoro timer, to-do list, focus reminders, side panel support. Local-first privacy.
+- [Clock Max](https://metenk.com/clockmax.html): A precision clock and time-management companion product by MeTenk.
+
+## Pages
+
+- [About](https://metenk.com/about.html): Who we are and our team philosophy — safety, practicality, minimalism, efficiency.
+- [Support Us](https://metenk.com/sponsor.html): How to support MeTenk's development, including donation options.
+- [Free VIP Redeem Codes](https://metenk.com/vip-redeem-code.html): Limited-time giveaway. Redeem codes unlock all VIP features, including future updates, cloud storage, and multi-platform support.
+- [Privacy Policy](https://metenk.com/privacy-policy.html): How the MeTenk extension collects, uses, and protects data.
+- [Clock Max Privacy Policy](https://metenk.com/clock-privacy-policy.html): Privacy policy for Clock Max.
+- [ColorPick Pro Privacy Policy](https://metenk.com/pickcolor-privacy-policy.html): Privacy policy for ColorPick Pro.
+
+## Contact
+
+- Email: colintenk@gmail.com
