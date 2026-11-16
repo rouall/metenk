@@ -4,6 +4,10 @@
 
 MeTenk (https://metenk.com/) is the official website for the MeTenk productivity extension and related tools by an independent team focused on safety, practicality, minimalism, and efficiency.
 
+## Languages
+
+The site is available in English and Chinese (简体中文). The active language is chosen automatically from the visitor's browser language and can be switched at any time via the floating language switcher in the bottom-right corner. The choice is remembered on the visitor's device. The `lang` attribute of each page reflects the language currently being displayed.
+
 ## Products
 
 - [MeTenk — Focus, Todo List & Pomodoro Timer](https://metenk.com/): Free browser extension for Chrome, Edge, and Firefox. Pomodoro timer, to-do list, focus reminders, side panel support. Local-first privacy.

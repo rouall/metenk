@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clock Max - Master Your Time | MeTenk</title>
   <link rel="icon" type="image/png" href="./clockmax-icon.png">
-  <meta name="description" content="Clock Max by MeTenk: a precision clock and time-management tool to master your time. Discover features, previews, and downloads.">
+  <meta name="description" content="Clock Max by MeTenk: a precision clock and time-management tool to master your time. Discover features, previews, and downloads." data-i18n-attr="content:metaDescription">
   <link rel="canonical" href="https://metenk.com/clockmax.html">
+  <link rel="alternate" hreflang="en" href="https://metenk.com/clockmax.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://metenk.com/clockmax.html">
+  <link rel="alternate" hreflang="x-default" href="https://metenk.com/clockmax.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MeTenk">
   <meta property="og:title" content="Clock Max - Master Your Time | MeTenk">
@@ -35,6 +38,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/i18n.css">
 </head>
 <body>
   <div class="welcome-container">
@@ -48,20 +52,20 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          <span>Released</span>
+          <span data-i18n="badgeReleased">Released</span>
         </div>
-        
-        <h1 class="hero-title">
+
+        <h1 class="hero-title" data-i18n-html="heroTitleHtml">
           <span class="title-line">Master Your Time</span>
           <span class="title-line gradient-text">With Clock Max</span>
         </h1>
-        
-        <p class="hero-subtitle">The ultimate time management suite designed for professionals who value every second.</p>
-        <p class="hero-tagline">Bring your phone's alarm and time tools to your browser — all in one elegant extension.</p>
+
+        <p class="hero-subtitle" data-i18n="heroSubtitle">The ultimate time management suite designed for professionals who value every second.</p>
+        <p class="hero-tagline" data-i18n="heroTagline">Bring your phone's alarm and time tools to your browser — all in one elegant extension.</p>
         
         <div class="hero-cta">
           <button class="cta-primary" id="startBtn">
-            <span>Get Started Free</span>
+            <span data-i18n="ctaStart">Get Started Free</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
@@ -69,10 +73,10 @@
           <div class="cta-meta">
             <span class="meta-item">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              4.9 Rating
+              <span data-i18n="metaRating">4.9 Rating</span>
             </span>
             <span class="meta-divider">•</span>
-            <span class="meta-item">100K+ Users</span>
+            <span class="meta-item" data-i18n="metaUsers">100K+ Users</span>
           </div>
         </div>
       </div>
@@ -102,8 +106,8 @@
 
     <div class="features-section">
       <div class="features-header">
-        <h2 class="features-title">Everything You Need</h2>
-        <p class="features-subtitle">Powerful features designed to boost your productivity</p>
+        <h2 class="features-title" data-i18n="featuresTitle">Everything You Need</h2>
+        <p class="features-subtitle" data-i18n="featuresSubtitle">Powerful features designed to boost your productivity</p>
       </div>
 
       <div class="features-grid">
@@ -118,8 +122,8 @@
               </svg>
             </div>
           </div>
-          <h3 class="feature-title">Smart Alarms</h3>
-          <p class="feature-desc">Flexible scheduling with daily, weekly, monthly, and yearly options. Custom sounds and intelligent snooze.</p>
+          <h3 class="feature-title" data-i18n="featureAlarmTitle">Smart Alarms</h3>
+          <p class="feature-desc" data-i18n="featureAlarmDesc">Flexible scheduling with daily, weekly, monthly, and yearly options. Custom sounds and intelligent snooze.</p>
         </div>
 
         <div class="feature-card">
@@ -132,8 +136,8 @@
               </svg>
             </div>
           </div>
-          <h3 class="feature-title">World Clock</h3>
-          <p class="feature-desc">Track multiple time zones simultaneously. Perfect for global teams and travelers.</p>
+          <h3 class="feature-title" data-i18n="featureWorldTitle">World Clock</h3>
+          <p class="feature-desc" data-i18n="featureWorldDesc">Track multiple time zones simultaneously. Perfect for global teams and travelers.</p>
         </div>
 
         <div class="feature-card">
@@ -145,8 +149,8 @@
               </svg>
             </div>
           </div>
-          <h3 class="feature-title">Precision Timer</h3>
-          <p class="feature-desc">High-precision stopwatch, countdown timers, and multi-timer support. Ideal for workouts, cooking, and focus sessions.</p>
+          <h3 class="feature-title" data-i18n="featureTimerTitle">Precision Timer</h3>
+          <p class="feature-desc" data-i18n="featureTimerDesc">High-precision stopwatch, countdown timers, and multi-timer support. Ideal for workouts, cooking, and focus sessions.</p>
         </div>
 
         <div class="feature-card">
@@ -158,8 +162,8 @@
               </svg>
             </div>
           </div>
-          <h3 class="feature-title">Task Manager</h3>
-          <p class="feature-desc">Built-in todo list to keep your tasks organized. Simple yet powerful task tracking.</p>
+          <h3 class="feature-title" data-i18n="featureTodoTitle">Task Manager</h3>
+          <p class="feature-desc" data-i18n="featureTodoDesc">Built-in todo list to keep your tasks organized. Simple yet powerful task tracking.</p>
         </div>
       </div>
     </div>
@@ -172,60 +176,63 @@
               <div class="carousel-dots">
                 <span></span><span></span><span></span>
               </div>
-              <span class="carousel-title">Clock Max</span>
+              <span class="carousel-title" data-i18n="carouselTitle">Clock Max</span>
             </div>
             <div class="carousel-content">
               <div class="carousel-slider">
                 <div class="carousel-slide active">
-                  <img src="./resource/preview-one.webp" alt="Clock Max Preview 1" loading="lazy">
+                  <img src="./resource/preview-one.webp" alt="Clock Max Preview 1" loading="lazy" data-i18n-attr="alt:previewAlt1">
                 </div>
                 <div class="carousel-slide">
-                  <img src="./resource/preview-two.webp" alt="Clock Max Preview 2" loading="lazy">
+                  <img src="./resource/preview-two.webp" alt="Clock Max Preview 2" loading="lazy" data-i18n-attr="alt:previewAlt2">
                 </div>
                 <div class="carousel-slide">
-                  <img src="./resource/preview-three.webp" alt="Clock Max Preview 3" loading="lazy">
+                  <img src="./resource/preview-three.webp" alt="Clock Max Preview 3" loading="lazy" data-i18n-attr="alt:previewAlt3">
                 </div>
                 <div class="carousel-slide">
-                  <img src="./resource/preview-four.webp" alt="Clock Max Preview 4" loading="lazy">
+                  <img src="./resource/preview-four.webp" alt="Clock Max Preview 4" loading="lazy" data-i18n-attr="alt:previewAlt4">
                 </div>
                 <div class="carousel-slide">
-                  <img src="./resource/preview-five.webp" alt="Clock Max Preview 5" loading="lazy">
+                  <img src="./resource/preview-five.webp" alt="Clock Max Preview 5" loading="lazy" data-i18n-attr="alt:previewAlt5">
                 </div>
               </div>
-              <button class="carousel-nav carousel-prev" aria-label="Previous slide">
+              <button class="carousel-nav carousel-prev" aria-label="Previous slide" data-i18n-attr="aria-label:carouselPrev">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M15 18l-6-6 6-6"/>
                 </svg>
               </button>
-              <button class="carousel-nav carousel-next" aria-label="Next slide">
+              <button class="carousel-nav carousel-next" aria-label="Next slide" data-i18n-attr="aria-label:carouselNext">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M9 18l6-6-6-6"/>
                 </svg>
               </button>
             </div>
             <div class="carousel-indicators">
-              <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
-              <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
-              <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
-              <button class="indicator" data-slide="3" aria-label="Go to slide 4"></button>
-              <button class="indicator" data-slide="4" aria-label="Go to slide 5"></button>
+              <button class="indicator active" data-slide="0" aria-label="Go to slide 1" data-i18n-attr="aria-label:carouselGo1"></button>
+              <button class="indicator" data-slide="1" aria-label="Go to slide 2" data-i18n-attr="aria-label:carouselGo2"></button>
+              <button class="indicator" data-slide="2" aria-label="Go to slide 3" data-i18n-attr="aria-label:carouselGo3"></button>
+              <button class="indicator" data-slide="3" aria-label="Go to slide 4" data-i18n-attr="aria-label:carouselGo4"></button>
+              <button class="indicator" data-slide="4" aria-label="Go to slide 5" data-i18n-attr="aria-label:carouselGo5"></button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="footer-section">
+    <footer class="footer-section">
       <div class="footer-content">
         <span class="footer-brand">Clock Max</span>
         <span class="footer-divider">|</span>
-        <span class="footer-copy">Made with by MeTenk</span>
+        <span class="footer-copy" data-i18n="footerMadeWith">Made with by MeTenk</span>
         <span class="footer-divider">|</span>
-        <a href="./clock-privacy-policy.html" class="footer-link">Privacy Policy</a>
+        <a href="./clock-privacy-policy.html" class="footer-link" data-i18n="footerPrivacy">Privacy Policy</a>
       </div>
-    </div>
+      <div class="i18n-lang-row" data-i18n-slot></div>
+    </footer>
   </div>
 
   <script src="clockmax-wel.js"></script>
+  <script defer src="assets/locales/clockmax.js"></script>
+  <script defer src="assets/i18n.js"></script>
 </body>
 </html>

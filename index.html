@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to MeTenk - Focus & Productivity</title>
-  <meta name="description" content="MeTenk is a free focus and productivity browser extension with a Pomodoro timer, to-do list, and reminders for Chrome, Edge, and Firefox. Local-first and private by design.">
+  <meta name="description" content="MeTenk is a free focus and productivity browser extension with a Pomodoro timer, to-do list, and reminders for Chrome, Edge, and Firefox. Local-first and private by design." data-i18n-attr="content:metaDescription">
   <link rel="canonical" href="https://metenk.com/">
+  <link rel="alternate" hreflang="en" href="https://metenk.com/">
+  <link rel="alternate" hreflang="zh-CN" href="https://metenk.com/">
+  <link rel="alternate" hreflang="x-default" href="https://metenk.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MeTenk">
   <meta property="og:title" content="MeTenk — Focus, Todo List & Pomodoro Timer">
@@ -1977,6 +1980,7 @@ var _hmt = _hmt || [];
       transform: translateY(0);
     }
   </style>
+  <link rel="stylesheet" href="assets/i18n.css">
 </head>
 <body>
   <main>
@@ -1996,25 +2000,25 @@ var _hmt = _hmt || [];
         </a>
       </div>
       <h1 class="hero-title">MeTenk</h1>
-      <p class="hero-subtitle">Focus, Todo list, Timer, Productivity</p>
+      <p class="hero-subtitle" data-i18n="heroSubtitle">Focus, Todo list, Timer, Productivity</p>
       <div class="hero-cta">
         <div class="browser-buttons">
           <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
              target="_blank" 
              class="browser-btn chrome" 
-             data-tooltip="Install for Chrome">
+             data-tooltip="Install for Chrome" data-i18n-attr="data-tooltip:tooltipChrome">
             <img src="resource/chromeicon.png" alt="Chrome">
           </a>
           <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
              target="_blank" 
              class="browser-btn edge" 
-             data-tooltip="Install for Edge">
+             data-tooltip="Install for Edge" data-i18n-attr="data-tooltip:tooltipEdge">
             <img src="resource/edge_browser_logo_icon_152998.png" alt="Edge">
           </a>
           <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
              target="_blank"
              class="browser-btn firefox" 
-             data-tooltip="Download for Firefox">
+             data-tooltip="Download for Firefox" data-i18n-attr="data-tooltip:tooltipFirefox">
             <img src="resource/firefox_browser_logo_icon_152991.png" alt="Firefox">
           </a>
         </div>
@@ -2026,39 +2030,39 @@ var _hmt = _hmt || [];
   <section class="features">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">Powerful Yet Simple</h2>
-        <p class="section-subtitle">Everything you need to stay focused and productive, nothing you don't.</p>
+        <h2 class="section-title" data-i18n="sectionTitle">Powerful Yet Simple</h2>
+        <p class="section-subtitle" data-i18n="sectionSubtitle">Everything you need to stay focused and productive, nothing you don't.</p>
       </div>
       <div class="features-grid">
         <div class="feature-card fade-in">
           <span class="feature-icon">⏱️</span>
-          <h3 class="feature-title">Smart Timer</h3>
-          <p class="feature-desc">Customizable Pomodoro sessions with elegant circular progress. Choose from presets or create your own rhythm.</p>
+          <h3 class="feature-title" data-i18n="feature1Title">Smart Timer</h3>
+          <p class="feature-desc" data-i18n="feature1Desc">Customizable Pomodoro sessions with elegant circular progress. Choose from presets or create your own rhythm.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">📝</span>
-          <h3 class="feature-title">Task Management</h3>
-          <p class="feature-desc">Integrated TodoList with drag & drop, completion tracking, and seamless workflow integration.</p>
+          <h3 class="feature-title" data-i18n="feature2Title">Task Management</h3>
+          <p class="feature-desc" data-i18n="feature2Desc">Integrated TodoList with drag & drop, completion tracking, and seamless workflow integration.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">📊</span>
-          <h3 class="feature-title">Progress Insights</h3>
-          <p class="feature-desc">Beautiful charts and statistics to track your productivity patterns and celebrate achievements.</p>
+          <h3 class="feature-title" data-i18n="feature3Title">Progress Insights</h3>
+          <p class="feature-desc" data-i18n="feature3Desc">Beautiful charts and statistics to track your productivity patterns and celebrate achievements.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">🎨</span>
-          <h3 class="feature-title">Elegant Themes</h3>
-          <p class="feature-desc">Multiple beautiful themes to match your style. From classic blue to elegant silver.</p>
+          <h3 class="feature-title" data-i18n="feature4Title">Elegant Themes</h3>
+          <p class="feature-desc" data-i18n="feature4Desc">Multiple beautiful themes to match your style. From classic blue to elegant silver.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">🌟</span>
-          <h3 class="feature-title">Stay Motivated</h3>
-          <p class="feature-desc">Inspiring quotes and gentle reminders to keep you motivated throughout your journey.</p>
+          <h3 class="feature-title" data-i18n="feature5Title">Stay Motivated</h3>
+          <p class="feature-desc" data-i18n="feature5Desc">Inspiring quotes and gentle reminders to keep you motivated throughout your journey.</p>
         </div>
         <div class="feature-card fade-in">
           <span class="feature-icon">🌐</span>
-          <h3 class="feature-title">Global Ready</h3>
-          <p class="feature-desc">Multi-language support including English, Chinese, Spanish, Arabic, and more.</p>
+          <h3 class="feature-title" data-i18n="feature6Title">Global Ready</h3>
+          <p class="feature-desc" data-i18n="feature6Desc">Multi-language support including English, Chinese, Spanish, Arabic, and more.</p>
         </div>
       </div>
       
@@ -2068,8 +2072,8 @@ var _hmt = _hmt || [];
           <button class="carousel-btn carousel-prev" id="carouselPrev">❮</button>
           <button class="carousel-btn carousel-next" id="carouselNext">❯</button>
           <div class="carousel-images">
-            <img src="resource/focus-reminder-popup-pur.webp" alt="Focus Reminder Purple" class="showcase-image active">
-            <img src="resource/focus-reminder-popup-red.webp" alt="Focus Reminder Red" class="showcase-image">
+            <img src="resource/focus-reminder-popup-pur.webp" alt="Focus Reminder Purple" class="showcase-image active" data-i18n-attr="alt:altFocusReminderPurple">
+            <img src="resource/focus-reminder-popup-red.webp" alt="Focus Reminder Red" class="showcase-image" data-i18n-attr="alt:altFocusReminderRed">
           </div>
           <div class="carousel-indicators" id="carouselIndicators"></div>
         </div>
@@ -2090,33 +2094,34 @@ var _hmt = _hmt || [];
             <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
                target="_blank" 
                class="browser-btn chrome" 
-               data-tooltip="Install for Chrome">
+               data-tooltip="Install for Chrome" data-i18n-attr="data-tooltip:tooltipChrome">
               <img src="resource/chromeicon.png" alt="Chrome">
             </a>
             <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
                target="_blank" 
                class="browser-btn edge" 
-               data-tooltip="Install for Edge">
+               data-tooltip="Install for Edge" data-i18n-attr="data-tooltip:tooltipEdge">
               <img src="resource/edge_browser_logo_icon_152998.png" alt="Edge">
             </a>
             <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
                target="_blank"
                class="browser-btn firefox" 
-               data-tooltip="Download for Firefox">
+               data-tooltip="Download for Firefox" data-i18n-attr="data-tooltip:tooltipFirefox">
               <img src="resource/firefox_browser_logo_icon_152991.png" alt="Firefox">
             </a>
           </div>
         </div>
         <div class="footer-links">
-          <a href="https://metenk.com/vip-redeem-code" class="footer-link vip-link" target="_blank" rel="noopener noreferrer">VIP Redeem Code</a>
-          <a href="clockmax.html" class="footer-link" target="_blank" rel="noopener noreferrer">Clock Max</a>
-          <a href="https://metenk.com/privacy-policy.html" class="footer-link" target="_blank">Privacy Policy</a>
-          <a href="about.html" class="footer-link" id="footerAboutLink">About</a>
-          <a href="sponsor.html" class="footer-link" id="footerCoffeeLink">Coffee</a>
+          <a href="https://metenk.com/vip-redeem-code" class="footer-link vip-link" target="_blank" rel="noopener noreferrer" data-i18n="linkVip">VIP Redeem Code</a>
+          <a href="clockmax.html" class="footer-link" target="_blank" rel="noopener noreferrer" data-i18n="linkClockMax">Clock Max</a>
+          <a href="https://metenk.com/privacy-policy.html" class="footer-link" target="_blank" data-i18n="linkPrivacy">Privacy Policy</a>
+          <a href="about.html" class="footer-link" id="footerAboutLink" data-i18n="linkAbout">About</a>
+          <a href="sponsor.html" class="footer-link" id="footerCoffeeLink" data-i18n="linkCoffee">Coffee</a>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright" data-i18n="copyright">
           © 2025 Metenk. Crafted with focus and dedication.
         </div>
+        <div class="i18n-lang-row" data-i18n-slot></div>
       </div>
     </div>
   </footer>
@@ -2168,5 +2173,7 @@ var _hmt = _hmt || [];
     })();
   </script>
   <script src="welcome.js"></script>
+  <script defer src="assets/locales/index.js"></script>
+  <script defer src="assets/i18n.js"></script>
 </body>
 </html>

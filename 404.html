@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found - MeTenk</title>
     <meta name="robots" content="noindex, follow">
+    <meta name="description" content="The page you are looking for does not exist or has been moved. Go back to MeTenk home to continue focusing." data-i18n-attr="content:metaDescription">
     <link rel="icon" type="image/png" href="./favicon.png">
     <style>
         * {
@@ -18,8 +19,10 @@
             color: #ffffff;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 28px;
             line-height: 1.6;
             padding: 20px;
         }
@@ -82,18 +85,23 @@
             background: rgba(255, 255, 255, 0.06);
         }
     </style>
+    <link rel="stylesheet" href="assets/i18n.css">
 </head>
 <body>
     <main class="container">
         <div class="code">404</div>
-        <h1>Page Not Found</h1>
-        <p>The page you are looking for doesn't exist or has been moved.</p>
-        <p class="redirect-note" id="redirect-note"></p>
+        <h1 data-i18n="pageTitle">Page Not Found</h1>
+        <p data-i18n="notFoundBody">The page you are looking for doesn't exist or has been moved.</p>
+        <p class="redirect-note" id="redirect-note">Redirecting to the requested page ...</p>
         <div class="links">
-            <a href="/" class="btn btn-primary">Back to Home</a>
-            <a href="/vip-redeem-code.html" class="btn btn-ghost">VIP Redeem Code</a>
+            <a href="/" class="btn btn-primary" data-i18n="backHome">Back to Home</a>
+            <a href="/vip-redeem-code.html" class="btn btn-ghost" data-i18n="vipRedeem">VIP Redeem Code</a>
         </div>
     </main>
+
+    <footer class="i18n-footer">
+        <span data-i18n-slot></span>
+    </footer>
 
     <script>
         // Clean-URL redirect: /vip-redeem-code -> /vip-redeem-code.html
@@ -102,13 +110,43 @@
                 'vip-redeem-code', 'about', 'sponsor', 'privacy-policy',
                 'clockmax', 'clock-privacy-policy', 'pickcolor-privacy-policy'
             ];
-            var segment = location.pathname.split('/').filter(Boolean).pop() || '';
-            if (!segment || segment.indexOf('.') !== -1) return;
-            if (pages.indexOf(segment) === -1) return;
             var note = document.getElementById('redirect-note');
-            note.textContent = 'Redirecting to /' + segment + '.html ...';
-            location.replace('/' + segment + '.html');
+            var segment = location.pathname.split('/').filter(Boolean).pop() || '';
+
+            if (!segment || segment.indexOf('.') !== -1 || pages.indexOf(segment) === -1) {
+                // Not a clean-URL redirect target: clear the placeholder note.
+                if (note) note.textContent = '';
+                return;
+            }
+
+            var FALLBACK = 'Redirecting to /{page}.html ...';
+
+            function renderNote() {
+                if (!note) return;
+                var tpl = (window.MetiI18n && window.MetiI18n.t)
+                    ? window.MetiI18n.t('redirectNote', FALLBACK)
+                    : FALLBACK;
+                note.textContent = String(tpl).replace('{page}', segment);
+            }
+
+            function redirect() {
+                renderNote();
+                location.replace('/' + segment + '.html');
+            }
+
+            // The i18n runtime boots on DOMContentLoaded; defer one tick so the
+            // note is already localized before the browser navigates away.
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function () {
+                    setTimeout(redirect, 0);
+                });
+            } else {
+                setTimeout(redirect, 0);
+            }
         })();
     </script>
+
+    <script defer src="assets/locales/404.js"></script>
+    <script defer src="assets/i18n.js"></script>
 </body>
 </html>

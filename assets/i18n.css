@@ -1,0 +1,151 @@
+/*!
+ * MeTenk i18n Switcher Styles
+ * ---------------------------------------------------------------------------
+ * Inline language control rendered at the very bottom of the page footer.
+ *
+ * Design notes: deliberately understated. The control is a flat row of text
+ * links separated by a thin middot (English · 中文). No floating widget, no
+ * globe badge — it reads as a footer utility and never competes with the
+ * page content. The active language is marked by colour + weight.
+ *
+ * 4px radii (small, per house style), keyboard accessible, print-safe.
+ */
+
+/* ---------- Language font stack ----------
+ * Latin system fonts stay FIRST so Latin glyphs keep their original look;
+ * CJK fonts follow, and the browser falls through to them per-character.
+ */
+html[lang^="zh"] body,
+html[lang^="zh"] button,
+html[lang^="zh"] input,
+html[lang^="zh"] textarea,
+html[lang^="zh"] select,
+html[lang^="zh"] .i18n-switcher {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB',
+               'Microsoft YaHei', '微软雅黑', 'Source Han Sans SC', 'Noto Sans CJK SC',
+               'WenQuanYi Micro Hei', 'Heiti SC', sans-serif;
+}
+
+/* ---------- Theme palette ----------
+ * Variables live on <html> so both the switcher and the footer shell that
+ * hosts it resolve the same colours.
+ */
+html[data-i18n-theme="light"] {
+  --metenk-i18n-fg: #64748b;
+  --metenk-i18n-accent: #2563eb;
+  --metenk-i18n-sep: rgba(100, 116, 139, 0.45);
+}
+
+html[data-i18n-theme="dark"],
+html[data-i18n-theme="night"] {
+  --metenk-i18n-fg: #8b93a1;
+  --metenk-i18n-accent: #60a5fa;
+  --metenk-i18n-sep: rgba(139, 147, 161, 0.45);
+}
+
+/* ---------- Footer shell ----------
+ * Used by pages that have no footer of their own: the runtime creates this
+ * element so the language control always has a home.
+ *
+ * `margin-top: auto` pins it to the bottom of a flex-column body.
+ */
+.i18n-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px 28px;
+  font-size: 12.5px;
+  line-height: 1;
+  color: var(--metenk-i18n-fg, #8b93a1);
+}
+
+.i18n-footer-sep {
+  color: var(--metenk-i18n-sep, rgba(139, 147, 161, 0.45));
+}
+
+/* Row used when the control is appended to a page's own <footer>. */
+.i18n-lang-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 12.5px;
+  line-height: 1;
+}
+
+/* ---------- Inline language control ---------- */
+.i18n-switcher {
+  display: inline-flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12.5px;
+  line-height: 1;
+}
+
+.i18n-option {
+  padding: 4px 2px;
+  border: none;
+  background: transparent;
+  color: var(--metenk-i18n-fg, #8b93a1);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: color 0.16s ease;
+  /* Keep a comfortable touch target without inflating the visual weight. */
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.i18n-option + .i18n-option::before {
+  content: '·';
+  margin: 0 9px;
+  color: var(--metenk-i18n-sep, rgba(139, 147, 161, 0.45));
+  pointer-events: none;
+}
+
+.i18n-option:hover {
+  color: var(--metenk-i18n-accent, #60a5fa);
+}
+
+.i18n-option:focus-visible {
+  outline: 2px solid var(--metenk-i18n-accent, #60a5fa);
+  outline-offset: 2px;
+}
+
+.i18n-option.is-active {
+  color: var(--metenk-i18n-accent, #60a5fa);
+  font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .i18n-footer {
+    padding: 18px 16px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .i18n-option {
+    transition: none !important;
+  }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .i18n-switcher,
+  .i18n-footer {
+    display: none !important;
+  }
+}

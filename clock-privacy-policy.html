@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Clock Max | MeTenk</title>
     <link rel="icon" type="image/png" href="./favicon.png">
-    <meta name="description" content="Clock Max privacy policy: how the app collects, uses, stores, and protects your data. Data stays local on your device.">
+    <meta name="description" content="Clock Max privacy policy: how the app collects, uses, stores, and protects your data. Data stays local on your device." data-i18n-attr="content:metaDescription">
     <link rel="canonical" href="https://metenk.com/clock-privacy-policy.html">
+    <link rel="alternate" hreflang="en" href="https://metenk.com/clock-privacy-policy.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://metenk.com/clock-privacy-policy.html">
+    <link rel="alternate" hreflang="x-default" href="https://metenk.com/clock-privacy-policy.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="MeTenk">
     <meta property="og:title" content="Privacy Policy - Clock Max | MeTenk">
@@ -32,10 +35,14 @@
             color: #333;
             background: #f5f5f5;
             padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
             max-width: 800px;
+            width: 100%;
             margin: 0 auto;
             background: #fff;
             padding: 40px;
@@ -113,74 +120,82 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="assets/i18n.css">
 </head>
 <body>
     <main class="container">
-        <h1>Privacy Policy for Clock Max</h1>
-        <p class="last-updated">Last Updated: February 9, 2026</p>
-        
-        <h2>Introduction</h2>
-        <p>Clock Max ("we", "our", or "the extension") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our Chrome extension.</p>
-        
-        <h2>Information We Collect</h2>
-        <p>Clock Max does <strong>NOT</strong> collect, store, or transmit any personal information to external servers.</p>
-        <p>All data is stored locally on your device using Chrome's built-in storage API (<code>chrome.storage.local</code>).</p>
-        
-        <h2>Data Stored Locally</h2>
-        <p>The following data is stored locally on your device to provide the extension's functionality:</p>
+        <h1 data-i18n="pageTitle">Privacy Policy for Clock Max</h1>
+        <p class="last-updated" data-i18n="lastUpdated">Last Updated: February 9, 2026</p>
+
+        <h2 data-i18n="introTitle">Introduction</h2>
+        <p data-i18n="introBody">Clock Max ("we", "our", or "the extension") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our Chrome extension.</p>
+
+        <h2 data-i18n="collectTitle">Information We Collect</h2>
+        <p data-i18n-html="collectBodyHtml">Clock Max does <strong>NOT</strong> collect, store, or transmit any personal information to external servers.</p>
+        <p data-i18n-html="storageApiBodyHtml">All data is stored locally on your device using Chrome's built-in storage API (<code>chrome.storage.local</code>).</p>
+
+        <h2 data-i18n="localDataTitle">Data Stored Locally</h2>
+        <p data-i18n="localDataIntro">The following data is stored locally on your device to provide the extension's functionality:</p>
         <ul>
-            <li><strong>Alarm settings</strong> - Your configured alarms, times, labels, and ringtones</li>
-            <li><strong>World clock preferences</strong> - Selected time zones and display preferences</li>
-            <li><strong>Stopwatch records</strong> - Lap times and session data</li>
-            <li><strong>Timer configurations</strong> - Timer settings, presets, and labels</li>
-            <li><strong>Todo list items</strong> - Your tasks and completion status</li>
-            <li><strong>User preferences</strong> - Language, theme, sound volume, notification settings</li>
-            <li><strong>Statistics data</strong> - Usage statistics for your personal productivity tracking</li>
+            <li data-i18n-html="dataAlarmHtml"><strong>Alarm settings</strong> - Your configured alarms, times, labels, and ringtones</li>
+            <li data-i18n-html="dataWorldHtml"><strong>World clock preferences</strong> - Selected time zones and display preferences</li>
+            <li data-i18n-html="dataStopwatchHtml"><strong>Stopwatch records</strong> - Lap times and session data</li>
+            <li data-i18n-html="dataTimerHtml"><strong>Timer configurations</strong> - Timer settings, presets, and labels</li>
+            <li data-i18n-html="dataTodoHtml"><strong>Todo list items</strong> - Your tasks and completion status</li>
+            <li data-i18n-html="dataPrefsHtml"><strong>User preferences</strong> - Language, theme, sound volume, notification settings</li>
+            <li data-i18n-html="dataStatsHtml"><strong>Statistics data</strong> - Usage statistics for your personal productivity tracking</li>
         </ul>
-        
-        <h2>How We Use Your Data</h2>
-        <p>All stored data is used solely to:</p>
+
+        <h2 data-i18n="useTitle">How We Use Your Data</h2>
+        <p data-i18n="useIntro">All stored data is used solely to:</p>
         <ul>
-            <li>Provide core extension functionality (alarms, timers, todo list, etc.)</li>
-            <li>Remember your preferences across browser sessions</li>
-            <li>Display your personal statistics</li>
+            <li data-i18n="use1">Provide core extension functionality (alarms, timers, todo list, etc.)</li>
+            <li data-i18n="use2">Remember your preferences across browser sessions</li>
+            <li data-i18n="use3">Display your personal statistics</li>
         </ul>
-        
-        <h2>Data Sharing</h2>
-        <p>We do <strong>NOT</strong> share, sell, or transmit any data to third parties. All data remains on your local device.</p>
-        
-        <h2>Third-Party Services</h2>
-        <p>Clock Max does not integrate with any third-party analytics, advertising, or tracking services.</p>
-        
-        <h2>Permissions Used</h2>
-        <p>The extension requests the following permissions for functional purposes only:</p>
+
+        <h2 data-i18n="sharingTitle">Data Sharing</h2>
+        <p data-i18n-html="sharingBodyHtml">We do <strong>NOT</strong> share, sell, or transmit any data to third parties. All data remains on your local device.</p>
+
+        <h2 data-i18n="thirdPartyTitle">Third-Party Services</h2>
+        <p data-i18n="thirdPartyBody">Clock Max does not integrate with any third-party analytics, advertising, or tracking services.</p>
+
+        <h2 data-i18n="permsTitle">Permissions Used</h2>
+        <p data-i18n="permsIntro">The extension requests the following permissions for functional purposes only:</p>
         <ul>
-            <li><code>alarms</code> - Required to schedule and trigger alarms and timers</li>
-            <li><code>notifications</code> - Required to display alarm and timer notifications</li>
-            <li><code>storage</code> - Required to save your settings and data locally</li>
-            <li><code>offscreen</code> - Required to play audio notifications (Manifest V3 limitation)</li>
-            <li><code>windows</code> - Required to open notification windows for alarms</li>
+            <li data-i18n-html="permAlarmsHtml"><code>alarms</code> - Required to schedule and trigger alarms and timers</li>
+            <li data-i18n-html="permNotificationsHtml"><code>notifications</code> - Required to display alarm and timer notifications</li>
+            <li data-i18n-html="permStorageHtml"><code>storage</code> - Required to save your settings and data locally</li>
+            <li data-i18n-html="permOffscreenHtml"><code>offscreen</code> - Required to play audio notifications (Manifest V3 limitation)</li>
+            <li data-i18n-html="permWindowsHtml"><code>windows</code> - Required to open notification windows for alarms</li>
         </ul>
-        
-        <h2>Data Security</h2>
-        <p>Since all data is stored locally on your device, data security is maintained by your browser's built-in security mechanisms. We do not have access to your data.</p>
-        
-        <h2>Your Rights</h2>
-        <p>You have full control over your data:</p>
+
+        <h2 data-i18n="securityTitle">Data Security</h2>
+        <p data-i18n="securityBody">Since all data is stored locally on your device, data security is maintained by your browser's built-in security mechanisms. We do not have access to your data.</p>
+
+        <h2 data-i18n="rightsTitle">Your Rights</h2>
+        <p data-i18n="rightsIntro">You have full control over your data:</p>
         <ul>
-            <li>You can clear all data by uninstalling the extension</li>
-            <li>You can export your data using the built-in export feature</li>
-            <li>You can modify or delete individual items within the extension</li>
+            <li data-i18n="rights1">You can clear all data by uninstalling the extension</li>
+            <li data-i18n="rights2">You can export your data using the built-in export feature</li>
+            <li data-i18n="rights3">You can modify or delete individual items within the extension</li>
         </ul>
-        
-        <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date above.</p>
-        
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+
+        <h2 data-i18n="changesTitle">Changes to This Policy</h2>
+        <p data-i18n="changesBody">We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date above.</p>
+
+        <h2 data-i18n="contactTitle">Contact Us</h2>
+        <p data-i18n="contactIntro">If you have any questions about this Privacy Policy, please contact us at:</p>
         <ul>
-            <li>Email: <a href="mailto:colintenk@gmail.com">colintenk@gmail.com</a></li>
+            <li data-i18n-html="contactEmail">Email: <a href="mailto:colintenk@gmail.com">colintenk@gmail.com</a></li>
         </ul>
     </main>
+
+    <footer class="i18n-footer">
+        <span data-i18n-slot></span>
+    </footer>
+
+    <script defer src="assets/locales/clock-privacy-policy.js"></script>
+    <script defer src="assets/i18n.js"></script>
 </body>
 </html>

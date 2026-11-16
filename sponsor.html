@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Us - MeTenk</title>
     <link rel="icon" type="image/png" href="./favicon.png">
-    <meta name="description" content="Support the development of MeTenk, a free focus and productivity browser extension. Your sponsorship helps us build better tools for everyone.">
+    <meta name="description" content="Support the development of MeTenk, a free focus and productivity browser extension. Your sponsorship helps us build better tools for everyone." data-i18n-attr="content:metaDescription">
     <link rel="canonical" href="https://metenk.com/sponsor.html">
+    <link rel="alternate" hreflang="en" href="https://metenk.com/sponsor.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://metenk.com/sponsor.html">
+    <link rel="alternate" hreflang="x-default" href="https://metenk.com/sponsor.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="MeTenk">
     <meta property="og:title" content="Support Us - MeTenk">
@@ -31,6 +34,8 @@
             background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
             color: #ffffff;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
             line-height: 1.6;
         }
 
@@ -379,24 +384,25 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="assets/i18n.css">
 </head>
 <body>
-    <a href="index.html" class="back-link">
+    <a href="index.html" class="back-link" data-i18n-html="backLink">
         ← Back to Home
     </a>
 
     <main class="container">
         <header class="header">
             <div class="logo">
-                <img src="resource/icon128.png" alt="MeTenk Logo">
+                <img src="resource/icon128.png" alt="MeTenk Logo" data-i18n-attr="alt:logoAlt">
             </div>
-            <h1 class="title">Support MeTenk</h1>
+            <h1 class="title" data-i18n="pageTitle">Support MeTenk</h1>
         </header>
 
         <div class="content">
             <div class="coffee-section">
                 <span class="coffee-icon">☕</span>
-                <h2 class="coffee-title">Buy me a coffee</h2>
+                <h2 class="coffee-title" data-i18n="coffeeTitle">Buy me a coffee</h2>
             </div>
 
             <div class="payment-methods">
@@ -405,23 +411,23 @@
                     <div class="qr-codes">
                         <div class="qr-item">
                             <div class="qr-image">
-                                <img src="resource/sponsorscan/wechat-scan.webp" alt="WeChat Pay QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <img src="resource/sponsorscan/wechat-scan.webp" alt="WeChat Pay QR Code" data-i18n-attr="alt:wechatQrAlt" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                 <div class="qr-placeholder" style="display: none;">
                                     <span>💰</span>
-                                    <p>WeChat Pay<br>QR Code</p>
+                                    <p data-i18n-html="wechatQrPlaceholder">WeChat Pay<br>QR Code</p>
                                 </div>
                             </div>
-                            <p class="qr-label">WeChat Pay</p>
+                            <p class="qr-label" data-i18n="wechatLabel">WeChat Pay</p>
                         </div>
                         <div class="qr-item">
                             <div class="qr-image">
-                                <img src="resource/sponsorscan/alipay-scan.webp" alt="Alipay QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <img src="resource/sponsorscan/alipay-scan.webp" alt="Alipay QR Code" data-i18n-attr="alt:alipayQrAlt" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                 <div class="qr-placeholder" style="display: none;">
                                     <span>💳</span>
-                                    <p>Alipay<br>QR Code</p>
+                                    <p data-i18n-html="alipayQrPlaceholder">Alipay<br>QR Code</p>
                                 </div>
                             </div>
-                            <p class="qr-label">Alipay</p>
+                            <p class="qr-label" data-i18n="alipayLabel">Alipay</p>
                         </div>
                     </div>
                 </div>
@@ -429,7 +435,7 @@
                 <!-- Online Payment Buttons -->
                 <div class="online-payments">
                     <div class="payment-buttons">
-                        <a href="https://buy.stripe.com/cNi4gr5gs2tIaDz3QY5c400" target="_blank" class="payment-btn stripe">
+                        <a href="https://buy.stripe.com/cNi4gr5gs2tIaDz3QY5c400" target="_blank" class="payment-btn stripe" data-i18n="stripeLabel">
                             💳 Stripe
                         </a>
                     </div>
@@ -437,7 +443,7 @@
             </div>
 
             <div class="thank-you">
-                <p class="thank-you-text">
+                <p class="thank-you-text" data-i18n-html="thankYouText">
                     Your support means the world to us! It helps us dedicate more time to improving MeTenk and adding new features that enhance your productivity journey. Thank you for being part of our community! 🙏<br><br>
                     Contact: colintenk@gmail.com
                 </p>
@@ -445,8 +451,17 @@
         </div>
     </main>
 
+    <footer class="i18n-footer">
+        <span>&copy; 2025 Metenk</span>
+        <span class="i18n-footer-sep" aria-hidden="true">&middot;</span>
+        <span data-i18n-slot></span>
+    </footer>
+
     <script>
         // Simple page functionality - no amount selection needed
     </script>
+
+    <script defer src="assets/locales/sponsor.js"></script>
+    <script defer src="assets/i18n.js"></script>
 </body>
 </html>
