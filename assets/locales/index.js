@@ -11,6 +11,7 @@ window.METENK_I18N = {
 
     heroTagline: 'The Ultimate Task Timer',
     heroSubtitle: 'Focus · To-Do · Timer · Productivity',
+    ctaNote: 'Free · No account · Data stays on your device',
 
     tooltipChrome: 'Install for Chrome',
     tooltipEdge: 'Install for Edge',
@@ -32,6 +33,18 @@ window.METENK_I18N = {
     feature6Title: 'Themes & Multi-language',
     feature6Desc: 'Switch between classic blue, silver, and dark themes. Use the extension in English, Chinese, Spanish, Arabic, and more — it follows your browser language automatically.',
 
+    faqTitle: 'Frequently Asked Questions',
+    faq1Q: 'Is MeTenk free to use?',
+    faq1A: 'Yes. The core extension is free to install from the Chrome Web Store, Microsoft Edge Add-ons, and Firefox Add-ons. An optional VIP redeem code unlocks extra features.',
+    faq2Q: 'Where is my data stored?',
+    faq2A: "On your own device. Tasks, focus sessions, and settings are saved in your browser's local storage, with no account and no cloud sync. You can export a backup or import your data at any time.",
+    faq3Q: 'Which browsers are supported?',
+    faq3A: 'MeTenk runs on Chrome, Microsoft Edge, and Firefox, including their Chromium-based derivatives.',
+    faq4Q: 'Can I customize the Pomodoro length?',
+    faq4A: 'Yes. Use the classic 25/5 preset or set your own focus and break durations.',
+    faq5Q: 'Does MeTenk work offline?',
+    faq5A: 'Yes. The timer, to-do list, and statistics work without an internet connection; only installing and updating the extension needs the web.',
+
     altFocusReminderPurple: 'Focus Reminder Purple',
     altFocusReminderRed: 'Focus Reminder Red',
 
@@ -50,6 +63,7 @@ window.METENK_I18N = {
 
     heroTagline: '任务计时神器',
     heroSubtitle: '专注 · 待办 · 计时 · 效率',
+    ctaNote: '免费 · 无需注册 · 数据留在本地',
 
     tooltipChrome: '安装到 Chrome',
     tooltipEdge: '安装到 Edge',
@@ -70,6 +84,18 @@ window.METENK_I18N = {
     feature5Desc: '温和的休息提醒与励志语录，帮你维持可持续的节奏，让深度工作不等于透支。',
     feature6Title: '主题与多语言',
     feature6Desc: '经典蓝、优雅银、深色主题自由切换；支持英语、中文、西班牙语、阿拉伯语等语言，界面自动跟随浏览器设置。',
+
+    faqTitle: '常见问题',
+    faq1Q: 'MeTenk 免费吗？',
+    faq1A: '是的。核心扩展可在 Chrome 应用商店、Microsoft Edge 加载项和 Firefox 附加组件中免费安装；可选的 VIP 兑换码可解锁更多功能。',
+    faq2Q: '我的数据存储在哪里？',
+    faq2A: '数据保存在您自己的设备上。任务、专注记录和设置都存储在浏览器本地，无需账号，也不做云端同步；同时支持随时导出备份与导入恢复。',
+    faq3Q: '支持哪些浏览器？',
+    faq3A: '支持 Chrome、Microsoft Edge 和 Firefox，以及它们基于 Chromium 的衍生浏览器。',
+    faq4Q: '可以自定义番茄钟时长吗？',
+    faq4A: '可以。既能使用经典的 25/5 预设，也能自由设置专注与休息时长。',
+    faq5Q: '离线能用吗？',
+    faq5A: '可以。计时器、待办清单和统计在断网时照常工作，只有安装和更新扩展需要联网。',
 
     altFocusReminderPurple: '专注提醒 - 紫色主题',
     altFocusReminderRed: '专注提醒 - 红色主题',

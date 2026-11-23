@@ -54,13 +54,16 @@ window.METENK_I18N = {
     security3: 'Regular updates to security protocols and protective measures',
     security4: 'Strict limitation of data access permissions',
 
-    updateTitle: '5. Policy Updates',
+    analyticsTitle: '5. Website Analytics',
+    analyticsBody: 'This website uses Google Analytics and Baidu Analytics to measure aggregate traffic, such as page views, referrers, and country-level location. These tools may set cookies in your browser. They never receive your tasks, focus records, or any other data created inside the extension, which stays on your own device.',
+
+    updateTitle: '6. Policy Updates',
     updateBody: 'We may update this privacy policy from time to time. Significant changes will be communicated to users through in-extension notifications or other appropriate means. Continued use of our service indicates your acceptance of the updated policy.',
 
-    contactTitle: '6. Contact Us',
+    contactTitle: '7. Contact Us',
     contactBody: 'If you have any questions or suggestions about this privacy policy, please contact us through the following method:',
 
-    lastUpdated: 'Last updated: November 16, 2026'
+    lastUpdated: 'Last updated: November 23, 2026'
   },
 
   zh: {
@@ -112,12 +115,15 @@ window.METENK_I18N = {
     security3: '定期更新安全协议与防护措施',
     security4: '严格限制数据访问权限',
 
-    updateTitle: '5. 政策更新',
+    analyticsTitle: '5. 网站访问统计',
+    analyticsBody: '本网站使用 Google Analytics 与百度统计来衡量整体访问情况，例如页面浏览量、来源渠道和国家/地区。这些工具可能会在您的浏览器中设置 Cookie。它们不会获取您的任务、专注记录或扩展内产生的任何其他数据——这些数据始终保存在您自己的设备上。',
+
+    updateTitle: '6. 政策更新',
     updateBody: '我们可能会不时更新本隐私政策。重大变更将通过扩展内通知或其他适当方式告知用户。继续使用我们的服务即表示您接受更新后的政策。',
 
-    contactTitle: '6. 联系我们',
+    contactTitle: '7. 联系我们',
     contactBody: '如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：',
 
-    lastUpdated: '最后更新日期：2026 年 11 月 16 日'
+    lastUpdated: '最后更新日期：2026 年 11 月 23 日'
   }
 };

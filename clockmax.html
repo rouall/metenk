@@ -3,233 +3,412 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Clock Max - Master Your Time | MeTenk</title>
+  <title>Clock Max - 提醒神器 | MeTenk</title>
   <link rel="icon" type="image/png" href="./clockmax-icon.png">
-  <meta name="description" content="Clock Max by MeTenk: a precision clock and time-management tool to master your time. Discover features, previews, and downloads." data-i18n-attr="content:metaDescription">
+  <meta name="description" content="Clock Max is a free Chrome extension for reminders, alarms, world clocks, timers, and to-dos. No account, no cloud sync — your data stays on your device." data-i18n-attr="content:metaDescription">
   <link rel="canonical" href="https://metenk.com/clockmax.html">
-  <link rel="alternate" hreflang="en" href="https://metenk.com/clockmax.html">
-  <link rel="alternate" hreflang="zh-CN" href="https://metenk.com/clockmax.html">
-  <link rel="alternate" hreflang="x-default" href="https://metenk.com/clockmax.html">
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MeTenk">
-  <meta property="og:title" content="Clock Max - Master Your Time | MeTenk">
-  <meta property="og:description" content="Clock Max by MeTenk: a precision clock and time-management tool to master your time.">
+  <meta property="og:title" content="Clock Max - 提醒神器 | MeTenk">
+  <meta property="og:description" content="Free Chrome extension for reminders, alarms, world clocks, timers, and to-dos. No account. Data stays on your device.">
   <meta property="og:url" content="https://metenk.com/clockmax.html">
   <meta property="og:image" content="https://metenk.com/resource/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Clock Max - Master Your Time | MeTenk">
-  <meta name="twitter:description" content="Clock Max by MeTenk: a precision clock and time-management tool to master your time.">
+  <meta name="twitter:title" content="Clock Max - 提醒神器 | MeTenk">
+  <meta name="twitter:description" content="Free Chrome extension for reminders, alarms, world clocks, timers, and to-dos. No account. Data stays on your device.">
   <meta name="twitter:image" content="https://metenk.com/resource/og-image.png">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Clock Max",
+    "alternateName": "Clock Max 提醒神器",
     "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Web",
+    "operatingSystem": "Chrome",
+    "browserRequirements": "Chrome 88 or later",
     "url": "https://metenk.com/clockmax.html",
-    "description": "A precision clock and time-management tool by MeTenk.",
-    "publisher": { "@id": "https://metenk.com/#organization" }
+    "downloadUrl": "https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk",
+    "description": "A free Chrome extension that combines smart reminders and alarms, a world clock, precision timers and stopwatch, and a built-in to-do list. All data is stored locally on your device.",
+    "featureList": [
+      "Recurring alarms and reminders (daily, weekly, monthly, yearly)",
+      "World clock with multiple time zones",
+      "Countdown timers and stopwatch",
+      "Built-in to-do list",
+      "Custom alarm sounds and snooze",
+      "Local-first storage with no account required"
+    ],
+    "screenshot": [
+      "https://metenk.com/resource/preview-one.webp",
+      "https://metenk.com/resource/preview-two.webp",
+      "https://metenk.com/resource/preview-three.webp"
+    ],
+    "inLanguage": ["en", "zh-CN"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": { "@id": "https://metenk.com/#organization" },
+    "sameAs": "https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "MeTenk", "item": "https://metenk.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Clock Max", "item": "https://metenk.com/clockmax.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Clock Max free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Clock Max is completely free, with no account, subscription, or in-app purchase required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which browsers does Clock Max support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clock Max is published on the Chrome Web Store and runs in Chrome and other Chromium-based browsers, including Microsoft Edge and Brave."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an account to use Clock Max?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No account is needed. Install the extension and start setting reminders right away."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Clock Max work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Alarms, timers, the world clock, and your to-do list all work offline because everything runs locally in your browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is my data stored?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All alarms, timers, tasks, and settings are stored locally on your device using the browser's storage API. Nothing is uploaded to our servers."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="clockmax-wel.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/i18n.css">
 </head>
 <body>
-  <div class="welcome-container">
-    <div class="hero-section">
-      <div class="hero-bg">
-        <div class="hero-gradient"></div>
-        <div class="hero-glow"></div>
-        <div class="hero-grid"></div>
-      </div>
-      
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          <span data-i18n="badgeReleased">Released</span>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <img src="resource/icon128.png" alt="" width="26" height="26">
+        <span>MeTenk</span>
+        <span class="brand-tag">Clock Max</span>
+      </a>
+      <a class="topbar-link" href="index.html" data-i18n="navBack">← Back to MeTenk</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="eyebrow">Clock Max · Reminder-first time suite</p>
+          <h1 class="hero-title" id="heroTitle" data-i18n-html="heroTitleHtml">
+            <span class="title-line">Clock Max</span>
+            <span class="title-line gradient-text">The Ultimate Reminder</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">Alarms, world clocks, timers, and a to-do list in one Chrome extension — so you never miss what matters.</p>
+          <p class="hero-tagline" data-i18n="heroTagline">Set it once, get reminded on time. No account, no cloud, no noise.</p>
+
+          <div class="hero-cta">
+            <a class="btn-primary" id="startBtn" href="https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk?utm_source=item-share-cb" target="_blank" rel="noopener">
+              <span data-i18n="ctaStart">Add to Chrome</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn-ghost" href="#features">
+              <span data-i18n="ctaLearn">See features</span>
+            </a>
+          </div>
+
+          <p class="trust-row">
+            <span data-i18n="trustFree">Free</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span data-i18n="trustAccount">No account</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span data-i18n="trustLocal">Data stays on your device</span>
+          </p>
         </div>
 
-        <h1 class="hero-title" data-i18n-html="heroTitleHtml">
-          <span class="title-line">Master Your Time</span>
-          <span class="title-line gradient-text">With Clock Max</span>
-        </h1>
+        <div class="app-mock" aria-hidden="true">
+          <div class="mock-header">
+            <div class="mock-dots"><span></span><span></span><span></span></div>
+            <span class="mock-title">Clock Max</span>
+          </div>
+          <div class="mock-body">
+            <div class="clock-wrap">
+              <svg class="clock-svg" viewBox="0 0 200 200" focusable="false">
+                <defs>
+                  <radialGradient id="clockFace" cx="50%" cy="40%" r="70%">
+                    <stop offset="0%" stop-color="#171a21"/>
+                    <stop offset="100%" stop-color="#0c0e12"/>
+                  </radialGradient>
+                </defs>
+                <circle cx="100" cy="100" r="94" fill="url(#clockFace)" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+                <circle cx="100" cy="100" r="84" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="5" stroke-dasharray="2 41.99" stroke-linecap="round"/>
+                <circle cx="100" cy="100" r="76" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="1.5" stroke-dasharray="1 6.96"/>
+                <line id="hand-hour" x1="100" y1="100" x2="100" y2="58" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+                <line id="hand-minute" x1="100" y1="100" x2="100" y2="42" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+                <line id="hand-second" x1="100" y1="108" x2="100" y2="34" stroke="#6b8cff" stroke-width="1.6" stroke-linecap="round"/>
+                <circle cx="100" cy="100" r="5" fill="#6b8cff"/>
+                <circle cx="100" cy="100" r="2" fill="#0c0e12"/>
+              </svg>
+              <div class="digital-time" id="digitalTime">00:00:00</div>
+            </div>
 
-        <p class="hero-subtitle" data-i18n="heroSubtitle">The ultimate time management suite designed for professionals who value every second.</p>
-        <p class="hero-tagline" data-i18n="heroTagline">Bring your phone's alarm and time tools to your browser — all in one elegant extension.</p>
-        
-        <div class="hero-cta">
-          <button class="cta-primary" id="startBtn">
-            <span data-i18n="ctaStart">Get Started Free</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </button>
-          <div class="cta-meta">
-            <span class="meta-item">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-              <span data-i18n="metaRating">4.9 Rating</span>
+            <div class="widget timer-panel">
+              <div class="widget-head">
+                <span class="widget-label" data-i18n="mockTimers">Multi-timer</span>
+                <span class="widget-badge">2</span>
+              </div>
+              <div class="timer-chips">
+                <div class="timer-chip">
+                  <span class="timer-time">25:00</span>
+                  <span class="timer-name" data-i18n="mockTimerFocus">Focus</span>
+                </div>
+                <div class="timer-chip">
+                  <span class="timer-time">05:00</span>
+                  <span class="timer-name" data-i18n="mockTimerBreak">Break</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mock-rows">
+              <div class="mock-row">
+                <span class="mock-row-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M5 3L2.5 5.5"/><path d="M22 5.5L19.5 3"/></svg>
+                </span>
+                <span class="mock-row-label" data-i18n="mockAlarmLabel">Alarm</span>
+                <span class="mock-row-value">07:00</span>
+              </div>
+              <div class="mock-row">
+                <span class="mock-row-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg>
+                </span>
+                <span class="mock-row-label" data-i18n="mockWorldLabel">World clock</span>
+                <span class="mock-row-value">09:41</span>
+              </div>
+              <div class="mock-row">
+                <span class="mock-row-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M9 2h6"/></svg>
+                </span>
+                <span class="mock-row-label" data-i18n="mockStopwatch">Stopwatch</span>
+                <span class="mock-row-value">00:00.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="featuresTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="featuresTitle" data-i18n="featuresTitle">Four tools, one reminder-first extension</h2>
+          <p class="section-sub" data-i18n="featuresSubtitle">Everything you need to stay on schedule, without another account or another tab.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M5 3L2.5 5.5"/><path d="M22 5.5L19.5 3"/></svg>
             </span>
-            <span class="meta-divider">•</span>
-            <span class="meta-item" data-i18n="metaUsers">100K+ Users</span>
-          </div>
+            <div>
+              <h3 class="feature-title" data-i18n="featureAlarmTitle">Smart reminders &amp; alarms</h3>
+              <p class="feature-desc" data-i18n="featureAlarmDesc">Schedule reminders daily, weekly, monthly, or yearly. Pick a custom sound, add a label, and snooze with one click.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-title" data-i18n="featureWorldTitle">World clock</h3>
+              <p class="feature-desc" data-i18n="featureWorldDesc">Keep an eye on several time zones at once — useful for remote teams, travel, and calls across regions.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M9 2h6"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-title" data-i18n="featureTimerTitle">Timers &amp; stopwatch</h3>
+              <p class="feature-desc" data-i18n="featureTimerDesc">Run countdown timers and a stopwatch with lap records. Ideal for cooking, workouts, and focused work sessions.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-title" data-i18n="featureTodoTitle">Built-in to-do list</h3>
+              <p class="feature-desc" data-i18n="featureTodoDesc">Capture tasks next to your reminders, check them off as you go, and keep your day in one place.</p>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="hero-visual">
-        <div class="visual-card main-card">
-          <div class="clock-preview">
-            <div class="analog-clock">
-              <div class="clock-face-large">
-                <div class="clock-markers">
-                  <span class="marker m12">12</span>
-                  <span class="marker m3">3</span>
-                  <span class="marker m6">6</span>
-                  <span class="marker m9">9</span>
-                </div>
-                <div class="clock-hand hour" id="preview-hour"></div>
-                <div class="clock-hand minute" id="preview-minute"></div>
-                <div class="clock-hand second" id="preview-second"></div>
-                <div class="clock-center"></div>
+    <section class="section" aria-labelledby="useTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="useTitle" data-i18n="useTitle">Built for the way you work</h2>
+          <p class="section-sub" data-i18n="useSubtitle">Simple enough for daily routines, precise enough for professional schedules.</p>
+        </div>
+        <div class="use-grid">
+          <article class="use-card">
+            <p class="use-index">01</p>
+            <h3 class="use-title" data-i18n="use1Title">Remote teams</h3>
+            <p class="use-desc" data-i18n="use1Desc">Line up stand-ups and client calls across time zones without opening another app.</p>
+          </article>
+          <article class="use-card">
+            <p class="use-index">02</p>
+            <h3 class="use-title" data-i18n="use2Title">Study &amp; deep work</h3>
+            <p class="use-desc" data-i18n="use2Desc">Run 25-minute focus sessions, then take a timed break — right from the toolbar.</p>
+          </article>
+          <article class="use-card">
+            <p class="use-index">03</p>
+            <h3 class="use-title" data-i18n="use3Title">Daily routines</h3>
+            <p class="use-desc" data-i18n="use3Desc">Wake-up alarms, medication reminders, and quick timers that stay out of the way.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="previewTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="previewTitle" data-i18n="previewTitle">See it in action</h2>
+          <p class="section-sub" data-i18n="previewSubtitle">Real screens from the extension — reminders, world clock, timers, and tasks.</p>
+        </div>
+
+        <div class="preview-frame">
+          <div class="preview-bar">
+            <div class="mock-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span class="mock-title">Clock Max</span>
+            <span class="preview-counter" id="slideCounter">1 / 5</span>
+          </div>
+          <div class="carousel" id="carousel">
+            <div class="carousel-viewport">
+              <div class="carousel-slide active">
+                <img src="./resource/preview-one.webp" width="1280" height="800" alt="Clock Max reminders and alarm list interface" loading="eager" decoding="async" data-i18n-attr="alt:previewAlt1">
+              </div>
+              <div class="carousel-slide">
+                <img src="./resource/preview-two.webp" width="1280" height="800" alt="Clock Max world clock with multiple time zones" loading="lazy" decoding="async" data-i18n-attr="alt:previewAlt2">
+              </div>
+              <div class="carousel-slide">
+                <img src="./resource/preview-three.webp" width="1280" height="800" alt="Clock Max countdown timer and stopwatch interface" loading="lazy" decoding="async" data-i18n-attr="alt:previewAlt3">
+              </div>
+              <div class="carousel-slide">
+                <img src="./resource/preview-four.webp" width="1280" height="800" alt="Clock Max to-do list with scheduled tasks" loading="lazy" decoding="async" data-i18n-attr="alt:previewAlt4">
+              </div>
+              <div class="carousel-slide">
+                <img src="./resource/preview-five.webp" width="1280" height="800" alt="Clock Max settings for sounds and notifications" loading="lazy" decoding="async" data-i18n-attr="alt:previewAlt5">
               </div>
             </div>
-            <div class="digital-time" id="digital-time">00:00:00</div>
+            <button class="carousel-nav carousel-prev" type="button" aria-label="Previous screenshot" data-i18n-attr="aria-label:carouselPrev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="carousel-nav carousel-next" type="button" aria-label="Next screenshot" data-i18n-attr="aria-label:carouselNext">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+          <div class="carousel-dots">
+            <button class="dot-btn active" type="button" data-slide="0" aria-label="Go to screenshot 1" data-i18n-attr="aria-label:carouselGo1"></button>
+            <button class="dot-btn" type="button" data-slide="1" aria-label="Go to screenshot 2" data-i18n-attr="aria-label:carouselGo2"></button>
+            <button class="dot-btn" type="button" data-slide="2" aria-label="Go to screenshot 3" data-i18n-attr="aria-label:carouselGo3"></button>
+            <button class="dot-btn" type="button" data-slide="3" aria-label="Go to screenshot 4" data-i18n-attr="aria-label:carouselGo4"></button>
+            <button class="dot-btn" type="button" data-slide="4" aria-label="Go to screenshot 5" data-i18n-attr="aria-label:carouselGo5"></button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="features-section">
-      <div class="features-header">
-        <h2 class="features-title" data-i18n="featuresTitle">Everything You Need</h2>
-        <p class="features-subtitle" data-i18n="featuresSubtitle">Powerful features designed to boost your productivity</p>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon alarm-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="13" r="8"/>
-                <path d="M12 9v4l2 2"/>
-                <path d="M5 3L2 6"/>
-                <path d="M22 6l-3-3"/>
-              </svg>
-            </div>
-          </div>
-          <h3 class="feature-title" data-i18n="featureAlarmTitle">Smart Alarms</h3>
-          <p class="feature-desc" data-i18n="featureAlarmDesc">Flexible scheduling with daily, weekly, monthly, and yearly options. Custom sounds and intelligent snooze.</p>
+    <section class="section" id="faq" aria-labelledby="faqTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="faqTitle" data-i18n="faqTitle">Frequently asked questions</h2>
+          <p class="section-sub" data-i18n="faqSubtitle">Quick answers before you install.</p>
         </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon world-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M2 12h20"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
-            </div>
-          </div>
-          <h3 class="feature-title" data-i18n="featureWorldTitle">World Clock</h3>
-          <p class="feature-desc" data-i18n="featureWorldDesc">Track multiple time zones simultaneously. Perfect for global teams and travelers.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon timer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-              </svg>
-            </div>
-          </div>
-          <h3 class="feature-title" data-i18n="featureTimerTitle">Precision Timer</h3>
-          <p class="feature-desc" data-i18n="featureTimerDesc">High-precision stopwatch, countdown timers, and multi-timer support. Ideal for workouts, cooking, and focus sessions.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <div class="feature-icon todo-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M9 11l3 3L22 4"/>
-                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-              </svg>
-            </div>
-          </div>
-          <h3 class="feature-title" data-i18n="featureTodoTitle">Task Manager</h3>
-          <p class="feature-desc" data-i18n="featureTodoDesc">Built-in todo list to keep your tasks organized. Simple yet powerful task tracking.</p>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-i18n="faq1Q">Is Clock Max free?</summary>
+            <p class="faq-answer" data-i18n="faq1A">Yes. Clock Max is completely free, with no account, subscription, or in-app purchase required.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq2Q">Which browsers does Clock Max support?</summary>
+            <p class="faq-answer" data-i18n="faq2A">Clock Max is published on the Chrome Web Store and runs in Chrome and other Chromium-based browsers, including Microsoft Edge and Brave.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq3Q">Do I need an account to use Clock Max?</summary>
+            <p class="faq-answer" data-i18n="faq3A">No account is needed. Install the extension and start setting reminders right away.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq4Q">Does Clock Max work offline?</summary>
+            <p class="faq-answer" data-i18n="faq4A">Yes. Alarms, timers, the world clock, and your to-do list all work offline because everything runs locally in your browser.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq5Q">Where is my data stored?</summary>
+            <p class="faq-answer" data-i18n="faq5A">All alarms, timers, tasks, and settings are stored locally on your device using the browser's storage API. Nothing is uploaded to our servers.</p>
+          </details>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="preview-section">
-      <div class="preview-container">
-        <div class="preview-carousel">
-          <div class="carousel-frame">
-            <div class="carousel-header">
-              <div class="carousel-dots">
-                <span></span><span></span><span></span>
-              </div>
-              <span class="carousel-title" data-i18n="carouselTitle">Clock Max</span>
-            </div>
-            <div class="carousel-content">
-              <div class="carousel-slider">
-                <div class="carousel-slide active">
-                  <img src="./resource/preview-one.webp" alt="Clock Max Preview 1" loading="lazy" data-i18n-attr="alt:previewAlt1">
-                </div>
-                <div class="carousel-slide">
-                  <img src="./resource/preview-two.webp" alt="Clock Max Preview 2" loading="lazy" data-i18n-attr="alt:previewAlt2">
-                </div>
-                <div class="carousel-slide">
-                  <img src="./resource/preview-three.webp" alt="Clock Max Preview 3" loading="lazy" data-i18n-attr="alt:previewAlt3">
-                </div>
-                <div class="carousel-slide">
-                  <img src="./resource/preview-four.webp" alt="Clock Max Preview 4" loading="lazy" data-i18n-attr="alt:previewAlt4">
-                </div>
-                <div class="carousel-slide">
-                  <img src="./resource/preview-five.webp" alt="Clock Max Preview 5" loading="lazy" data-i18n-attr="alt:previewAlt5">
-                </div>
-              </div>
-              <button class="carousel-nav carousel-prev" aria-label="Previous slide" data-i18n-attr="aria-label:carouselPrev">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M15 18l-6-6 6-6"/>
-                </svg>
-              </button>
-              <button class="carousel-nav carousel-next" aria-label="Next slide" data-i18n-attr="aria-label:carouselNext">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 18l6-6-6-6"/>
-                </svg>
-              </button>
-            </div>
-            <div class="carousel-indicators">
-              <button class="indicator active" data-slide="0" aria-label="Go to slide 1" data-i18n-attr="aria-label:carouselGo1"></button>
-              <button class="indicator" data-slide="1" aria-label="Go to slide 2" data-i18n-attr="aria-label:carouselGo2"></button>
-              <button class="indicator" data-slide="2" aria-label="Go to slide 3" data-i18n-attr="aria-label:carouselGo3"></button>
-              <button class="indicator" data-slide="3" aria-label="Go to slide 4" data-i18n-attr="aria-label:carouselGo4"></button>
-              <button class="indicator" data-slide="4" aria-label="Go to slide 5" data-i18n-attr="aria-label:carouselGo5"></button>
-            </div>
-          </div>
+    <section class="section" aria-labelledby="ctaBandTitle">
+      <div class="container">
+        <div class="cta-band">
+          <h2 class="cta-band-title" id="ctaBandTitle" data-i18n="ctaBandTitle">Never miss a moment again</h2>
+          <p class="cta-band-desc" data-i18n="ctaBandDesc">Install Clock Max and set your first reminder in under a minute.</p>
+          <a class="btn-primary" id="ctaBtn" href="https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk?utm_source=item-share-cb" target="_blank" rel="noopener" data-i18n="ctaBandBtn">Add to Chrome — it's free</a>
         </div>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <footer class="footer-section">
-      <div class="footer-content">
-        <span class="footer-brand">Clock Max</span>
-        <span class="footer-divider">|</span>
-        <span class="footer-copy" data-i18n="footerMadeWith">Made with by MeTenk</span>
-        <span class="footer-divider">|</span>
-        <a href="./clock-privacy-policy.html" class="footer-link" data-i18n="footerPrivacy">Privacy Policy</a>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footerHome">Home</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="./clock-privacy-policy.html" data-i18n="footerPrivacy">Privacy Policy</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <span data-i18n="footerProduct">Clock Max</span>
       </div>
       <div class="i18n-lang-row" data-i18n-slot></div>
-    </footer>
-  </div>
+      <p class="footer-copy" data-i18n="footerCopyright">© 2026 MeTenk</p>
+    </div>
+  </footer>
 
   <script src="clockmax-wel.js"></script>
   <script defer src="assets/locales/clockmax.js"></script>
