@@ -2,7 +2,8 @@
 
 User-agent: *
 Allow: /
-Disallow: /resource/
+# Screenshots and icons live in /resource/ and should stay crawlable so they
+# can appear in image search and structured-data screenshot fields.
 
 Sitemap: https://metenk.com/sitemap.xml
 

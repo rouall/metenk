@@ -53,6 +53,7 @@
     var dots = document.querySelectorAll('.dot-btn');
     var prevBtn = root.querySelector('.carousel-prev');
     var nextBtn = root.querySelector('.carousel-next');
+    var toggleBtn = document.getElementById('carouselToggle');
     var counter = document.getElementById('slideCounter');
     var total = slides.length;
     if (!total) return;
@@ -60,6 +61,23 @@
     var current = 0;
     var autoTimer = null;
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var userPaused = !!reduceMotion;
+
+    function toggleLabel(key, fallback) {
+      if (window.MetiI18n && typeof window.MetiI18n.t === 'function') {
+        return window.MetiI18n.t(key) || fallback;
+      }
+      return fallback;
+    }
+
+    function syncToggle() {
+      if (!toggleBtn) return;
+      toggleBtn.setAttribute('data-playing', userPaused ? 'false' : 'true');
+      toggleBtn.setAttribute('data-i18n-attr', 'aria-label:' + (userPaused ? 'carouselPlay' : 'carouselPause'));
+      toggleBtn.setAttribute('aria-label', userPaused
+        ? toggleLabel('carouselPlay', 'Play slideshow')
+        : toggleLabel('carouselPause', 'Pause slideshow'));
+    }
 
     function render(index) {
       current = (index + total) % total;
@@ -92,9 +110,21 @@
     }
 
     function startAutoPlay() {
-      if (reduceMotion) return;
+      if (reduceMotion || userPaused) return;
       stopAutoPlay();
       autoTimer = setInterval(next, 6000);
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function () {
+        userPaused = !userPaused;
+        if (userPaused) {
+          stopAutoPlay();
+        } else {
+          startAutoPlay();
+        }
+        syncToggle();
+      });
     }
 
     if (prevBtn) prevBtn.addEventListener('click', function () { prev(); startAutoPlay(); });
@@ -145,6 +175,7 @@
     });
 
     render(0);
+    syncToggle();
     startAutoPlay();
   }
 
