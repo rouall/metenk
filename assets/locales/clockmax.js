@@ -22,14 +22,6 @@ window.METENK_I18N = {
     trustAccount: 'No account',
     trustLocal: 'Data stays on your device',
 
-    mockAlarmLabel: 'Alarm',
-    mockAlarmRepeat: 'Daily',
-    mockWorldLabel: 'World clock',
-    mockStopwatch: 'Stopwatch',
-    mockTimers: 'Multi-timer',
-    mockTimerFocus: 'Focus',
-    mockTimerBreak: 'Break',
-
     featuresTitle: 'Four tools, one reminder-first extension',
     featuresSubtitle: 'Everything you need to stay on schedule, without another account or another tab.',
 
@@ -139,14 +131,6 @@ window.METENK_I18N = {
     trustFree: '完全免费',
     trustAccount: '无需注册',
     trustLocal: '数据留在本地',
-
-    mockAlarmLabel: '闹钟',
-    mockAlarmRepeat: '每天',
-    mockWorldLabel: '世界时钟',
-    mockStopwatch: '秒表',
-    mockTimers: '多计时器',
-    mockTimerFocus: '专注',
-    mockTimerBreak: '休息',
 
     featuresTitle: '四件工具，一个提醒优先的扩展',
     featuresSubtitle: '该记住的事、该守的时间，一个扩展就够了，不必再开一个网页、再注册一个账号。',

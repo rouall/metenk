@@ -1,47 +1,14 @@
 /*!
  * Clock Max — product page behaviour
  * ---------------------------------------------------------------------------
- * 1. Live analog + digital clock preview
- * 2. Accessible screenshot carousel (buttons, dots, keyboard, swipe, autoplay)
- * 3. Keeps the original welcome-page flow when opened inside the extension
+ * 1. Accessible screenshot carousel (buttons, dots, keyboard, swipe, autoplay)
+ * 2. Keeps the original welcome-page flow when opened inside the extension
  */
 
 (function () {
   'use strict';
 
   var browserAPI = typeof browser !== 'undefined' ? browser : (typeof chrome !== 'undefined' ? chrome : null);
-
-  /* ---------------- Clock ---------------- */
-
-  var hourHand = document.getElementById('hand-hour');
-  var minuteHand = document.getElementById('hand-minute');
-  var secondHand = document.getElementById('hand-second');
-  var digitalTime = document.getElementById('digitalTime');
-
-  function pad(value) {
-    return value < 10 ? '0' + value : String(value);
-  }
-
-  function updateClock() {
-    if (!hourHand) return;
-
-    var now = new Date();
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var seconds = now.getSeconds();
-
-    var hourDeg = (hours % 12) * 30 + minutes * 0.5;
-    var minuteDeg = minutes * 6;
-    var secondDeg = seconds * 6;
-
-    hourHand.setAttribute('transform', 'rotate(' + hourDeg + ' 100 100)');
-    minuteHand.setAttribute('transform', 'rotate(' + minuteDeg + ' 100 100)');
-    secondHand.setAttribute('transform', 'rotate(' + secondDeg + ' 100 100)');
-
-    if (digitalTime) {
-      digitalTime.textContent = pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
-    }
-  }
 
   /* ---------------- Carousel ---------------- */
 
@@ -199,8 +166,6 @@
   /* ---------------- Init ---------------- */
 
   function init() {
-    updateClock();
-    setInterval(updateClock, 1000);
     initCarousel();
     initStoreButton();
   }

@@ -148,6 +148,7 @@
     <section class="hero" aria-labelledby="heroTitle">
       <div class="container hero-inner">
         <div class="hero-content">
+          <div class="hero-ticks" aria-hidden="true"></div>
           <p class="eyebrow" data-i18n="eyebrow">Clock Max · Reminder-first time suite</p>
           <h1 class="hero-title" id="heroTitle" data-i18n-html="heroTitleHtml">
             <span class="title-line">Clock Max</span>
@@ -175,74 +176,6 @@
           </p>
         </div>
 
-        <div class="app-mock" aria-hidden="true">
-          <div class="mock-header">
-            <div class="mock-dots"><span></span><span></span><span></span></div>
-            <span class="mock-title">Clock Max</span>
-          </div>
-          <div class="mock-body">
-            <div class="clock-wrap">
-              <svg class="clock-svg" viewBox="0 0 200 200" focusable="false">
-                <defs>
-                  <radialGradient id="clockFace" cx="50%" cy="40%" r="70%">
-                    <stop offset="0%" stop-color="#171a21"/>
-                    <stop offset="100%" stop-color="#0c0e12"/>
-                  </radialGradient>
-                </defs>
-                <circle cx="100" cy="100" r="94" fill="url(#clockFace)" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
-                <circle cx="100" cy="100" r="84" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="5" stroke-dasharray="2 41.99" stroke-linecap="round"/>
-                <circle cx="100" cy="100" r="76" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="1.5" stroke-dasharray="1 6.96"/>
-                <line id="hand-hour" x1="100" y1="100" x2="100" y2="58" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-                <line id="hand-minute" x1="100" y1="100" x2="100" y2="42" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
-                <line id="hand-second" x1="100" y1="108" x2="100" y2="34" stroke="#6b8cff" stroke-width="1.6" stroke-linecap="round"/>
-                <circle cx="100" cy="100" r="5" fill="#6b8cff"/>
-                <circle cx="100" cy="100" r="2" fill="#0c0e12"/>
-              </svg>
-              <div class="digital-time" id="digitalTime">00:00:00</div>
-            </div>
-
-            <div class="widget timer-panel">
-              <div class="widget-head">
-                <span class="widget-label" data-i18n="mockTimers">Multi-timer</span>
-                <span class="widget-badge">2</span>
-              </div>
-              <div class="timer-chips">
-                <div class="timer-chip">
-                  <span class="timer-time">25:00</span>
-                  <span class="timer-name" data-i18n="mockTimerFocus">Focus</span>
-                </div>
-                <div class="timer-chip">
-                  <span class="timer-time">05:00</span>
-                  <span class="timer-name" data-i18n="mockTimerBreak">Break</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="mock-rows">
-              <div class="mock-row">
-                <span class="mock-row-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M5 3L2.5 5.5"/><path d="M22 5.5L19.5 3"/></svg>
-                </span>
-                <span class="mock-row-label" data-i18n="mockAlarmLabel">Alarm</span>
-                <span class="mock-row-value">07:00<span class="mock-row-tag" data-i18n="mockAlarmRepeat">Daily</span></span>
-              </div>
-              <div class="mock-row">
-                <span class="mock-row-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg>
-                </span>
-                <span class="mock-row-label" data-i18n="mockWorldLabel">World clock</span>
-                <span class="mock-row-value">09:41</span>
-              </div>
-              <div class="mock-row">
-                <span class="mock-row-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M9 2h6"/></svg>
-                </span>
-                <span class="mock-row-label" data-i18n="mockStopwatch">Stopwatch</span>
-                <span class="mock-row-value">00:00.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
