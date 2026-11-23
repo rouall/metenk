@@ -172,7 +172,10 @@ var _hmt = _hmt || [];
       // start fetching it before the body is parsed (better LCP).
       function applyHeroBackground() {
         var path = getImage();
-        document.documentElement.style.setProperty('--hero-bg', 'url("' + path + '")');
+        // Resolve to an absolute URL: the variable is consumed inside assets/landing.css,
+        // where a plain relative path would resolve against /assets/ and 404.
+        var absolutePath = new URL(path, document.baseURI).href;
+        document.documentElement.style.setProperty('--hero-bg', 'url("' + absolutePath + '")');
 
         var link = document.getElementById('hero-bg-preload');
         if (!link) {
@@ -183,7 +186,7 @@ var _hmt = _hmt || [];
           link.setAttribute('fetchpriority', 'high');
           document.head.appendChild(link);
         }
-        link.href = path;
+        link.href = absolutePath;
       }
 
       applyHeroBackground();

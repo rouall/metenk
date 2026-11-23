@@ -7,7 +7,7 @@
 window.METENK_I18N = {
   en: {
     docTitle: 'Clock Max - The Ultimate Reminder | MeTenk',
-    metaDescription: 'Clock Max is a free Chrome extension with one-time, daily, weekly, and custom reminders at any time, plus world clocks, timers, and to-dos. No account — data stays on your device.',
+    metaDescription: 'Clock Max is a free Chrome extension with one-time, daily, weekly, weekday/weekend, monthly, yearly, and custom reminders at any time, plus world clocks, timers, and to-dos. No account — data stays on your device.',
 
     navBack: '← Back to MeTenk',
 
@@ -34,7 +34,7 @@ window.METENK_I18N = {
     featuresSubtitle: 'Everything you need to stay on schedule, without another account or another tab.',
 
     featureAlarmTitle: 'Smart reminders & alarms',
-    featureAlarmDesc: 'One-time, daily, weekly, or pick your own weekdays — any time of day, to the minute. Add a label, choose a sound, snooze in one click.',
+    featureAlarmDesc: 'One-time, daily, weekly, weekday/weekend, monthly (a chosen date or the last day), yearly, or fully custom — any time of day, to the minute. Add a label, choose a sound, snooze in one click.',
     featureWorldTitle: 'World clock',
     featureWorldDesc: 'Keep an eye on several time zones at once — useful for remote teams, travel, and calls across regions.',
     featureTimerTitle: 'Timers & stopwatch',
@@ -43,7 +43,7 @@ window.METENK_I18N = {
     featureTodoDesc: 'Capture tasks next to your reminders, check them off as you go, and keep your day in one place.',
 
     modesTitle: 'Reminder schedules that fit your routine',
-    modesSubtitle: 'One-time, daily, weekly, or pick your own weekdays — with minute-level precision, so any time of day works.',
+    modesSubtitle: 'One-time, daily, weekly, weekday/weekend, monthly, yearly, or fully custom — with minute-level precision, so any time of day works.',
     modeOnceTitle: 'One-time reminder',
     modeOnceDesc: 'Pick a date and an exact time; it rings once. Ideal for meetings, payments, and travel.',
     modeOnceDate: 'Nov 28',
@@ -52,6 +52,18 @@ window.METENK_I18N = {
     modeDailyChip: 'Every day',
     modeWeeklyTitle: 'Weekly',
     modeWeeklyDesc: 'Choose any weekdays — every Monday, or a few set days a week, at the same time or different ones.',
+    modeWeekdayTitle: 'Weekdays or weekends',
+    modeWeekdayDesc: 'Ring only Monday to Friday for work routines, or only on weekends — at the same time or different ones.',
+    modeWeekdayChip: 'Mon–Fri',
+    modeMonthlyTitle: 'Monthly on a date',
+    modeMonthlyDesc: 'Pick a day of the month — the 1st, the 15th, or any date — for rent, bills, and subscriptions.',
+    modeMonthlyChip: '15th',
+    modeLastDayTitle: 'Last day of the month',
+    modeLastDayDesc: 'Always the month-end day, whatever its length — 28, 29, 30, or 31 — so it never drifts out of place.',
+    modeLastDayChip: 'Month end',
+    modeYearlyTitle: 'Yearly',
+    modeYearlyDesc: 'A fixed date every year — birthdays, renewals, and anniversaries, remembered once and for good.',
+    modeYearlyChip: 'Dec 31',
     modeCustomTitle: 'Custom',
     modeCustomDesc: 'Mix your own days and times, minute by minute. Keep several alarms listed and toggle the ones you need.',
     wdMon: 'M',
@@ -72,7 +84,6 @@ window.METENK_I18N = {
     use3Desc: 'Wake-up alarms, medication reminders, and quick timers that stay out of the way.',
 
     previewTitle: 'See it in action',
-    previewSubtitle: 'Real screens from the extension — reminders, world clock, timers, and tasks.',
     previewAlt1: 'Clock Max reminders and alarm list interface',
     previewAlt2: 'Clock Max world clock with multiple time zones',
     previewAlt3: 'Clock Max countdown timer and stopwatch interface',
@@ -89,11 +100,10 @@ window.METENK_I18N = {
     carouselGo5: 'Go to screenshot 5',
 
     faqTitle: 'Frequently asked questions',
-    faqSubtitle: 'Quick answers before you install.',
     faq1Q: 'Is Clock Max free?',
     faq1A: 'Yes. Clock Max is completely free, with no account, subscription, or in-app purchase required.',
     faqScheduleQ: 'What reminder schedules are supported?',
-    faqScheduleA: 'One-time, daily, weekly, and custom weekday schedules. Every alarm can be set to any time of day, precise to the minute.',
+    faqScheduleA: 'One-time, daily, weekly, weekday/weekend, monthly on a chosen date, the last day of the month, yearly, and fully custom schedules. Every alarm can be set to any time of day, precise to the minute.',
     faq2Q: 'Which browsers does Clock Max support?',
     faq2A: 'Clock Max is published on the Chrome Web Store and runs in Chrome and other Chromium-based browsers, including Microsoft Edge and Brave.',
     faq3Q: 'Do I need an account to use Clock Max?',
@@ -104,7 +114,7 @@ window.METENK_I18N = {
     faq5A: 'All alarms, timers, tasks, and settings are stored locally on your device using the browser\'s storage API. Nothing is uploaded to our servers.',
 
     ctaBandTitle: 'Never miss a moment again',
-    ctaBandDesc: 'Install Clock Max and set your first reminder in under a minute.',
+    ctaBandDesc: 'Install Clock Max and quickly set your first reminder.',
     ctaBandBtn: "Add to Chrome — it's free",
 
     footerHome: 'Home',
@@ -115,7 +125,7 @@ window.METENK_I18N = {
 
   zh: {
     docTitle: 'Clock Max - 提醒神器 | MeTenk',
-    metaDescription: 'Clock Max 提醒神器：免费 Chrome 扩展，支持单次、每天、每周与自定义提醒，任意时刻精准触发，集世界时钟、计时器与待办清单于一体。无需账号，数据只存本地。',
+    metaDescription: 'Clock Max 提醒神器：免费 Chrome 扩展，支持单次、每天、每周、工作日/周末、每月（指定日期或最后一天）、每年与自定义提醒，任意时刻精准触发，集世界时钟、计时器与待办清单于一体。无需账号，数据只存本地。',
 
     navBack: '← 返回 MeTenk',
 
@@ -142,7 +152,7 @@ window.METENK_I18N = {
     featuresSubtitle: '该记住的事、该守的时间，一个扩展就够了，不必再开一个网页、再注册一个账号。',
 
     featureAlarmTitle: '智能提醒与闹钟',
-    featureAlarmDesc: '单次、每天、每周或自选星期几，任意时刻精准提醒。可加备注、换铃声、一键贪睡。',
+    featureAlarmDesc: '单次、每天、每周、工作日/周末、每月（指定日期或最后一天）、每年，或完全自定义，任意时刻精准提醒。可加备注、换铃声、一键贪睡。',
     featureWorldTitle: '世界时钟',
     featureWorldDesc: '同时查看多个时区，远程协作、出差与跨区域通话都心里有数。',
     featureTimerTitle: '计时器与秒表',
@@ -151,7 +161,7 @@ window.METENK_I18N = {
     featureTodoDesc: '把任务和提醒放在一起，随时勾选完成，一天的事一处管好。',
 
     modesTitle: '提醒方式，随你安排',
-    modesSubtitle: '单次、每天、每周，或自己挑选星期几——时间精确到分钟，想设几点就设几点。',
+    modesSubtitle: '单次、每天、每周、工作日/周末、每月、每年，或完全自定义——时间精确到分钟，想设几点就设几点。',
     modeOnceTitle: '单次提醒',
     modeOnceDesc: '指定日期与具体时刻，只响一次。会议、缴费、出行提醒都合适。',
     modeOnceDate: '11 月 28 日',
@@ -160,6 +170,18 @@ window.METENK_I18N = {
     modeDailyChip: '每天',
     modeWeeklyTitle: '每周',
     modeWeeklyDesc: '任选星期几，可以是每个工作日，也可以是一周中的任意几天。',
+    modeWeekdayTitle: '工作日或周末',
+    modeWeekdayDesc: '只在周一至周五响，适合上班打卡与日常作息；也可只安排在周末。',
+    modeWeekdayChip: '周一至周五',
+    modeMonthlyTitle: '每月指定日期',
+    modeMonthlyDesc: '指定每月某一天，可以是 1 号、15 号或任意日期，房租、账单、订阅续费都不错过。',
+    modeMonthlyChip: '15 日',
+    modeLastDayTitle: '每月最后一天',
+    modeLastDayDesc: '自动落在每月最后一天，无论 28、29、30 还是 31 天，都不会错位。',
+    modeLastDayChip: '月末',
+    modeYearlyTitle: '每年',
+    modeYearlyDesc: '每年固定日期提醒，生日、年费续费、纪念日，设一次就够了。',
+    modeYearlyChip: '12 月 31 日',
     modeCustomTitle: '自定义',
     modeCustomDesc: '自己挑日子、自己定时刻，精确到分钟；多条闹钟并列保存，按需开关。',
     wdMon: '一',
@@ -180,7 +202,6 @@ window.METENK_I18N = {
     use3Desc: '起床闹钟、服药提醒、临时计时，安静可靠不打扰。',
 
     previewTitle: '界面一览',
-    previewSubtitle: '扩展内的真实界面：提醒、世界时钟、计时器与待办。',
     previewAlt1: 'Clock Max 提醒与闹钟列表界面',
     previewAlt2: 'Clock Max 多时区世界时钟界面',
     previewAlt3: 'Clock Max 倒计时与秒表界面',
@@ -197,11 +218,10 @@ window.METENK_I18N = {
     carouselGo5: '查看第 5 张截图',
 
     faqTitle: '常见问题',
-    faqSubtitle: '安装前，先快速了解几个关键点。',
     faq1Q: 'Clock Max 是免费的吗？',
     faq1A: '是的。Clock Max 完全免费，不需要账号、订阅或任何内购。',
     faqScheduleQ: '支持哪些提醒方式？',
-    faqScheduleA: '支持单次、每天、每周以及自选星期几。每个闹钟都可以设置在任意时刻，精确到分钟。',
+    faqScheduleA: '支持单次、每天、每周、工作日/周末、每月指定日期、每月最后一天、每年，以及完全自定义。每个闹钟都可设定任意时刻，精确到分钟。',
     faq2Q: 'Clock Max 支持哪些浏览器？',
     faq2A: 'Clock Max 已上架 Chrome 应用商店，可在 Chrome 及其他 Chromium 内核浏览器中使用，包括 Microsoft Edge 和 Brave。',
     faq3Q: '使用 Clock Max 需要注册账号吗？',
@@ -212,7 +232,7 @@ window.METENK_I18N = {
     faq5A: '所有闹钟、计时、任务与设置都通过浏览器存储 API 保存在你的设备本地，不会上传到我们的服务器。',
 
     ctaBandTitle: '别再错过重要的时刻',
-    ctaBandDesc: '安装 Clock Max，一分钟内设好第一个提醒。',
+    ctaBandDesc: '安装 Clock Max，快速设置第一个提醒。',
     ctaBandBtn: '免费添加到 Chrome',
 
     footerHome: '首页',

@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="./clockmax-icon.png">
   <link rel="apple-touch-icon" href="./resource/clockmax-icon.png">
   <meta name="theme-color" content="#0a0a0a">
-  <meta name="description" content="Clock Max is a free Chrome extension with one-time, daily, weekly, and custom reminders at any time, plus world clocks, timers, and to-dos. No account — data stays on your device." data-i18n-attr="content:metaDescription">
+  <meta name="description" content="Clock Max is a free Chrome extension with one-time, daily, weekly, weekday/weekend, monthly, yearly, and custom reminders at any time, plus world clocks, timers, and to-dos. No account — data stays on your device." data-i18n-attr="content:metaDescription">
   <link rel="canonical" href="https://metenk.com/clockmax.html">
 
   <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="zh_CN">
   <meta property="og:title" content="Clock Max - The Ultimate Reminder | MeTenk">
-  <meta property="og:description" content="One-time, daily, weekly, and custom reminders at any time — plus world clocks, timers, and to-dos in one free Chrome extension.">
+  <meta property="og:description" content="One-time, daily, weekly, weekday/weekend, monthly, yearly, and custom reminders at any time — plus world clocks, timers, and to-dos in one free Chrome extension.">
   <meta property="og:url" content="https://metenk.com/clockmax.html">
   <meta property="og:image" content="https://metenk.com/resource/og-clockmax.png">
   <meta property="og:image:alt" content="Clock Max — reminders, world clock, timers and to-dos in one Chrome extension">
@@ -23,7 +23,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Clock Max - The Ultimate Reminder | MeTenk">
-  <meta name="twitter:description" content="One-time, daily, weekly, and custom reminders at any time — plus world clocks, timers, and to-dos in one free Chrome extension.">
+  <meta name="twitter:description" content="One-time, daily, weekly, weekday/weekend, monthly, yearly, and custom reminders at any time — plus world clocks, timers, and to-dos in one free Chrome extension.">
   <meta name="twitter:image" content="https://metenk.com/resource/og-clockmax.png">
   <meta name="twitter:image:alt" content="Clock Max — reminders, world clock, timers and to-dos in one Chrome extension">
 
@@ -38,9 +38,9 @@
     "browserRequirements": "Chrome 88 or later",
     "url": "https://metenk.com/clockmax.html",
     "downloadUrl": "https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk",
-    "description": "A free Chrome extension with one-time, daily, weekly, and custom weekday reminders at any time of day, plus a world clock, precision timers and stopwatch, and a built-in to-do list. All data is stored locally on your device.",
+    "description": "A free Chrome extension with one-time, daily, weekly, weekday/weekend, monthly (a chosen date or the last day), yearly, and fully custom reminders at any time of day, plus a world clock, precision timers and stopwatch, and a built-in to-do list. All data is stored locally on your device.",
     "featureList": [
-      "One-time, daily, weekly, and custom weekday reminders at any time of day",
+      "One-time, daily, weekly, weekday/weekend, monthly, yearly, and custom reminders at any time of day",
       "World clock with multiple time zones",
       "Countdown timers and stopwatch",
       "Built-in to-do list",
@@ -90,7 +90,7 @@
         "name": "What reminder schedules are supported?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "One-time, daily, weekly, and custom weekday schedules. Every alarm can be set to any time of day, precise to the minute."
+          "text": "One-time, daily, weekly, weekday/weekend, monthly on a chosen date, the last day of the month, yearly, and fully custom schedules. Every alarm can be set to any time of day, precise to the minute."
         }
       },
       {
@@ -259,7 +259,7 @@
             </span>
             <div>
               <h3 class="feature-title" data-i18n="featureAlarmTitle">Smart reminders &amp; alarms</h3>
-              <p class="feature-desc" data-i18n="featureAlarmDesc">One-time, daily, weekly, or pick your own weekdays — any time of day, to the minute. Add a label, choose a sound, snooze in one click.</p>
+              <p class="feature-desc" data-i18n="featureAlarmDesc">One-time, daily, weekly, weekday/weekend, monthly (a chosen date or the last day), yearly, or fully custom — any time of day, to the minute. Add a label, choose a sound, snooze in one click.</p>
             </div>
           </article>
           <article class="feature-card">
@@ -297,20 +297,20 @@
       <div class="container">
         <div class="section-head">
           <h2 class="section-title" id="modesTitle" data-i18n="modesTitle">Reminder schedules that fit your routine</h2>
-          <p class="section-sub" data-i18n="modesSubtitle">One-time, daily, weekly, or pick your own weekdays — with minute-level precision, so any time of day works.</p>
+          <p class="section-sub" data-i18n="modesSubtitle">One-time, daily, weekly, weekday/weekend, monthly, yearly, or fully custom — with minute-level precision, so any time of day works.</p>
         </div>
         <div class="modes-grid">
           <article class="mode-card">
             <div class="mode-head">
               <span class="mode-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><circle cx="12" cy="16" r="1.5"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="M11.2 15.2l1.6-1v5"/></svg>
               </span>
               <h3 class="mode-title" data-i18n="modeOnceTitle">One-time reminder</h3>
             </div>
             <p class="mode-desc" data-i18n="modeOnceDesc">Pick a date and an exact time; it rings once. Ideal for meetings, payments, and travel.</p>
             <div class="mode-demo">
-              <span class="demo-chip" data-i18n="modeOnceDate">Nov 28</span>
-              <span class="demo-chip accent">09:00</span>
+              <span class="demo-tag" data-i18n="modeOnceDate">Nov 28</span>
+              <span class="demo-time">09:00</span>
             </div>
           </article>
           <article class="mode-card">
@@ -322,14 +322,14 @@
             </div>
             <p class="mode-desc" data-i18n="modeDailyDesc">The same time each day — for wake-ups, medication, and daily check-ins. Set it once and forget it.</p>
             <div class="mode-demo">
-              <span class="demo-chip accent" data-i18n="modeDailyChip">Every day</span>
-              <span class="demo-chip">07:00</span>
+              <span class="demo-tag" data-i18n="modeDailyChip">Every day</span>
+              <span class="demo-time">07:00</span>
             </div>
           </article>
           <article class="mode-card">
             <div class="mode-head">
               <span class="mode-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 4v5h-5"/></svg>
               </span>
               <h3 class="mode-title" data-i18n="modeWeeklyTitle">Weekly</h3>
             </div>
@@ -344,13 +344,65 @@
                 <span class="demo-day" data-i18n="wdSat">S</span>
                 <span class="demo-day" data-i18n="wdSun">S</span>
               </span>
-              <span class="demo-chip accent">09:00</span>
+              <span class="demo-time">09:00</span>
             </div>
           </article>
           <article class="mode-card">
             <div class="mode-head">
               <span class="mode-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="7" cy="17" r="2"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12.5" rx="2"/><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeWeekdayTitle">Weekdays or weekends</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeWeekdayDesc">Ring only Monday to Friday for work routines, or only on weekends — at the same time or different ones.</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeWeekdayChip">Mon–Fri</span>
+              <span class="demo-time">08:30</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeMonthlyTitle">Monthly on a date</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeMonthlyDesc">Pick a day of the month — the 1st, the 15th, or any date — for rent, bills, and subscriptions.</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeMonthlyChip">15th</span>
+              <span class="demo-time">10:00</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="M9 16h6M12.5 13.5L15 16l-2.5 2.5"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeLastDayTitle">Last day of the month</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeLastDayDesc">Always the month-end day, whatever its length — 28, 29, 30, or 31 — so it never drifts out of place.</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeLastDayChip">Month end</span>
+              <span class="demo-time">18:00</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.35 4.95 5.4.7-3.98 3.72 1.03 5.33L12 15.6l-4.8 2.6 1.03-5.33L4.25 9.15l5.4-.7z"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeYearlyTitle">Yearly</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeYearlyDesc">A fixed date every year — birthdays, renewals, and anniversaries, remembered once and for good.</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeYearlyChip">Dec 31</span>
+              <span class="demo-time">09:00</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>
               </span>
               <h3 class="mode-title" data-i18n="modeCustomTitle">Custom</h3>
             </div>
@@ -365,7 +417,7 @@
                 <span class="demo-day" data-i18n="wdSat">S</span>
                 <span class="demo-day" data-i18n="wdSun">S</span>
               </span>
-              <span class="demo-chip accent">22:30</span>
+              <span class="demo-time">22:30</span>
             </div>
           </article>
         </div>
@@ -402,7 +454,6 @@
       <div class="container">
         <div class="section-head">
           <h2 class="section-title" id="previewTitle" data-i18n="previewTitle">See it in action</h2>
-          <p class="section-sub" data-i18n="previewSubtitle">Real screens from the extension — reminders, world clock, timers, and tasks.</p>
         </div>
 
         <div class="preview-frame">
@@ -455,7 +506,6 @@
       <div class="container">
         <div class="section-head">
           <h2 class="section-title" id="faqTitle" data-i18n="faqTitle">Frequently asked questions</h2>
-          <p class="section-sub" data-i18n="faqSubtitle">Quick answers before you install.</p>
         </div>
         <div class="faq-list">
           <details class="faq-item">
@@ -464,7 +514,7 @@
           </details>
           <details class="faq-item">
             <summary data-i18n="faqScheduleQ">What reminder schedules are supported?</summary>
-            <p class="faq-answer" data-i18n="faqScheduleA">One-time, daily, weekly, and custom weekday schedules. Every alarm can be set to any time of day, precise to the minute.</p>
+            <p class="faq-answer" data-i18n="faqScheduleA">One-time, daily, weekly, weekday/weekend, monthly on a chosen date, the last day of the month, yearly, and fully custom schedules. Every alarm can be set to any time of day, precise to the minute.</p>
           </details>
           <details class="faq-item">
             <summary data-i18n="faq2Q">Which browsers does Clock Max support?</summary>
@@ -490,7 +540,7 @@
       <div class="container">
         <div class="cta-band">
           <h2 class="cta-band-title" id="ctaBandTitle" data-i18n="ctaBandTitle">Never miss a moment again</h2>
-          <p class="cta-band-desc" data-i18n="ctaBandDesc">Install Clock Max and set your first reminder in under a minute.</p>
+          <p class="cta-band-desc" data-i18n="ctaBandDesc">Install Clock Max and quickly set your first reminder.</p>
           <a class="btn-primary" id="ctaBtn" href="https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk?utm_source=item-share-cb" target="_blank" rel="noopener" data-i18n="ctaBandBtn">Add to Chrome — it's free</a>
         </div>
       </div>

@@ -461,55 +461,67 @@ a {
 .modes-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 14px;
+}
+
+@media (min-width: 1100px) {
+  .modes-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .mode-card {
-  padding: 24px;
-  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.018) 100%);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  border-radius: var(--radius-sm);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
 .mode-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(103, 136, 255, 0.26);
+  transform: translateY(-2px);
+  border-color: rgba(103, 136, 255, 0.3);
+  background: linear-gradient(180deg, rgba(103, 136, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
 .mode-head {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-bottom: 11px;
 }
 
 .mode-icon {
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 9px;
-  background: linear-gradient(135deg, rgba(67, 97, 238, 0.24) 0%, rgba(72, 149, 239, 0.10) 100%);
-  border: 1px solid rgba(103, 136, 255, 0.22);
-  color: var(--accent);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(67, 97, 238, 0.22) 0%, rgba(72, 149, 239, 0.08) 100%);
+  border: 1px solid rgba(103, 136, 255, 0.2);
+  color: #a8c6ff;
 }
 
 .mode-icon svg {
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
 }
 
 .mode-title {
-  font-size: 16px;
+  font-size: 14.5px;
   font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.1px;
 }
 
 .mode-desc {
-  font-size: 13.5px;
-  line-height: 1.7;
+  flex: 1;
+  font-size: 12.5px;
+  line-height: 1.65;
   color: var(--text-muted);
   margin-bottom: 16px;
 }
@@ -517,48 +529,67 @@ a {
 .mode-demo {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  background: rgba(2, 6, 23, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
 }
 
-.demo-chip {
-  padding: 4px 9px;
-  font-size: 11.5px;
+.demo-tag {
+  font-size: 11px;
+  font-weight: 500;
   color: var(--text-dim);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.demo-chip.accent {
-  color: #c7d5ff;
-  background: rgba(67, 97, 238, 0.18);
-  border-color: rgba(103, 136, 255, 0.3);
+.demo-time {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #e8edf9;
+  font-variant-numeric: tabular-nums;
 }
 
 .demo-days {
   display: flex;
-  gap: 4px;
+  gap: 3px;
 }
 
 .demo-day {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 10.5px;
-  border-radius: 6px;
+  font-size: 9.5px;
+  font-weight: 500;
+  border-radius: 5px;
   color: var(--text-dim);
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .demo-day.on {
   color: #c7d5ff;
-  background: rgba(67, 97, 238, 0.22);
-  border-color: rgba(103, 136, 255, 0.35);
+  background: rgba(67, 97, 238, 0.28);
+  border-color: rgba(103, 136, 255, 0.38);
+}
+
+@media (min-width: 1100px) {
+  .demo-days {
+    gap: 2px;
+  }
+
+  .demo-day {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
 }
 
 /* ---------- Sections ---------- */
@@ -587,6 +618,10 @@ section[id] {
 .section-sub {
   font-size: 15.5px;
   color: var(--text-muted);
+}
+
+.section-head > .section-title:last-child {
+  margin-bottom: 0;
 }
 
 /* ---------- Features ---------- */
@@ -1020,9 +1055,6 @@ summary:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .modes-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1035,6 +1067,10 @@ summary:focus-visible {
   }
 
   .use-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modes-grid {
     grid-template-columns: 1fr;
   }
 

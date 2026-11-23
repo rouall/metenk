@@ -11,7 +11,7 @@ The site is available in English and Chinese (简体中文). The active language
 ## Products
 
 - [MeTenk - Task Timer](https://metenk.com/): Free browser extension for Chrome, Edge, and Firefox. Pomodoro timer, to-do list, focus statistics, focus reminders, and side panel support. Local-first privacy.
-- [Clock Max](https://metenk.com/clockmax.html): Reminder-first Chrome extension (提醒神器). One-time, daily, weekly, and custom weekday reminders at any time of day, plus a world clock, countdown timers and stopwatch, and a built-in to-do list. Free, no account, all data stored locally on the device.
+- [Clock Max](https://metenk.com/clockmax.html): Reminder-first Chrome extension (提醒神器). One-time, daily, weekly, weekday/weekend, monthly (a chosen date or the last day), yearly, and custom reminders at any time of day, plus a world clock, countdown timers and stopwatch, and a built-in to-do list. Free, no account, all data stored locally on the device.
 
 ## Pages
 
