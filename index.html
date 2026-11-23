@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to MeTenk - Focus & Productivity</title>
+  <title>MeTenk - Task Timer</title>
   <meta name="description" content="MeTenk is a free focus and productivity browser extension with a Pomodoro timer, to-do list, and reminders for Chrome, Edge, and Firefox. Local-first and private by design." data-i18n-attr="content:metaDescription">
   <link rel="canonical" href="https://metenk.com/">
   <link rel="alternate" hreflang="en" href="https://metenk.com/">
@@ -610,16 +610,6 @@ var _hmt = _hmt || [];
       }
     }
     
-    /* Enhanced Feature Card Effects */
-    .feature-card:hover .feature-title {
-      transform: translateY(-5px);
-      color: #ffffff;
-    }
-    
-    .feature-card:hover .feature-desc {
-      color: #c4c7cc;
-    }
-    
     /* Smooth Scroll */
     html {
       scroll-behavior: smooth;
@@ -884,6 +874,25 @@ var _hmt = _hmt || [];
       margin-right: auto;
     }
 
+    .hero-subtitle-main {
+      display: block;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #e5e7eb;
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle-sub {
+      display: block;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.5;
+      color: #9ca3af;
+      letter-spacing: 0.1em;
+    }
+
     .hero-cta {
       display: inline-flex;
       gap: 20px;
@@ -987,26 +996,28 @@ var _hmt = _hmt || [];
     }
 
     .section-subtitle {
-      font-size: 20px;
+      font-size: 18px;
       color: #6b7280;
-      max-width: 600px;
+      max-width: 680px;
       margin: 0 auto;
+      line-height: 1.7;
     }
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
-      margin-top: 80px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 64px;
     }
 
     .feature-card {
+      display: flex;
+      flex-direction: column;
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 24px;
-      padding: 40px 30px;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
       position: relative;
       overflow: hidden;
     }
@@ -1017,72 +1028,60 @@ var _hmt = _hmt || [];
       top: 0;
       left: 0;
       right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, rgba(67, 97, 238, 0.8), rgba(72, 149, 239, 0.8));
+      height: 2px;
+      background: linear-gradient(90deg, rgba(67, 97, 238, 0.9), rgba(72, 149, 239, 0.45));
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-
-    .feature-card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, transparent 100%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
+      transition: transform 0.35s ease;
     }
 
     .feature-card:hover {
-      transform: translateY(-12px) scale(1.02);
-      border-color: rgba(67, 97, 238, 0.4);
-      box-shadow: 0 25px 70px rgba(67, 97, 238, 0.25), 0 10px 30px rgba(0, 0, 0, 0.3);
-      background: linear-gradient(135deg, rgba(67, 97, 238, 0.12) 0%, rgba(72, 149, 239, 0.08) 100%);
+      transform: translateY(-6px);
+      border-color: rgba(103, 136, 255, 0.35);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
     }
 
     .feature-card:hover::before {
       transform: scaleX(1);
     }
 
-    .feature-card:hover::after {
-      opacity: 1;
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(67, 97, 238, 0.22) 0%, rgba(72, 149, 239, 0.1) 100%);
+      border: 1px solid rgba(103, 136, 255, 0.22);
+      color: #93c5fd;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .feature-card:hover .feature-icon {
-      transform: scale(1.1) rotate(5deg);
-      filter: drop-shadow(0 15px 30px rgba(67, 97, 238, 0.3));
+      transform: translateY(-2px);
+      border-color: rgba(103, 136, 255, 0.45);
     }
 
-    .feature-icon {
-      font-size: 64px;
-      margin-bottom: 28px;
-      display: block;
-      filter: drop-shadow(0 10px 20px rgba(67, 97, 238, 0.2));
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .feature-icon {
-      font-size: 64px;
-      margin-bottom: 28px;
-      display: block;
-      filter: drop-shadow(0 10px 20px rgba(67, 97, 238, 0.2));
+    .feature-icon svg {
+      width: 26px;
+      height: 26px;
     }
 
     .feature-title {
-      font-size: 26px;
+      font-size: 20px;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
       color: #ffffff;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.2px;
     }
 
     .feature-desc {
-      font-size: 16px;
+      font-size: 15px;
       color: #9ca3af;
-      line-height: 1.8;
+      line-height: 1.75;
       font-weight: 400;
     }
 
@@ -1770,6 +1769,10 @@ var _hmt = _hmt || [];
       .hero-decoration.left-group {
         display: none;
       }
+
+      .features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 768px) {
@@ -1783,6 +1786,14 @@ var _hmt = _hmt || [];
 
       .hero-subtitle {
         font-size: 18px;
+      }
+
+      .hero-subtitle-main {
+        font-size: 21px;
+      }
+
+      .hero-subtitle-sub {
+        font-size: 14px;
       }
 
       .logo-container {
@@ -2000,7 +2011,10 @@ var _hmt = _hmt || [];
         </a>
       </div>
       <h1 class="hero-title">MeTenk</h1>
-      <p class="hero-subtitle" data-i18n="heroSubtitle">Focus, Todo list, Timer, Productivity</p>
+      <p class="hero-subtitle">
+        <span class="hero-subtitle-main" data-i18n="heroTagline">The Ultimate Task Timer</span>
+        <span class="hero-subtitle-sub" data-i18n="heroSubtitle">Focus · To-Do · Timer · Productivity</span>
+      </p>
       <div class="hero-cta">
         <div class="browser-buttons">
           <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
@@ -2030,39 +2044,51 @@ var _hmt = _hmt || [];
   <section class="features">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title" data-i18n="sectionTitle">Powerful Yet Simple</h2>
-        <p class="section-subtitle" data-i18n="sectionSubtitle">Everything you need to stay focused and productive, nothing you don't.</p>
+        <h2 class="section-title" data-i18n="sectionTitle">Pomodoro Timer, To-Do List &amp; Focus Stats</h2>
+        <p class="section-subtitle" data-i18n="sectionSubtitle">One lightweight extension for Chrome, Edge and Firefox. Plan your tasks, run focus sessions, and review your statistics — all data stays on your device.</p>
       </div>
       <div class="features-grid">
         <div class="feature-card fade-in">
-          <span class="feature-icon">⏱️</span>
-          <h3 class="feature-title" data-i18n="feature1Title">Smart Timer</h3>
-          <p class="feature-desc" data-i18n="feature1Desc">Customizable Pomodoro sessions with elegant circular progress. Choose from presets or create your own rhythm.</p>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4.5l2.5 2"/><path d="M9 2h6"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature1Title">Pomodoro Focus Timer</h3>
+          <p class="feature-desc" data-i18n="feature1Desc">Start a classic 25/5 Pomodoro session or set your own focus and break lengths. A circular ring shows the current phase and the time remaining at a glance.</p>
         </div>
         <div class="feature-card fade-in">
-          <span class="feature-icon">📝</span>
-          <h3 class="feature-title" data-i18n="feature2Title">Task Management</h3>
-          <p class="feature-desc" data-i18n="feature2Desc">Integrated TodoList with drag & drop, completion tracking, and seamless workflow integration.</p>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4 6l1.2 1.2L7.5 4.8"/><path d="M4 12l1.2 1.2 2.3-2.4"/><path d="M4 18l1.2 1.2 2.3-2.4"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature2Title">To-Do List &amp; Tasks</h3>
+          <p class="feature-desc" data-i18n="feature2Desc">Create, reorder, and complete tasks with drag and drop. Attach any to-do item to a focus session so planning and timing happen in one place.</p>
         </div>
         <div class="feature-card fade-in">
-          <span class="feature-icon">📊</span>
-          <h3 class="feature-title" data-i18n="feature3Title">Progress Insights</h3>
-          <p class="feature-desc" data-i18n="feature3Desc">Beautiful charts and statistics to track your productivity patterns and celebrate achievements.</p>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-6"/><path d="M2 20h20"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature3Title">Focus Statistics</h3>
+          <p class="feature-desc" data-i18n="feature3Desc">Daily and weekly charts break down focus minutes, completed sessions, and finished tasks, so you can see exactly where your time goes.</p>
         </div>
         <div class="feature-card fade-in">
-          <span class="feature-icon">🎨</span>
-          <h3 class="feature-title" data-i18n="feature4Title">Elegant Themes</h3>
-          <p class="feature-desc" data-i18n="feature4Desc">Multiple beautiful themes to match your style. From classic blue to elegant silver.</p>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9.2 12.2l2 2 3.6-3.8"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature4Title">Privacy First</h3>
+          <p class="feature-desc" data-i18n="feature4Desc">No account, no cloud sync, no tracking of your tasks. Every to-do item and focus record is stored in your browser's local storage on your own device.</p>
         </div>
         <div class="feature-card fade-in">
-          <span class="feature-icon">🌟</span>
-          <h3 class="feature-title" data-i18n="feature5Title">Stay Motivated</h3>
-          <p class="feature-desc" data-i18n="feature5Desc">Inspiring quotes and gentle reminders to keep you motivated throughout your journey.</p>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16v-5a6 6 0 10-12 0v5l-1.6 2.4h15.2L18 16z"/><path d="M10 20.2a2.2 2.2 0 004 0"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature5Title">Focus Reminders</h3>
+          <p class="feature-desc" data-i18n="feature5Desc">Gentle break reminders and motivating quotes keep your rhythm sustainable, so deep work never turns into burnout.</p>
         </div>
         <div class="feature-card fade-in">
-          <span class="feature-icon">🌐</span>
-          <h3 class="feature-title" data-i18n="feature6Title">Global Ready</h3>
-          <p class="feature-desc" data-i18n="feature6Desc">Multi-language support including English, Chinese, Spanish, Arabic, and more.</p>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.4 3.8 5.4 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3z"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature6Title">Themes &amp; Multi-language</h3>
+          <p class="feature-desc" data-i18n="feature6Desc">Switch between classic blue, silver, and dark themes. Use the extension in English, Chinese, Spanish, Arabic, and more — it follows your browser language automatically.</p>
         </div>
       </div>
       
@@ -2119,7 +2145,7 @@ var _hmt = _hmt || [];
           <a href="sponsor.html" class="footer-link" id="footerCoffeeLink" data-i18n="linkCoffee">Coffee</a>
         </div>
         <div class="footer-copyright" data-i18n="copyright">
-          © 2025 Metenk. Crafted with focus and dedication.
+          © 2026 Metenk. Crafting every product with heart.
         </div>
         <div class="i18n-lang-row" data-i18n-slot></div>
       </div>

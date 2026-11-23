@@ -6,30 +6,31 @@
  */
 window.METENK_I18N = {
   en: {
-    docTitle: 'Welcome to MeTenk - Focus & Productivity',
+    docTitle: 'MeTenk - Task Timer',
     metaDescription: 'MeTenk is a free focus and productivity browser extension with a Pomodoro timer, to-do list, and reminders for Chrome, Edge, and Firefox. Local-first and private by design.',
 
-    heroSubtitle: 'Focus, Todo list, Timer, Productivity',
+    heroTagline: 'The Ultimate Task Timer',
+    heroSubtitle: 'Focus · To-Do · Timer · Productivity',
 
     tooltipChrome: 'Install for Chrome',
     tooltipEdge: 'Install for Edge',
     tooltipFirefox: 'Download for Firefox',
 
-    sectionTitle: 'Powerful Yet Simple',
-    sectionSubtitle: "Everything you need to stay focused and productive, nothing you don't.",
+    sectionTitle: 'Pomodoro Timer, To-Do List & Focus Stats',
+    sectionSubtitle: 'One lightweight extension for Chrome, Edge and Firefox. Plan your tasks, run focus sessions, and review your statistics — all data stays on your device.',
 
-    feature1Title: 'Smart Timer',
-    feature1Desc: 'Customizable Pomodoro sessions with elegant circular progress. Choose from presets or create your own rhythm.',
-    feature2Title: 'Task Management',
-    feature2Desc: 'Integrated TodoList with drag & drop, completion tracking, and seamless workflow integration.',
-    feature3Title: 'Progress Insights',
-    feature3Desc: 'Beautiful charts and statistics to track your productivity patterns and celebrate achievements.',
-    feature4Title: 'Elegant Themes',
-    feature4Desc: 'Multiple beautiful themes to match your style. From classic blue to elegant silver.',
-    feature5Title: 'Stay Motivated',
-    feature5Desc: 'Inspiring quotes and gentle reminders to keep you motivated throughout your journey.',
-    feature6Title: 'Global Ready',
-    feature6Desc: 'Multi-language support including English, Chinese, Spanish, Arabic, and more.',
+    feature1Title: 'Pomodoro Focus Timer',
+    feature1Desc: 'Start a classic 25/5 Pomodoro session or set your own focus and break lengths. A circular ring shows the current phase and the time remaining at a glance.',
+    feature2Title: 'To-Do List & Tasks',
+    feature2Desc: 'Create, reorder, and complete tasks with drag and drop. Attach any to-do item to a focus session so planning and timing happen in one place.',
+    feature3Title: 'Focus Statistics',
+    feature3Desc: 'Daily and weekly charts break down focus minutes, completed sessions, and finished tasks, so you can see exactly where your time goes.',
+    feature4Title: 'Privacy First',
+    feature4Desc: "No account, no cloud sync, no tracking of your tasks. Every to-do item and focus record is stored in your browser's local storage on your own device.",
+    feature5Title: 'Focus Reminders',
+    feature5Desc: 'Gentle break reminders and motivating quotes keep your rhythm sustainable, so deep work never turns into burnout.',
+    feature6Title: 'Themes & Multi-language',
+    feature6Desc: 'Switch between classic blue, silver, and dark themes. Use the extension in English, Chinese, Spanish, Arabic, and more — it follows your browser language automatically.',
 
     altFocusReminderPurple: 'Focus Reminder Purple',
     altFocusReminderRed: 'Focus Reminder Red',
@@ -40,34 +41,35 @@ window.METENK_I18N = {
     linkAbout: 'About',
     linkCoffee: 'Coffee',
 
-    copyright: '© 2025 Metenk. Crafted with focus and dedication.'
+    copyright: '© 2026 Metenk. Crafting every product with heart.'
   },
 
   zh: {
-    docTitle: '欢迎使用 MeTenk - 专注与效率',
+    docTitle: 'MeTenk - 任务计时神器',
     metaDescription: 'MeTenk 是一款免费的开源专注与效率浏览器扩展，提供番茄钟、待办清单和提醒功能，支持 Chrome、Edge 和 Firefox。数据本地优先，隐私至上。',
 
-    heroSubtitle: '专注、待办、计时、效率',
+    heroTagline: '任务计时神器',
+    heroSubtitle: '专注 · 待办 · 计时 · 效率',
 
     tooltipChrome: '安装到 Chrome',
     tooltipEdge: '安装到 Edge',
     tooltipFirefox: '下载到 Firefox',
 
-    sectionTitle: '强大而简单',
-    sectionSubtitle: '专注与高效所需的一切，仅此而已。',
+    sectionTitle: '番茄钟、待办清单与专注统计',
+    sectionSubtitle: '一个轻量扩展，兼容 Chrome、Edge 与 Firefox。规划待办、开启专注、回顾统计，所有数据都保存在你的设备上。',
 
-    feature1Title: '智能计时器',
-    feature1Desc: '可自定义的番茄钟时段，配合优雅的环形进度显示。既能选用预设节奏，也能打造专属节拍。',
-    feature2Title: '任务管理',
-    feature2Desc: '内置待办清单，支持拖拽排序、完成度追踪，与你的工作流无缝衔接。',
-    feature3Title: '进度洞察',
-    feature3Desc: '精美的图表与统计数据，助你洞察自己的效率规律，见证每一次突破。',
-    feature4Title: '优雅主题',
-    feature4Desc: '多款精致主题任你挑选，从经典蓝到优雅银，尽显个性品味。',
-    feature5Title: '保持动力',
-    feature5Desc: '励志语录与温柔提醒，让你在整个旅程中始终保持专注与热情。',
-    feature6Title: '面向全球',
-    feature6Desc: '支持多语言界面，包含英语、中文、西班牙语、阿拉伯语等更多语言。',
+    feature1Title: '番茄钟计时器',
+    feature1Desc: '内置经典 25/5 番茄钟，也支持自定义专注与休息时长。环形进度实时显示当前阶段和剩余时间，节奏一目了然。',
+    feature2Title: '待办清单与任务',
+    feature2Desc: '拖拽即可新建、排序和完成待办，每项任务都能关联一次专注计时，规划与执行在同一处完成。',
+    feature3Title: '专注统计',
+    feature3Desc: '按天、按周统计专注时长、完成场次与任务完成量，清楚看到时间真正花在了哪里。',
+    feature4Title: '隐私优先',
+    feature4Desc: '无需注册、不做云端同步、不追踪任务内容。所有待办与专注记录都保存在本机浏览器的本地存储中。',
+    feature5Title: '专注提醒',
+    feature5Desc: '温和的休息提醒与励志语录，帮你维持可持续的节奏，让深度工作不等于透支。',
+    feature6Title: '主题与多语言',
+    feature6Desc: '经典蓝、优雅银、深色主题自由切换；支持英语、中文、西班牙语、阿拉伯语等语言，界面自动跟随浏览器设置。',
 
     altFocusReminderPurple: '专注提醒 - 紫色主题',
     altFocusReminderRed: '专注提醒 - 红色主题',
@@ -78,6 +80,6 @@ window.METENK_I18N = {
     linkAbout: '关于我们',
     linkCoffee: '请我喝咖啡',
 
-    copyright: '© 2025 Metenk. 用专注与用心打造。'
+    copyright: '© 2026 Metenk. 用心打造每一款产品'
   }
 };
