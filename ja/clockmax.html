@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" data-i18n-page="clockmax" data-default-lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clock Max - 究極のリマインダー | MeTenk</title>
+  <link rel="icon" type="image/png" href="/clockmax-icon.png">
+  <link rel="apple-touch-icon" href="/resource/clockmax-icon.png">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Clock Max は、単発・毎日・毎週・平日/週末・毎月・毎年・カスタムのリマインダーを任意の時刻に設定できる無料の Chrome 拡張機能です。世界時計、タイマー、ToDo リストも搭載。アカウント不要で、データは端末内に保存されます。" data-i18n-attr="content:metaDescription">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MeTenk">
+  <meta property="og:title" content="Clock Max - 究極のリマインダー | MeTenk">
+  <meta property="og:description" content="Clock Max は、単発・毎日・毎週・平日/週末・毎月・毎年・カスタムのリマインダーを任意の時刻に設定できる無料の Chrome 拡張機能です。世界時計、タイマー、ToDo リストも搭載。アカウント不要で、データは端末内に保存されます。">
+  <meta property="og:image" content="https://metenk.com/resource/og-image.png">
+  <meta property="og:image:alt" content="Clock Max — reminders, world clock, timers and to-dos in one Chrome extension">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Clock Max - 究極のリマインダー | MeTenk">
+  <meta name="twitter:description" content="Clock Max は、単発・毎日・毎週・平日/週末・毎月・毎年・カスタムのリマインダーを任意の時刻に設定できる無料の Chrome 拡張機能です。世界時計、タイマー、ToDo リストも搭載。アカウント不要で、データは端末内に保存されます。">
+  <meta name="twitter:image" content="https://metenk.com/resource/og-image.png">
+  <meta name="twitter:image:alt" content="Clock Max — reminders, world clock, timers and to-dos in one Chrome extension">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Clock Max",
+  "alternateName": "Clock Max 提醒神器",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Chrome",
+  "browserRequirements": "Chrome 88 or later",
+  "url": "https://metenk.com/clockmax.html",
+  "downloadUrl": "https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk",
+  "description": "A free Chrome extension with one-time, daily, weekly, weekday/weekend, monthly (a chosen date or the last day), yearly, and fully custom reminders at any time of day, plus a world clock, precision timers and stopwatch, and a built-in to-do list. All data is stored locally on your device.",
+  "featureList": [
+    "One-time, daily, weekly, weekday/weekend, monthly, yearly, and custom reminders at any time of day",
+    "World clock with multiple time zones",
+    "Countdown timers and stopwatch",
+    "Built-in to-do list",
+    "Custom alarm sounds and snooze",
+    "Local-first storage with no account required"
+  ],
+  "screenshot": [
+    "https://metenk.com/resource/preview-one.webp",
+    "https://metenk.com/resource/preview-two.webp",
+    "https://metenk.com/resource/preview-three.webp"
+  ],
+  "inLanguage": "ja",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@id": "https://metenk.com/#organization"
+  },
+  "sameAs": "https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "MeTenk",
+      "item": "https://metenk.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Clock Max",
+      "item": "https://metenk.com/clockmax.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Clock Max は無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。Clock Max は完全無料で、アカウント、サブスクリプション、アプリ内課金は不要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Clock Max はどのブラウザに対応していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clock Max は Chrome ウェブストアで公開されており、Chrome および Microsoft Edge や Brave を含む Chromium ベースのブラウザで動作します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Clock Max の利用にアカウントは必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "アカウントは不要です。拡張機能をインストールすれば、すぐにリマインダーを作成できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Clock Max はオフラインでも使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。アラーム、タイマー、世界時計、ToDo リストはすべてブラウザ内でローカルに動作するため、オフラインでも使えます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "データはどこに保存されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "すべてのアラーム、タイマー、タスク、設定はブラウザのストレージ API を使って端末内に保存されます。私たちのサーバーに送信されることはありません。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="/clockmax-wel.css">
+  <link rel="stylesheet" href="/assets/i18n.css">
+  <!-- i18n:head:start -->
+  <link rel="canonical" href="https://metenk.com/ja/clockmax.html">
+  <link rel="alternate" hreflang="en" href="https://metenk.com/clockmax.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://metenk.com/zh/clockmax.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://metenk.com/zh-tw/clockmax.html">
+  <link rel="alternate" hreflang="es" href="https://metenk.com/es/clockmax.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://metenk.com/pt-br/clockmax.html">
+  <link rel="alternate" hreflang="ja" href="https://metenk.com/ja/clockmax.html">
+  <link rel="alternate" hreflang="x-default" href="https://metenk.com/clockmax.html">
+  <meta property="og:url" content="https://metenk.com/ja/clockmax.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="zh_TW">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <!-- i18n:head:end -->
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/ja/">
+        <img src="/resource/icon128.png" alt="" width="26" height="26">
+        <span>MeTenk</span>
+        <span class="brand-tag">Clock Max</span>
+      </a>
+      <a class="topbar-link" href="/ja/" data-i18n="navBack">← MeTenk に戻る</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="hero-ticks" aria-hidden="true"></div>
+          <p class="eyebrow" data-i18n="eyebrow">Clock Max · リマインダー中心の時間管理スイート</p>
+          <h1 class="hero-title" id="heroTitle" data-i18n-html="heroTitleHtml"><span class="title-line">Clock Max</span><span class="title-line gradient-text">究極のリマインダー</span></h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">アラーム、世界時計、タイマー、ToDo リストを 1 つの Chrome 拡張機能に。大切なことをもう見逃しません。</p>
+          <p class="hero-tagline" data-i18n="heroTagline">一度設定すれば、時間どおりに通知。アカウント不要、クラウド不要、余計な音もなし。</p>
+
+          <div class="hero-cta">
+            <a class="btn-primary" id="startBtn" href="https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk?utm_source=item-share-cb" target="_blank" rel="noopener">
+              <span data-i18n="ctaStart">Chrome に追加</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn-ghost" href="#features">
+              <span data-i18n="ctaLearn">機能を見る</span>
+            </a>
+          </div>
+
+          <p class="trust-row">
+            <span data-i18n="trustFree">無料</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span data-i18n="trustAccount">アカウント不要</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span data-i18n="trustLocal">データは端末内に保存</span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="featuresTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="featuresTitle" data-i18n="featuresTitle">4 つのツールを 1 つのリマインダー重視の拡張機能に</h2>
+          <p class="section-sub" data-i18n="featuresSubtitle">予定を守るために必要なすべてを、別のアカウントも別のタブもなしで。</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M5 3L2.5 5.5"/><path d="M22 5.5L19.5 3"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-title" data-i18n="featureAlarmTitle">スマートなリマインダーとアラーム</h3>
+              <p class="feature-desc" data-i18n="featureAlarmDesc">単発、毎日、毎週、平日/週末、毎月（指定日または月末）、毎年、完全カスタム — 1 分単位で任意の時刻に。ラベルを付け、音を選び、ワンクリックでスヌーズできます。</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-title" data-i18n="featureWorldTitle">世界時計</h3>
+              <p class="feature-desc" data-i18n="featureWorldDesc">複数のタイムゾーンを同時に確認。リモートチーム、出張、海外との通話に便利です。</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M9 2h6"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-title" data-i18n="featureTimerTitle">タイマーとストップウォッチ</h3>
+              <p class="feature-desc" data-i18n="featureTimerDesc">カウントダウンタイマーとラップ記録付きストップウォッチ。料理、運動、集中作業に最適です。</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-title" data-i18n="featureTodoTitle">ToDo リスト内蔵</h3>
+              <p class="feature-desc" data-i18n="featureTodoDesc">リマインダーの隣にタスクを書き留め、終わったらチェック。1 日の予定を 1 か所にまとめられます。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="schedules" aria-labelledby="modesTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="modesTitle" data-i18n="modesTitle">生活リズムに合うリマインダー設定</h2>
+          <p class="section-sub" data-i18n="modesSubtitle">単発、毎日、毎週、平日/週末、毎月、毎年、完全カスタム — 1 分単位の精度で、どの時間帯でも設定できます。</p>
+        </div>
+        <div class="modes-grid">
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="M11.2 15.2l1.6-1v5"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeOnceTitle">単発リマインダー</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeOnceDesc">日付と正確な時刻を指定して 1 回だけ鳴らします。会議、支払い、旅行に最適です。</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeOnceDate">11月28日</span>
+              <span class="demo-time">09:00</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeDailyTitle">毎日</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeDailyDesc">毎日同じ時刻に — 起床、服薬、毎日のチェックに。一度設定すれば後は放っておけます。</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeDailyChip">毎日</span>
+              <span class="demo-time">07:00</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 4v5h-5"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeWeeklyTitle">毎週</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeWeeklyDesc">曜日を自由に選択 — 毎週月曜日、または週に数日だけ、同じ時刻でも別々の時刻でも。</p>
+            <div class="mode-demo">
+              <span class="demo-days">
+                <span class="demo-day on" data-i18n="wdMon">月</span>
+                <span class="demo-day" data-i18n="wdTue">火</span>
+                <span class="demo-day on" data-i18n="wdWed">水</span>
+                <span class="demo-day" data-i18n="wdThu">木</span>
+                <span class="demo-day on" data-i18n="wdFri">金</span>
+                <span class="demo-day" data-i18n="wdSat">土</span>
+                <span class="demo-day" data-i18n="wdSun">日</span>
+              </span>
+              <span class="demo-time">09:00</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12.5" rx="2"/><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeWeekdayTitle">平日または週末</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeWeekdayDesc">仕事の習慣なら月〜金だけ、または週末だけに鳴らせます。同じ時刻でも別々の時刻でも。</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeWeekdayChip">月〜金</span>
+              <span class="demo-time">08:30</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeMonthlyTitle">毎月の指定日</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeMonthlyDesc">毎月の日付（1 日、15 日、任意の日）を選択。家賃、請求書、サブスクの支払いに。</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeMonthlyChip">15日</span>
+              <span class="demo-time">10:00</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="M9 16h6M12.5 13.5L15 16l-2.5 2.5"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeLastDayTitle">毎月の最終日</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeLastDayDesc">月の長さに関係なく、常に月末日（28・29・30・31 日）に設定。ずれることはありません。</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeLastDayChip">月末</span>
+              <span class="demo-time">18:00</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.35 4.95 5.4.7-3.98 3.72 1.03 5.33L12 15.6l-4.8 2.6 1.03-5.33L4.25 9.15l5.4-.7z"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeYearlyTitle">毎年</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeYearlyDesc">毎年決まった日付に — 誕生日、更新、記念日を一度設定すればずっとお知らせします。</p>
+            <div class="mode-demo">
+              <span class="demo-tag" data-i18n="modeYearlyChip">12月31日</span>
+              <span class="demo-time">09:00</span>
+            </div>
+          </article>
+          <article class="mode-card">
+            <div class="mode-head">
+              <span class="mode-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>
+              </span>
+              <h3 class="mode-title" data-i18n="modeCustomTitle">カスタム</h3>
+            </div>
+            <p class="mode-desc" data-i18n="modeCustomDesc">曜日と時刻を自分で組み合わせ、1 分単位で設定。複数のアラームを並べて保存し、必要なものだけオンにできます。</p>
+            <div class="mode-demo">
+              <span class="demo-days">
+                <span class="demo-day" data-i18n="wdMon">月</span>
+                <span class="demo-day on" data-i18n="wdTue">火</span>
+                <span class="demo-day" data-i18n="wdWed">水</span>
+                <span class="demo-day on" data-i18n="wdThu">木</span>
+                <span class="demo-day" data-i18n="wdFri">金</span>
+                <span class="demo-day" data-i18n="wdSat">土</span>
+                <span class="demo-day" data-i18n="wdSun">日</span>
+              </span>
+              <span class="demo-time">22:30</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="useTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="useTitle" data-i18n="useTitle">あなたの働き方に合わせて設計</h2>
+          <p class="section-sub" data-i18n="useSubtitle">日常にはシンプルに、仕事の予定には正確に。</p>
+        </div>
+        <div class="use-grid">
+          <article class="use-card">
+            <p class="use-index">01</p>
+            <h3 class="use-title" data-i18n="use1Title">リモートチーム</h3>
+            <p class="use-desc" data-i18n="use1Desc">タイムゾーンをまたいで朝会や顧客との通話を調整。別のアプリを開く必要はありません。</p>
+          </article>
+          <article class="use-card">
+            <p class="use-index">02</p>
+            <h3 class="use-title" data-i18n="use2Title">学習と深い集中</h3>
+            <p class="use-desc" data-i18n="use2Desc">ツールバーから 25 分の集中セッションを実行し、その後は時間を決めて休憩できます。</p>
+          </article>
+          <article class="use-card">
+            <p class="use-index">03</p>
+            <h3 class="use-title" data-i18n="use3Title">毎日の習慣</h3>
+            <p class="use-desc" data-i18n="use3Desc">起床アラーム、服薬リマインダー、ちょっとしたタイマーが邪魔をしません。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="previewTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="previewTitle" data-i18n="previewTitle">実際の画面</h2>
+        </div>
+
+        <div class="preview-frame">
+          <div class="preview-bar">
+            <div class="mock-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span class="mock-title">Clock Max</span>
+            <button class="carousel-toggle" id="carouselToggle" type="button" data-playing="true" aria-label="スライドショーを一時停止" data-i18n-attr="aria-label:carouselPause">
+              <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+              <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+            </button>
+            <span class="preview-counter" id="slideCounter" aria-live="polite">1 / 5</span>
+          </div>
+          <div class="carousel" id="carousel">
+            <div class="carousel-viewport">
+              <div class="carousel-slide active">
+                <img src="/resource/preview-one.webp" width="1280" height="800" alt="Clock Max のリマインダーとアラーム一覧画面" loading="eager" decoding="async" data-i18n-attr="alt:previewAlt1">
+              </div>
+              <div class="carousel-slide">
+                <img src="/resource/preview-two.webp" width="1280" height="800" alt="Clock Max の複数タイムゾーンの世界時計画面" loading="lazy" decoding="async" data-i18n-attr="alt:previewAlt2">
+              </div>
+              <div class="carousel-slide">
+                <img src="/resource/preview-three.webp" width="1280" height="800" alt="Clock Max のカウントダウンタイマーとストップウォッチ画面" loading="lazy" decoding="async" data-i18n-attr="alt:previewAlt3">
+              </div>
+              <div class="carousel-slide">
+                <img src="/resource/preview-four.webp" width="1280" height="800" alt="Clock Max の予定付き ToDo リスト画面" loading="lazy" decoding="async" data-i18n-attr="alt:previewAlt4">
+              </div>
+              <div class="carousel-slide">
+                <img src="/resource/preview-five.webp" width="1280" height="800" alt="Clock Max のサウンドと通知の設定画面" loading="lazy" decoding="async" data-i18n-attr="alt:previewAlt5">
+              </div>
+            </div>
+            <button class="carousel-nav carousel-prev" type="button" aria-label="前のスクリーンショット" data-i18n-attr="aria-label:carouselPrev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="carousel-nav carousel-next" type="button" aria-label="次のスクリーンショット" data-i18n-attr="aria-label:carouselNext">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+          <div class="carousel-dots">
+            <button class="dot-btn active" type="button" data-slide="0" aria-label="スクリーンショット 1 に移動" data-i18n-attr="aria-label:carouselGo1"></button>
+            <button class="dot-btn" type="button" data-slide="1" aria-label="スクリーンショット 2 に移動" data-i18n-attr="aria-label:carouselGo2"></button>
+            <button class="dot-btn" type="button" data-slide="2" aria-label="スクリーンショット 3 に移動" data-i18n-attr="aria-label:carouselGo3"></button>
+            <button class="dot-btn" type="button" data-slide="3" aria-label="スクリーンショット 4 に移動" data-i18n-attr="aria-label:carouselGo4"></button>
+            <button class="dot-btn" type="button" data-slide="4" aria-label="スクリーンショット 5 に移動" data-i18n-attr="aria-label:carouselGo5"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faqTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="faqTitle" data-i18n="faqTitle">よくある質問</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-i18n="faq1Q">Clock Max は無料ですか？</summary>
+            <p class="faq-answer" data-i18n="faq1A">はい。Clock Max は完全無料で、アカウント、サブスクリプション、アプリ内課金は不要です。</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faqScheduleQ">どんなリマインダー設定に対応していますか？</summary>
+            <p class="faq-answer" data-i18n="faqScheduleA">単発、毎日、毎週、平日/週末、毎月の指定日、月末日、毎年、完全カスタムに対応しています。各アラームは 1 分単位で任意の時刻に設定できます。</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq2Q">Clock Max はどのブラウザに対応していますか？</summary>
+            <p class="faq-answer" data-i18n="faq2A">Clock Max は Chrome ウェブストアで公開されており、Chrome および Microsoft Edge や Brave を含む Chromium ベースのブラウザで動作します。</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq3Q">Clock Max の利用にアカウントは必要ですか？</summary>
+            <p class="faq-answer" data-i18n="faq3A">アカウントは不要です。拡張機能をインストールすれば、すぐにリマインダーを作成できます。</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq4Q">Clock Max はオフラインでも使えますか？</summary>
+            <p class="faq-answer" data-i18n="faq4A">はい。アラーム、タイマー、世界時計、ToDo リストはすべてブラウザ内でローカルに動作するため、オフラインでも使えます。</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq5Q">データはどこに保存されますか？</summary>
+            <p class="faq-answer" data-i18n="faq5A">すべてのアラーム、タイマー、タスク、設定はブラウザのストレージ API を使って端末内に保存されます。私たちのサーバーに送信されることはありません。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ctaBandTitle">
+      <div class="container">
+        <div class="cta-band">
+          <h2 class="cta-band-title" id="ctaBandTitle" data-i18n="ctaBandTitle">もう瞬間を逃さない</h2>
+          <p class="cta-band-desc" data-i18n="ctaBandDesc">Clock Max をインストールして、最初のリマインダーをすぐに設定しましょう。</p>
+          <a class="btn-primary" id="ctaBtn" href="https://chromewebstore.google.com/detail/amicbegakinicbbbjaocchcnphchogmk?utm_source=item-share-cb" target="_blank" rel="noopener" data-i18n="ctaBandBtn">Chrome に追加 — 無料</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/ja/" data-i18n="footerHome">ホーム</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="/ja/clock-privacy-policy.html" data-i18n="footerPrivacy">プライバシーポリシー</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <span data-i18n="footerProduct">Clock Max</span>
+      </div>
+      <div class="i18n-lang-row" data-i18n-slot></div>
+      <p class="footer-copy" data-i18n="footerCopyright">© 2026 MeTenk</p>
+    </div>
+  </footer>
+
+  <script src="/clockmax-wel.js"></script>
+  <script defer src="/assets/locales/clockmax.js"></script>
+  <script defer src="/assets/i18n.js"></script>
+</body>
+</html>

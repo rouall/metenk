@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr" data-i18n-page="index" data-default-lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeTenk - Timer de tarefas</title>
+  <meta name="description" content="O MeTenk é uma extensão de navegador gratuita de foco e produtividade com timer Pomodoro, lista de tarefas e lembretes para Chrome, Edge e Firefox. Local-first e privada por padrão." data-i18n-attr="content:metaDescription">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MeTenk">
+  <meta property="og:title" content="MeTenk - Timer de tarefas">
+  <meta property="og:description" content="O MeTenk é uma extensão de navegador gratuita de foco e produtividade com timer Pomodoro, lista de tarefas e lembretes para Chrome, Edge e Firefox. Local-first e privada por padrão.">
+  <meta property="og:image" content="https://metenk.com/resource/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MeTenk - Timer de tarefas">
+  <meta name="twitter:description" content="O MeTenk é uma extensão de navegador gratuita de foco e produtividade com timer Pomodoro, lista de tarefas e lembretes para Chrome, Edge e Firefox. Local-first e privada por padrão.">
+  <meta name="twitter:image" content="https://metenk.com/resource/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://metenk.com/#organization",
+      "name": "MeTenk",
+      "url": "https://metenk.com/",
+      "logo": "https://metenk.com/resource/icon128.png",
+      "email": "colintenk@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://metenk.com/#website",
+      "url": "https://metenk.com/",
+      "name": "MeTenk",
+      "publisher": {
+        "@id": "https://metenk.com/#organization"
+      },
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "MeTenk - Task Timer",
+      "alternateName": "MeTenk 任务计时神器",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Chrome, Edge, Firefox",
+      "url": "https://metenk.com/",
+      "screenshot": "https://metenk.com/resource/og-image.png",
+      "description": "Free Pomodoro focus timer, to-do list, and focus statistics browser extension. All data stays on your device.",
+      "featureList": [
+        "Pomodoro focus timer with custom session lengths",
+        "To-do list with drag-and-drop task tracking",
+        "Daily and weekly focus statistics",
+        "Local-first privacy: no account and no cloud sync",
+        "Focus reminders with break prompts",
+        "Themes and multi-language interface"
+      ],
+      "inLanguage": "pt-BR",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://metenk.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://metenk.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O MeTenk é gratuito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A extensão principal é gratuita na Chrome Web Store, na Microsoft Edge Add-ons e na Firefox Add-ons. Um código VIP opcional libera recursos extras."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde meus dados ficam armazenados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No seu próprio dispositivo. Tarefas, sessões de foco e configurações ficam no armazenamento local do navegador, sem conta e sem sincronização na nuvem. Você pode exportar um backup ou importar seus dados quando quiser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais navegadores são compatíveis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O MeTenk funciona no Chrome, no Microsoft Edge e no Firefox, incluindo seus derivados baseados em Chromium."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso personalizar a duração do Pomodoro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Use o preset clássico 25/5 ou defina suas próprias durações de foco e pausa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O MeTenk funciona offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O timer, a lista de tarefas e as estatísticas funcionam sem internet; só instalar e atualizar a extensão exige conexão."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1S7CQX7H6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F1S7CQX7H6');
+</script>
+
+
+<!-- 百度统计 -->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e441137fbca45346db185da89d14a454";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+  <link rel="stylesheet" href="/assets/landing.css">
+  <link rel="stylesheet" href="/assets/reviews.css">
+  <script>
+    (function () {
+      var lightImages = [
+        '23ONJ.webp', '2J3INK.webp', '32JBEFIJ.webp', '32JNJN32.avif', 'DFFDFDFD3432.webp',
+        'DFON23.avif', 'DFON23OKM.avif', 'DILJN23.webp', 'FDOIHN323.webp', 'O32N.webp',
+        'Office06.avif', 'Office41.avif'
+      ];
+
+      var nightImages = [
+        '09DSJN23.webp', 'DSIJN23JH23JK.webp', 'DSIOSDMKSDJN2323.webp', 'DSN2398SDNUI.webp',
+        'DSOIJN32KJ.webp', 'SDO3287DFNIJ.webp', 'SDOIN23IU23BIUNC.webp', 'SDOINEWRIUB32.webp', 'SDONIU23OIU23N.webp'
+      ];
+
+      function isNight() {
+        var h = new Date().getHours();
+        return h >= 18 || h < 6;
+      }
+
+      function getImage() {
+        try {
+          var now = new Date();
+          var cacheKey = 'bg_' + now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + '-' + now.getHours() + '-' + now.getMinutes();
+          var path = sessionStorage.getItem(cacheKey);
+          if (!path) {
+            var arr = isNight() ? nightImages : lightImages;
+            path = '/resource/' + (isNight() ? 'night' : 'light') + '/' + arr[Math.floor(Math.random() * arr.length)];
+            sessionStorage.setItem(cacheKey, path);
+          }
+          return path;
+        } catch (e) {
+          return '/resource/light/2J3INK.webp';
+        }
+      }
+
+      // The hero background is published as a CSS variable, so the browser can
+      // start fetching it before the body is parsed (better LCP).
+      function applyHeroBackground() {
+        var path = getImage();
+        // Resolve to an absolute URL: the variable is consumed inside assets/landing.css,
+        // where a plain relative path would resolve against /assets/ and 404.
+        var absolutePath = new URL(path, document.baseURI).href;
+        document.documentElement.style.setProperty('--hero-bg', 'url("' + absolutePath + '")');
+
+        var link = document.getElementById('hero-bg-preload');
+        if (!link) {
+          link = document.createElement('link');
+          link.id = 'hero-bg-preload';
+          link.rel = 'preload';
+          link.as = 'image';
+          link.setAttribute('fetchpriority', 'high');
+          document.head.appendChild(link);
+        }
+        link.href = absolutePath;
+      }
+
+      applyHeroBackground();
+      setInterval(applyHeroBackground, 60000);
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/i18n.css">
+  <!-- i18n:head:start -->
+  <link rel="canonical" href="https://metenk.com/pt-br/">
+  <link rel="alternate" hreflang="en" href="https://metenk.com/">
+  <link rel="alternate" hreflang="zh-CN" href="https://metenk.com/zh/">
+  <link rel="alternate" hreflang="zh-TW" href="https://metenk.com/zh-tw/">
+  <link rel="alternate" hreflang="es" href="https://metenk.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://metenk.com/pt-br/">
+  <link rel="alternate" hreflang="ja" href="https://metenk.com/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://metenk.com/">
+  <meta property="og:url" content="https://metenk.com/pt-br/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="zh_TW">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <!-- i18n:head:end -->
+</head>
+<body>
+  <main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="/resource/icon128.png" alt="MeTenk Logo" width="128" height="128">
+        </div>
+        <a href="/pt-br/clockmax.html" class="clockmax-wrapper" title="Clock Max">
+          <div class="clockmax-icon">
+            <img src="/resource/clockmax-icon.png" alt="Clock Max" width="128" height="128">
+          </div>
+          <span class="clockmax-label">Clock Max</span>
+        </a>
+      </div>
+      <h1 class="hero-title">MeTenk</h1>
+      <p class="hero-subtitle">
+        <span class="hero-subtitle-main" data-i18n="heroTagline">O timer de tarefas definitivo</span>
+        <span class="hero-subtitle-sub" data-i18n="heroSubtitle">Foco · Tarefas · Timer · Produtividade</span>
+      </p>
+      <div class="hero-cta">
+        <div class="browser-buttons">
+          <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
+             target="_blank" 
+             class="browser-btn chrome" 
+             data-tooltip="Instalar no Chrome" data-i18n-attr="data-tooltip:tooltipChrome,aria-label:tooltipChrome" aria-label="Instalar no Chrome">
+            <img src="/resource/chromeicon.png" alt="Chrome" width="32" height="32">
+          </a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
+             target="_blank" 
+             class="browser-btn edge" 
+             data-tooltip="Instalar no Edge" data-i18n-attr="data-tooltip:tooltipEdge,aria-label:tooltipEdge" aria-label="Instalar no Edge">
+            <img src="/resource/edge_browser_logo_icon_152998.png" alt="Edge" width="32" height="32">
+          </a>
+          <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
+             target="_blank"
+             class="browser-btn firefox" 
+             data-tooltip="Baixar para Firefox" data-i18n-attr="data-tooltip:tooltipFirefox,aria-label:tooltipFirefox" aria-label="Baixar para Firefox">
+            <img src="/resource/firefox_browser_logo_icon_152991.png" alt="Firefox" width="32" height="32">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="sectionTitle">Timer Pomodoro, lista de tarefas e estatísticas</h2>
+        <p class="section-subtitle" data-i18n="sectionSubtitle">Uma extensão leve para Chrome, Edge e Firefox. Planeje suas tarefas, faça sessões de foco e revise suas estatísticas — todos os dados ficam no seu dispositivo.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4.5l2.5 2"/><path d="M9 2h6"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature1Title">Timer Pomodoro</h3>
+          <p class="feature-desc" data-i18n="feature1Desc">Inicie uma sessão Pomodoro clássica de 25/5 ou defina seus próprios tempos de foco e pausa. Um anel circular mostra a fase atual e o tempo restante de relance.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4 6l1.2 1.2L7.5 4.8"/><path d="M4 12l1.2 1.2 2.3-2.4"/><path d="M4 18l1.2 1.2 2.3-2.4"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature2Title">Lista de tarefas</h3>
+          <p class="feature-desc" data-i18n="feature2Desc">Crie, reordene e conclua tarefas arrastando e soltando. Vincule qualquer tarefa a uma sessão de foco para planejar e cronometrar no mesmo lugar.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-6"/><path d="M2 20h20"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature3Title">Estatísticas de foco</h3>
+          <p class="feature-desc" data-i18n="feature3Desc">Gráficos diários e semanais detalham minutos de foco, sessões concluídas e tarefas finalizadas, para você ver exatamente para onde vai seu tempo.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9.2 12.2l2 2 3.6-3.8"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature4Title">Privacidade em primeiro lugar</h3>
+          <p class="feature-desc" data-i18n="feature4Desc">Sem conta, sem sincronização na nuvem e sem rastrear suas tarefas. Cada tarefa e registro de foco fica no armazenamento local do seu navegador, no seu próprio dispositivo.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16v-5a6 6 0 10-12 0v5l-1.6 2.4h15.2L18 16z"/><path d="M10 20.2a2.2 2.2 0 004 0"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature5Title">Lembretes de foco</h3>
+          <p class="feature-desc" data-i18n="feature5Desc">Lembretes suaves de pausa e frases motivadoras mantêm seu ritmo sustentável, para que o trabalho profundo nunca vire esgotamento.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.4 3.8 5.4 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3z"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature6Title">Temas e idiomas</h3>
+          <p class="feature-desc" data-i18n="feature6Desc">Alterne entre os temas azul clássico, prata e escuro. Use a extensão em inglês, chinês, espanhol, árabe e mais — ela acompanha o idioma do navegador automaticamente.</p>
+        </div>
+      </div>
+      
+      <!-- Product Showcase Image -->
+      <div class="product-showcase fade-in">
+        <div class="showcase-image-wrapper" id="showcaseCarousel">
+          <button class="carousel-btn carousel-prev" id="carouselPrev">❮</button>
+          <button class="carousel-btn carousel-next" id="carouselNext">❯</button>
+          <div class="carousel-images">
+            <img src="/resource/focus-reminder-popup-pur.webp" alt="Lembrete de foco roxo" class="showcase-image active" width="1280" height="800" loading="lazy" decoding="async" data-i18n-attr="alt:altFocusReminderPurple">
+            <img src="/resource/focus-reminder-popup-red.webp" alt="Lembrete de foco vermelho" class="showcase-image" width="1280" height="800" loading="lazy" decoding="async" data-i18n-attr="alt:altFocusReminderRed">
+          </div>
+          <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+      </div>
+      
+
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews" id="reviews" aria-labelledby="reviewsTitle">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="reviews-eyebrow">
+          <span class="reviews-kicker" data-i18n="reviewsKicker">Avaliações verificadas</span>
+          <div class="reviews-summary" id="reviewsSummary" hidden></div>
+        </div>
+        <h2 class="section-title" id="reviewsTitle" data-i18n="reviewsTitle">Amado por quem realmente se concentra</h2>
+        <p class="section-subtitle" data-i18n="reviewsSubtitle">Avaliações reais das lojas do Chrome, Edge e Firefox — reunidas em um só lugar e traduzidas para o seu idioma.</p>
+      </div>
+    </div>
+    <div class="reviews-marquee fade-in" id="reviewsMarquee" data-i18n-attr="aria-label:reviewsTitle" aria-label="Amado por quem realmente se concentra">
+      <div class="reviews-track" id="reviewsTrack"></div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" id="faqTitle" data-i18n="faqTitle">Perguntas frequentes</h2>
+      </div>
+      <div class="faq-list fade-in">
+        <details class="faq-item">
+          <summary data-i18n="faq1Q">O MeTenk é gratuito?</summary>
+          <div class="faq-answer" data-i18n="faq1A">Sim. A extensão principal é gratuita na Chrome Web Store, na Microsoft Edge Add-ons e na Firefox Add-ons. Um código VIP opcional libera recursos extras.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq2Q">Onde meus dados ficam armazenados?</summary>
+          <div class="faq-answer" data-i18n="faq2A">No seu próprio dispositivo. Tarefas, sessões de foco e configurações ficam no armazenamento local do navegador, sem conta e sem sincronização na nuvem. Você pode exportar um backup ou importar seus dados quando quiser.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq3Q">Quais navegadores são compatíveis?</summary>
+          <div class="faq-answer" data-i18n="faq3A">O MeTenk funciona no Chrome, no Microsoft Edge e no Firefox, incluindo seus derivados baseados em Chromium.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq4Q">Posso personalizar a duração do Pomodoro?</summary>
+          <div class="faq-answer" data-i18n="faq4A">Sim. Use o preset clássico 25/5 ou defina suas próprias durações de foco e pausa.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq5Q">O MeTenk funciona offline?</summary>
+          <div class="faq-answer" data-i18n="faq5A">Sim. O timer, a lista de tarefas e as estatísticas funcionam sem internet; só instalar e atualizar a extensão exige conexão.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand-section">
+          <div class="footer-brand">Metenk</div>
+          <div class="footer-browser-buttons">
+            <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
+               target="_blank" 
+               class="browser-btn chrome" 
+               data-tooltip="Instalar no Chrome" data-i18n-attr="data-tooltip:tooltipChrome,aria-label:tooltipChrome" aria-label="Instalar no Chrome">
+              <img src="/resource/chromeicon.png" alt="Chrome" width="32" height="32">
+            </a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
+               target="_blank" 
+               class="browser-btn edge" 
+               data-tooltip="Instalar no Edge" data-i18n-attr="data-tooltip:tooltipEdge,aria-label:tooltipEdge" aria-label="Instalar no Edge">
+              <img src="/resource/edge_browser_logo_icon_152998.png" alt="Edge" width="32" height="32">
+            </a>
+            <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
+               target="_blank"
+               class="browser-btn firefox" 
+               data-tooltip="Baixar para Firefox" data-i18n-attr="data-tooltip:tooltipFirefox,aria-label:tooltipFirefox" aria-label="Baixar para Firefox">
+              <img src="/resource/firefox_browser_logo_icon_152991.png" alt="Firefox" width="32" height="32">
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="/pt-br/vip-redeem-code.html" class="footer-link vip-link" target="_blank" rel="noopener noreferrer" data-i18n="linkVip">Código VIP</a>
+          <a href="/pt-br/clockmax.html" class="footer-link" data-i18n="linkClockMax">Clock Max</a>
+          <a href="/pt-br/privacy-policy.html" class="footer-link" target="_blank" data-i18n="linkPrivacy">Política de privacidade</a>
+          <a href="/pt-br/about.html" class="footer-link" id="footerAboutLink" data-i18n="linkAbout">Sobre</a>
+          <a href="/pt-br/sponsor.html" class="footer-link" id="footerCoffeeLink" data-i18n="linkCoffee">Café</a>
+        </div>
+        <div class="footer-copyright" data-i18n="copyright">© 2026 Metenk. Cada produto, feito com carinho.</div>
+        <div class="i18n-lang-row" data-i18n-slot></div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="/welcome.js"></script>
+  <script defer src="/assets/locales/index.js"></script>
+  <script defer src="/assets/i18n.js"></script>
+  <script defer src="/assets/reviews-data.js"></script>
+  <script defer src="/assets/reviews.js"></script>
+</body>
+</html>

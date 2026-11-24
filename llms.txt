@@ -6,7 +6,7 @@ MeTenk (https://metenk.com/) is the official website for the MeTenk productivity
 
 ## Languages
 
-The site is available in English and Chinese (简体中文). The active language is chosen automatically from the visitor's browser language and can be switched at any time via the language switcher at the bottom of the page footer. The choice is remembered on the visitor's device. The `lang` attribute of each page reflects the language currently being displayed.
+The site is available in English, Simplified Chinese (简体中文), Traditional Chinese (繁體中文), Spanish (Español), Brazilian Portuguese (Português do Brasil), and Japanese (日本語). Every language has its own crawlable URL — English at the root and the others under `/zh/`, `/zh-tw/`, `/es/`, `/pt-br/`, and `/ja/` — linked together with `hreflang` alternates. On the English root pages the language follows the visitor's browser setting; on a language-specific page the URL determines the language. Visitors can switch at any time via the language control at the bottom of the footer. The `lang` attribute of each page reflects the language being displayed.
 
 ## Products
 

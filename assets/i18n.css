@@ -27,6 +27,34 @@ html[lang^="zh"] .i18n-switcher {
                'WenQuanYi Micro Hei', 'Heiti SC', sans-serif;
 }
 
+/* Traditional Chinese must not fall through to the Simplified stack above
+ * (different glyph shapes for the same code point), so it gets its own list. */
+html[lang="zh-TW"] body,
+html[lang="zh-TW"] button,
+html[lang="zh-TW"] input,
+html[lang="zh-TW"] textarea,
+html[lang="zh-TW"] select,
+html[lang="zh-TW"] .i18n-switcher {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, 'PingFang TC', 'Heiti TC',
+               'Microsoft JhengHei', '微軟正黑體', 'Source Han Sans TC',
+               'Noto Sans TC', 'Noto Sans CJK TC', sans-serif;
+}
+
+/* Japanese: Hiragino / Yu Gothic first, then Noto. */
+html[lang="ja"] body,
+html[lang="ja"] button,
+html[lang="ja"] input,
+html[lang="ja"] textarea,
+html[lang="ja"] select,
+html[lang="ja"] .i18n-switcher {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+               'Yu Gothic', 'YuGothic', 'Meiryo', 'Noto Sans JP',
+               'Noto Sans CJK JP', sans-serif;
+}
+
+
 /* ---------- Theme palette ----------
  * Variables live on <html> so both the switcher and the footer shell that
  * hosts it resolve the same colours.
@@ -85,6 +113,9 @@ html[data-i18n-theme="night"] {
 .i18n-switcher {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 2px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 12.5px;
   line-height: 1;
@@ -99,6 +130,7 @@ html[data-i18n-theme="night"] {
   font-size: inherit;
   font-weight: 400;
   line-height: inherit;
+  text-decoration: none;
   cursor: pointer;
   border-radius: 3px;
   transition: color 0.16s ease;
@@ -133,6 +165,12 @@ html[data-i18n-theme="night"] {
 @media (max-width: 768px) {
   .i18n-footer {
     padding: 18px 16px 24px;
+  }
+
+  /* Six languages on a narrow screen: tighten the separators instead of
+   * letting the row overflow the page gutter. */
+  .i18n-option + .i18n-option::before {
+    margin: 0 6px;
   }
 }
 

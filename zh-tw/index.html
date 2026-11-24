@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-TW" dir="ltr" data-i18n-page="index" data-default-lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeTenk - 任務計時神器</title>
+  <meta name="description" content="MeTenk 是一款免費的專注與效率瀏覽器擴充功能，提供番茄鐘、待辦清單和提醒功能，支援 Chrome、Edge 和 Firefox。資料本地優先，隱私至上。" data-i18n-attr="content:metaDescription">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MeTenk">
+  <meta property="og:title" content="MeTenk - 任務計時神器">
+  <meta property="og:description" content="MeTenk 是一款免費的專注與效率瀏覽器擴充功能，提供番茄鐘、待辦清單和提醒功能，支援 Chrome、Edge 和 Firefox。資料本地優先，隱私至上。">
+  <meta property="og:image" content="https://metenk.com/resource/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MeTenk - 任務計時神器">
+  <meta name="twitter:description" content="MeTenk 是一款免費的專注與效率瀏覽器擴充功能，提供番茄鐘、待辦清單和提醒功能，支援 Chrome、Edge 和 Firefox。資料本地優先，隱私至上。">
+  <meta name="twitter:image" content="https://metenk.com/resource/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://metenk.com/#organization",
+      "name": "MeTenk",
+      "url": "https://metenk.com/",
+      "logo": "https://metenk.com/resource/icon128.png",
+      "email": "colintenk@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://metenk.com/#website",
+      "url": "https://metenk.com/",
+      "name": "MeTenk",
+      "publisher": {
+        "@id": "https://metenk.com/#organization"
+      },
+      "inLanguage": "zh-TW"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "MeTenk - Task Timer",
+      "alternateName": "MeTenk 任务计时神器",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Chrome, Edge, Firefox",
+      "url": "https://metenk.com/",
+      "screenshot": "https://metenk.com/resource/og-image.png",
+      "description": "Free Pomodoro focus timer, to-do list, and focus statistics browser extension. All data stays on your device.",
+      "featureList": [
+        "Pomodoro focus timer with custom session lengths",
+        "To-do list with drag-and-drop task tracking",
+        "Daily and weekly focus statistics",
+        "Local-first privacy: no account and no cloud sync",
+        "Focus reminders with break prompts",
+        "Themes and multi-language interface"
+      ],
+      "inLanguage": "zh-TW",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://metenk.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://metenk.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "MeTenk 免費嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的。核心擴充功能可在 Chrome 線上應用程式商店、Microsoft Edge 附加元件和 Firefox 附加元件中免費安裝；選用的 VIP 兌換碼可解鎖更多功能。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我的資料儲存在哪裡？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "資料保存在你自己的裝置上。任務、專注紀錄和設定都儲存在瀏覽器本機，無需帳號，也不做雲端同步；同時支援隨時匯出備份與匯入還原。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "支援哪些瀏覽器？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "支援 Chrome、Microsoft Edge 和 Firefox，以及它們基於 Chromium 的衍生瀏覽器。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以自訂番茄鐘時長嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。既能使用經典的 25/5 預設，也能自由設定專注與休息時長。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "離線能用嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。計時器、待辦清單和統計在斷網時照常運作，只有安裝和更新擴充功能需要連網。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1S7CQX7H6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F1S7CQX7H6');
+</script>
+
+
+<!-- 百度统计 -->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e441137fbca45346db185da89d14a454";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+  <link rel="stylesheet" href="/assets/landing.css">
+  <link rel="stylesheet" href="/assets/reviews.css">
+  <script>
+    (function () {
+      var lightImages = [
+        '23ONJ.webp', '2J3INK.webp', '32JBEFIJ.webp', '32JNJN32.avif', 'DFFDFDFD3432.webp',
+        'DFON23.avif', 'DFON23OKM.avif', 'DILJN23.webp', 'FDOIHN323.webp', 'O32N.webp',
+        'Office06.avif', 'Office41.avif'
+      ];
+
+      var nightImages = [
+        '09DSJN23.webp', 'DSIJN23JH23JK.webp', 'DSIOSDMKSDJN2323.webp', 'DSN2398SDNUI.webp',
+        'DSOIJN32KJ.webp', 'SDO3287DFNIJ.webp', 'SDOIN23IU23BIUNC.webp', 'SDOINEWRIUB32.webp', 'SDONIU23OIU23N.webp'
+      ];
+
+      function isNight() {
+        var h = new Date().getHours();
+        return h >= 18 || h < 6;
+      }
+
+      function getImage() {
+        try {
+          var now = new Date();
+          var cacheKey = 'bg_' + now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + '-' + now.getHours() + '-' + now.getMinutes();
+          var path = sessionStorage.getItem(cacheKey);
+          if (!path) {
+            var arr = isNight() ? nightImages : lightImages;
+            path = '/resource/' + (isNight() ? 'night' : 'light') + '/' + arr[Math.floor(Math.random() * arr.length)];
+            sessionStorage.setItem(cacheKey, path);
+          }
+          return path;
+        } catch (e) {
+          return '/resource/light/2J3INK.webp';
+        }
+      }
+
+      // The hero background is published as a CSS variable, so the browser can
+      // start fetching it before the body is parsed (better LCP).
+      function applyHeroBackground() {
+        var path = getImage();
+        // Resolve to an absolute URL: the variable is consumed inside assets/landing.css,
+        // where a plain relative path would resolve against /assets/ and 404.
+        var absolutePath = new URL(path, document.baseURI).href;
+        document.documentElement.style.setProperty('--hero-bg', 'url("' + absolutePath + '")');
+
+        var link = document.getElementById('hero-bg-preload');
+        if (!link) {
+          link = document.createElement('link');
+          link.id = 'hero-bg-preload';
+          link.rel = 'preload';
+          link.as = 'image';
+          link.setAttribute('fetchpriority', 'high');
+          document.head.appendChild(link);
+        }
+        link.href = absolutePath;
+      }
+
+      applyHeroBackground();
+      setInterval(applyHeroBackground, 60000);
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/i18n.css">
+  <!-- i18n:head:start -->
+  <link rel="canonical" href="https://metenk.com/zh-tw/">
+  <link rel="alternate" hreflang="en" href="https://metenk.com/">
+  <link rel="alternate" hreflang="zh-CN" href="https://metenk.com/zh/">
+  <link rel="alternate" hreflang="zh-TW" href="https://metenk.com/zh-tw/">
+  <link rel="alternate" hreflang="es" href="https://metenk.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://metenk.com/pt-br/">
+  <link rel="alternate" hreflang="ja" href="https://metenk.com/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://metenk.com/">
+  <meta property="og:url" content="https://metenk.com/zh-tw/">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <!-- i18n:head:end -->
+</head>
+<body>
+  <main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="/resource/icon128.png" alt="MeTenk Logo" width="128" height="128">
+        </div>
+        <a href="/zh-tw/clockmax.html" class="clockmax-wrapper" title="Clock Max">
+          <div class="clockmax-icon">
+            <img src="/resource/clockmax-icon.png" alt="Clock Max" width="128" height="128">
+          </div>
+          <span class="clockmax-label">Clock Max</span>
+        </a>
+      </div>
+      <h1 class="hero-title">MeTenk</h1>
+      <p class="hero-subtitle">
+        <span class="hero-subtitle-main" data-i18n="heroTagline">任務計時神器</span>
+        <span class="hero-subtitle-sub" data-i18n="heroSubtitle">專注 · 待辦 · 計時 · 效率</span>
+      </p>
+      <div class="hero-cta">
+        <div class="browser-buttons">
+          <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
+             target="_blank" 
+             class="browser-btn chrome" 
+             data-tooltip="安裝到 Chrome" data-i18n-attr="data-tooltip:tooltipChrome,aria-label:tooltipChrome" aria-label="安裝到 Chrome">
+            <img src="/resource/chromeicon.png" alt="Chrome" width="32" height="32">
+          </a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
+             target="_blank" 
+             class="browser-btn edge" 
+             data-tooltip="安裝到 Edge" data-i18n-attr="data-tooltip:tooltipEdge,aria-label:tooltipEdge" aria-label="安裝到 Edge">
+            <img src="/resource/edge_browser_logo_icon_152998.png" alt="Edge" width="32" height="32">
+          </a>
+          <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
+             target="_blank"
+             class="browser-btn firefox" 
+             data-tooltip="下載到 Firefox" data-i18n-attr="data-tooltip:tooltipFirefox,aria-label:tooltipFirefox" aria-label="下載到 Firefox">
+            <img src="/resource/firefox_browser_logo_icon_152991.png" alt="Firefox" width="32" height="32">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="sectionTitle">番茄鐘、待辦清單與專注統計</h2>
+        <p class="section-subtitle" data-i18n="sectionSubtitle">一個輕量擴充功能，相容 Chrome、Edge 與 Firefox。規劃待辦、開啟專注、回顧統計，所有資料都保存在你的裝置上。</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4.5l2.5 2"/><path d="M9 2h6"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature1Title">番茄鐘計時器</h3>
+          <p class="feature-desc" data-i18n="feature1Desc">內建經典 25/5 番茄鐘，也支援自訂專注與休息時長。環形進度即時顯示目前階段和剩餘時間，節奏一目瞭然。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4 6l1.2 1.2L7.5 4.8"/><path d="M4 12l1.2 1.2 2.3-2.4"/><path d="M4 18l1.2 1.2 2.3-2.4"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature2Title">待辦清單與任務</h3>
+          <p class="feature-desc" data-i18n="feature2Desc">拖曳即可新增、排序和完成待辦，每項任務都能連結一次專注計時，規劃與執行在同一處完成。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-6"/><path d="M2 20h20"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature3Title">專注統計</h3>
+          <p class="feature-desc" data-i18n="feature3Desc">依日、依週統計專注時長、完成場次與任務完成量，清楚看到時間真正花在哪裡。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9.2 12.2l2 2 3.6-3.8"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature4Title">隱私優先</h3>
+          <p class="feature-desc" data-i18n="feature4Desc">無需註冊、不做雲端同步、不追蹤任務內容。所有待辦與專注紀錄都保存在本機瀏覽器的本機儲存空間中。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16v-5a6 6 0 10-12 0v5l-1.6 2.4h15.2L18 16z"/><path d="M10 20.2a2.2 2.2 0 004 0"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature5Title">專注提醒</h3>
+          <p class="feature-desc" data-i18n="feature5Desc">溫和的休息提醒與勵志語錄，幫你維持可持續的節奏，讓深度工作不等於透支。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.4 3.8 5.4 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3z"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature6Title">主題與多語言</h3>
+          <p class="feature-desc" data-i18n="feature6Desc">經典藍、優雅銀、深色主題自由切換；支援英文、中文、西班牙文、阿拉伯文等語言，介面自動跟隨瀏覽器設定。</p>
+        </div>
+      </div>
+      
+      <!-- Product Showcase Image -->
+      <div class="product-showcase fade-in">
+        <div class="showcase-image-wrapper" id="showcaseCarousel">
+          <button class="carousel-btn carousel-prev" id="carouselPrev">❮</button>
+          <button class="carousel-btn carousel-next" id="carouselNext">❯</button>
+          <div class="carousel-images">
+            <img src="/resource/focus-reminder-popup-pur.webp" alt="專注提醒 - 紫色主題" class="showcase-image active" width="1280" height="800" loading="lazy" decoding="async" data-i18n-attr="alt:altFocusReminderPurple">
+            <img src="/resource/focus-reminder-popup-red.webp" alt="專注提醒 - 紅色主題" class="showcase-image" width="1280" height="800" loading="lazy" decoding="async" data-i18n-attr="alt:altFocusReminderRed">
+          </div>
+          <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+      </div>
+      
+
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews" id="reviews" aria-labelledby="reviewsTitle">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="reviews-eyebrow">
+          <span class="reviews-kicker" data-i18n="reviewsKicker">真實評價</span>
+          <div class="reviews-summary" id="reviewsSummary" hidden></div>
+        </div>
+        <h2 class="section-title" id="reviewsTitle" data-i18n="reviewsTitle">專注者的真實好評</h2>
+        <p class="section-subtitle" data-i18n="reviewsSubtitle">來自 Chrome、Edge 與 Firefox 商店的真實評價，彙整於此，並已翻譯為你的語言。</p>
+      </div>
+    </div>
+    <div class="reviews-marquee fade-in" id="reviewsMarquee" data-i18n-attr="aria-label:reviewsTitle" aria-label="專注者的真實好評">
+      <div class="reviews-track" id="reviewsTrack"></div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" id="faqTitle" data-i18n="faqTitle">常見問題</h2>
+      </div>
+      <div class="faq-list fade-in">
+        <details class="faq-item">
+          <summary data-i18n="faq1Q">MeTenk 免費嗎？</summary>
+          <div class="faq-answer" data-i18n="faq1A">是的。核心擴充功能可在 Chrome 線上應用程式商店、Microsoft Edge 附加元件和 Firefox 附加元件中免費安裝；選用的 VIP 兌換碼可解鎖更多功能。</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq2Q">我的資料儲存在哪裡？</summary>
+          <div class="faq-answer" data-i18n="faq2A">資料保存在你自己的裝置上。任務、專注紀錄和設定都儲存在瀏覽器本機，無需帳號，也不做雲端同步；同時支援隨時匯出備份與匯入還原。</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq3Q">支援哪些瀏覽器？</summary>
+          <div class="faq-answer" data-i18n="faq3A">支援 Chrome、Microsoft Edge 和 Firefox，以及它們基於 Chromium 的衍生瀏覽器。</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq4Q">可以自訂番茄鐘時長嗎？</summary>
+          <div class="faq-answer" data-i18n="faq4A">可以。既能使用經典的 25/5 預設，也能自由設定專注與休息時長。</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq5Q">離線能用嗎？</summary>
+          <div class="faq-answer" data-i18n="faq5A">可以。計時器、待辦清單和統計在斷網時照常運作，只有安裝和更新擴充功能需要連網。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand-section">
+          <div class="footer-brand">Metenk</div>
+          <div class="footer-browser-buttons">
+            <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
+               target="_blank" 
+               class="browser-btn chrome" 
+               data-tooltip="安裝到 Chrome" data-i18n-attr="data-tooltip:tooltipChrome,aria-label:tooltipChrome" aria-label="安裝到 Chrome">
+              <img src="/resource/chromeicon.png" alt="Chrome" width="32" height="32">
+            </a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
+               target="_blank" 
+               class="browser-btn edge" 
+               data-tooltip="安裝到 Edge" data-i18n-attr="data-tooltip:tooltipEdge,aria-label:tooltipEdge" aria-label="安裝到 Edge">
+              <img src="/resource/edge_browser_logo_icon_152998.png" alt="Edge" width="32" height="32">
+            </a>
+            <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
+               target="_blank"
+               class="browser-btn firefox" 
+               data-tooltip="下載到 Firefox" data-i18n-attr="data-tooltip:tooltipFirefox,aria-label:tooltipFirefox" aria-label="下載到 Firefox">
+              <img src="/resource/firefox_browser_logo_icon_152991.png" alt="Firefox" width="32" height="32">
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="/zh-tw/vip-redeem-code.html" class="footer-link vip-link" target="_blank" rel="noopener noreferrer" data-i18n="linkVip">VIP 兌換碼</a>
+          <a href="/zh-tw/clockmax.html" class="footer-link" data-i18n="linkClockMax">Clock Max</a>
+          <a href="/zh-tw/privacy-policy.html" class="footer-link" target="_blank" data-i18n="linkPrivacy">隱私權政策</a>
+          <a href="/zh-tw/about.html" class="footer-link" id="footerAboutLink" data-i18n="linkAbout">關於我們</a>
+          <a href="/zh-tw/sponsor.html" class="footer-link" id="footerCoffeeLink" data-i18n="linkCoffee">請我喝咖啡</a>
+        </div>
+        <div class="footer-copyright" data-i18n="copyright">© 2026 Metenk. 用心打造每一款產品</div>
+        <div class="i18n-lang-row" data-i18n-slot></div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="/welcome.js"></script>
+  <script defer src="/assets/locales/index.js"></script>
+  <script defer src="/assets/i18n.js"></script>
+  <script defer src="/assets/reviews-data.js"></script>
+  <script defer src="/assets/reviews.js"></script>
+</body>
+</html>

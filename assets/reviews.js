@@ -64,11 +64,16 @@
     return AVATAR_GRADIENTS[sum % AVATAR_GRADIENTS.length];
   }
 
-  /** Quote in the visitor's language, falling back to the original wording. */
+  /**
+   * Quote in the visitor's language. Falls back to English (the shared
+   * translation) before the original wording, so a locale that is still
+   * missing a translation never surfaces a third language on the page.
+   */
   function quoteFor(review) {
     var active = lang();
     if (review.lang === active) return review.body;
-    return (review.translation && review.translation[active]) || review.body;
+    var translations = review.translation || {};
+    return translations[active] || translations.en || review.body;
   }
 
   function el(tag, className, text) {

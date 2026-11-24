@@ -31,9 +31,20 @@
    * Language registry — the single source of truth for supported locales.
    * ------------------------------------------------------------------ */
   var LANGS = [
-    { code: 'en', label: 'English', htmlLang: 'en',    dir: 'ltr' },
-    { code: 'zh', label: '中文',    htmlLang: 'zh-CN', dir: 'ltr' }
+    { code: 'en',    label: 'English',        htmlLang: 'en',    dir: 'ltr', path: '' },
+    { code: 'zh',    label: '中文',            htmlLang: 'zh-CN', dir: 'ltr', path: 'zh' },
+    { code: 'zh-TW', label: '繁體中文',         htmlLang: 'zh-TW', dir: 'ltr', path: 'zh-tw' },
+    { code: 'es',    label: 'Español',        htmlLang: 'es',    dir: 'ltr', path: 'es' },
+    { code: 'pt-BR', label: 'Português (BR)', htmlLang: 'pt-BR', dir: 'ltr', path: 'pt-br' },
+    { code: 'ja',    label: '日本語',          htmlLang: 'ja',    dir: 'ltr', path: 'ja' }
   ];
+
+  /* Browser tags that should land on a specific registry entry. */
+  var ALIASES = {
+    'zh-cn': 'zh', 'zh-hans': 'zh', 'zh-sg': 'zh', 'zh-my': 'zh',
+    'zh-hk': 'zh-TW', 'zh-mo': 'zh-TW', 'zh-hant': 'zh-TW', 'zh-tw': 'zh-TW',
+    'pt': 'pt-BR', 'pt-pt': 'pt-BR', 'pt-br': 'pt-BR'
+  };
 
   var STORAGE_KEY = 'metenk:lang';
   var DEFAULT_LANG = 'en';
@@ -54,6 +65,21 @@
       if (LANGS[i].code.toLowerCase() === c ||
           LANGS[i].htmlLang.toLowerCase() === c) {
         return LANGS[i];
+      }
+    }
+
+    var alias = ALIASES[c];
+    if (alias) {
+      for (var j = 0; j < LANGS.length; j++) {
+        if (LANGS[j].code === alias) return LANGS[j];
+      }
+    }
+
+    // Fall back to the base tag: "en-GB" -> "en", "es-MX" -> "es".
+    var base = c.split('-')[0];
+    if (base !== c) {
+      for (var k = 0; k < LANGS.length; k++) {
+        if (LANGS[k].code.toLowerCase() === base) return LANGS[k];
       }
     }
     return null;
@@ -108,6 +134,11 @@
    * Order: explicit user choice -> browser locales -> default.
    */
   function detect() {
+    // Statically generated pages declare their language on <html>. The URL wins
+    // over browser preference and stored choice, so /ja/ always renders Japanese.
+    var pinned = findLang(document.documentElement.getAttribute('data-default-lang'));
+    if (pinned) return pinned.code;
+
     var saved = findLang(readStored());
     if (saved) return saved.code;
 
@@ -121,12 +152,6 @@
 
       var exact = findLang(raw);
       if (exact) return exact.code;
-
-      // "zh-Hans-CN" -> "zh"
-      var base = raw.split('-')[0];
-      for (var j = 0; j < LANGS.length; j++) {
-        if (LANGS[j].code.toLowerCase() === base) return LANGS[j].code;
-      }
     }
 
     return DEFAULT_LANG;
@@ -228,8 +253,22 @@
    *   2. Fall back to the page's own <footer> element.
    *   3. Last resort: create a minimal footer so the control is never lost.
    */
+  /**
+   * URL of a page in a given language. Used by the switcher when the page
+   * declares `data-i18n-page`, so each option links to a real, crawlable URL.
+   */
+  function pageUrl(langDef, page) {
+    var base = langDef.path ? '/' + langDef.path + '/' : '/';
+    if (!page || page === 'index') return base;
+    return base + page + '.html';
+  }
+
   function buildSwitcher() {
     if (switcher) return switcher;
+
+    // Static pages declare which page they are; that turns the control into a
+    // set of real links (/ja/, /es/about.html ...) instead of runtime toggles.
+    var page = document.documentElement.getAttribute('data-i18n-page');
 
     var host = document.createElement('div');
     host.className = 'i18n-switcher';
@@ -238,15 +277,25 @@
     host.setAttribute('aria-label', 'Language');
 
     LANGS.forEach(function (lang) {
-      var opt = document.createElement('button');
-      opt.type = 'button';
+      var opt = page
+        ? document.createElement('a')
+        : document.createElement('button');
+
       opt.className = 'i18n-option';
       opt.setAttribute('data-lang', lang.code);
       opt.setAttribute('lang', lang.htmlLang);
       opt.textContent = lang.label;
-      opt.addEventListener('click', function () {
-        setLang(opt.getAttribute('data-lang'));
-      });
+
+      if (page) {
+        opt.href = pageUrl(lang, page);
+        opt.setAttribute('hreflang', lang.htmlLang);
+        // Remember the choice before the browser navigates away.
+        opt.addEventListener('click', function () { writeStored(lang.code); });
+      } else {
+        opt.type = 'button';
+        opt.addEventListener('click', function () { setLang(lang.code); });
+      }
+
       host.appendChild(opt);
     });
 
@@ -276,7 +325,8 @@
     var opts = switcher.host.querySelectorAll('.i18n-option');
     for (var i = 0; i < opts.length; i++) {
       var active = opts[i].getAttribute('data-lang') === code;
-      opts[i].setAttribute('aria-current', active ? 'true' : 'false');
+      var isLink = opts[i].tagName === 'A';
+      opts[i].setAttribute('aria-current', active ? (isLink ? 'page' : 'true') : 'false');
       opts[i].classList.toggle('is-active', active);
     }
   }

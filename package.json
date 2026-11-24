@@ -1,0 +1,10 @@
+{
+  "name": "metenk-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static multi-language site for MeTenk (metenk.com)",
+  "scripts": {
+    "build": "node scripts/build-i18n.mjs",
+    "build:check": "node scripts/build-i18n.mjs --check"
+  }
+}

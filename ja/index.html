@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" data-i18n-page="index" data-default-lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeTenk - タスクタイマー</title>
+  <meta name="description" content="MeTenk は、ポモドーロタイマー・ToDo リスト・リマインダーを備えた無料の集中・生産性ブラウザ拡張機能です。Chrome、Edge、Firefox に対応し、データは端末内に保存されます。" data-i18n-attr="content:metaDescription">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MeTenk">
+  <meta property="og:title" content="MeTenk - タスクタイマー">
+  <meta property="og:description" content="MeTenk は、ポモドーロタイマー・ToDo リスト・リマインダーを備えた無料の集中・生産性ブラウザ拡張機能です。Chrome、Edge、Firefox に対応し、データは端末内に保存されます。">
+  <meta property="og:image" content="https://metenk.com/resource/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MeTenk - タスクタイマー">
+  <meta name="twitter:description" content="MeTenk は、ポモドーロタイマー・ToDo リスト・リマインダーを備えた無料の集中・生産性ブラウザ拡張機能です。Chrome、Edge、Firefox に対応し、データは端末内に保存されます。">
+  <meta name="twitter:image" content="https://metenk.com/resource/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://metenk.com/#organization",
+      "name": "MeTenk",
+      "url": "https://metenk.com/",
+      "logo": "https://metenk.com/resource/icon128.png",
+      "email": "colintenk@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://metenk.com/#website",
+      "url": "https://metenk.com/",
+      "name": "MeTenk",
+      "publisher": {
+        "@id": "https://metenk.com/#organization"
+      },
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "MeTenk - Task Timer",
+      "alternateName": "MeTenk 任务计时神器",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Chrome, Edge, Firefox",
+      "url": "https://metenk.com/",
+      "screenshot": "https://metenk.com/resource/og-image.png",
+      "description": "Free Pomodoro focus timer, to-do list, and focus statistics browser extension. All data stays on your device.",
+      "featureList": [
+        "Pomodoro focus timer with custom session lengths",
+        "To-do list with drag-and-drop task tracking",
+        "Daily and weekly focus statistics",
+        "Local-first privacy: no account and no cloud sync",
+        "Focus reminders with break prompts",
+        "Themes and multi-language interface"
+      ],
+      "inLanguage": "ja",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://metenk.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://metenk.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "MeTenk は無料ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。基本の拡張機能は Chrome ウェブストア、Microsoft Edge アドオン、Firefox アドオンから無料でインストールできます。任意の VIP コードで追加機能を解放できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "データはどこに保存されますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "お使いの端末内です。タスク、集中セッション、設定はブラウザのローカルストレージに保存され、アカウントもクラウド同期もありません。いつでもバックアップの書き出しやデータの読み込みができます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "対応しているブラウザは？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MeTenk は Chrome、Microsoft Edge、Firefox、および Chromium ベースの派生ブラウザで動作します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ポモドーロの時間は変更できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。定番の 25/5 プリセットを使うか、集中時間と休憩時間を自由に設定できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "オフラインでも使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。タイマー、ToDo リスト、統計はインターネット接続なしで動作します。必要なのはインストールと更新のときだけです。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1S7CQX7H6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F1S7CQX7H6');
+</script>
+
+
+<!-- 百度统计 -->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e441137fbca45346db185da89d14a454";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+  <link rel="stylesheet" href="/assets/landing.css">
+  <link rel="stylesheet" href="/assets/reviews.css">
+  <script>
+    (function () {
+      var lightImages = [
+        '23ONJ.webp', '2J3INK.webp', '32JBEFIJ.webp', '32JNJN32.avif', 'DFFDFDFD3432.webp',
+        'DFON23.avif', 'DFON23OKM.avif', 'DILJN23.webp', 'FDOIHN323.webp', 'O32N.webp',
+        'Office06.avif', 'Office41.avif'
+      ];
+
+      var nightImages = [
+        '09DSJN23.webp', 'DSIJN23JH23JK.webp', 'DSIOSDMKSDJN2323.webp', 'DSN2398SDNUI.webp',
+        'DSOIJN32KJ.webp', 'SDO3287DFNIJ.webp', 'SDOIN23IU23BIUNC.webp', 'SDOINEWRIUB32.webp', 'SDONIU23OIU23N.webp'
+      ];
+
+      function isNight() {
+        var h = new Date().getHours();
+        return h >= 18 || h < 6;
+      }
+
+      function getImage() {
+        try {
+          var now = new Date();
+          var cacheKey = 'bg_' + now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + '-' + now.getHours() + '-' + now.getMinutes();
+          var path = sessionStorage.getItem(cacheKey);
+          if (!path) {
+            var arr = isNight() ? nightImages : lightImages;
+            path = '/resource/' + (isNight() ? 'night' : 'light') + '/' + arr[Math.floor(Math.random() * arr.length)];
+            sessionStorage.setItem(cacheKey, path);
+          }
+          return path;
+        } catch (e) {
+          return '/resource/light/2J3INK.webp';
+        }
+      }
+
+      // The hero background is published as a CSS variable, so the browser can
+      // start fetching it before the body is parsed (better LCP).
+      function applyHeroBackground() {
+        var path = getImage();
+        // Resolve to an absolute URL: the variable is consumed inside assets/landing.css,
+        // where a plain relative path would resolve against /assets/ and 404.
+        var absolutePath = new URL(path, document.baseURI).href;
+        document.documentElement.style.setProperty('--hero-bg', 'url("' + absolutePath + '")');
+
+        var link = document.getElementById('hero-bg-preload');
+        if (!link) {
+          link = document.createElement('link');
+          link.id = 'hero-bg-preload';
+          link.rel = 'preload';
+          link.as = 'image';
+          link.setAttribute('fetchpriority', 'high');
+          document.head.appendChild(link);
+        }
+        link.href = absolutePath;
+      }
+
+      applyHeroBackground();
+      setInterval(applyHeroBackground, 60000);
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/i18n.css">
+  <!-- i18n:head:start -->
+  <link rel="canonical" href="https://metenk.com/ja/">
+  <link rel="alternate" hreflang="en" href="https://metenk.com/">
+  <link rel="alternate" hreflang="zh-CN" href="https://metenk.com/zh/">
+  <link rel="alternate" hreflang="zh-TW" href="https://metenk.com/zh-tw/">
+  <link rel="alternate" hreflang="es" href="https://metenk.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://metenk.com/pt-br/">
+  <link rel="alternate" hreflang="ja" href="https://metenk.com/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://metenk.com/">
+  <meta property="og:url" content="https://metenk.com/ja/">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:locale:alternate" content="zh_TW">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <!-- i18n:head:end -->
+</head>
+<body>
+  <main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="/resource/icon128.png" alt="MeTenk Logo" width="128" height="128">
+        </div>
+        <a href="/ja/clockmax.html" class="clockmax-wrapper" title="Clock Max">
+          <div class="clockmax-icon">
+            <img src="/resource/clockmax-icon.png" alt="Clock Max" width="128" height="128">
+          </div>
+          <span class="clockmax-label">Clock Max</span>
+        </a>
+      </div>
+      <h1 class="hero-title">MeTenk</h1>
+      <p class="hero-subtitle">
+        <span class="hero-subtitle-main" data-i18n="heroTagline">究極のタスクタイマー</span>
+        <span class="hero-subtitle-sub" data-i18n="heroSubtitle">集中 · ToDo · タイマー · 生産性</span>
+      </p>
+      <div class="hero-cta">
+        <div class="browser-buttons">
+          <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
+             target="_blank" 
+             class="browser-btn chrome" 
+             data-tooltip="Chrome に追加" data-i18n-attr="data-tooltip:tooltipChrome,aria-label:tooltipChrome" aria-label="Chrome に追加">
+            <img src="/resource/chromeicon.png" alt="Chrome" width="32" height="32">
+          </a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
+             target="_blank" 
+             class="browser-btn edge" 
+             data-tooltip="Edge に追加" data-i18n-attr="data-tooltip:tooltipEdge,aria-label:tooltipEdge" aria-label="Edge に追加">
+            <img src="/resource/edge_browser_logo_icon_152998.png" alt="Edge" width="32" height="32">
+          </a>
+          <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
+             target="_blank"
+             class="browser-btn firefox" 
+             data-tooltip="Firefox 版をダウンロード" data-i18n-attr="data-tooltip:tooltipFirefox,aria-label:tooltipFirefox" aria-label="Firefox 版をダウンロード">
+            <img src="/resource/firefox_browser_logo_icon_152991.png" alt="Firefox" width="32" height="32">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" data-i18n="sectionTitle">ポモドーロタイマー・ToDo リスト・集中統計</h2>
+        <p class="section-subtitle" data-i18n="sectionSubtitle">Chrome、Edge、Firefox で使える軽量な拡張機能。タスクを計画し、集中セッションを実行し、統計を振り返れます。データはすべて端末内に保存されます。</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4.5l2.5 2"/><path d="M9 2h6"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature1Title">ポモドーロタイマー</h3>
+          <p class="feature-desc" data-i18n="feature1Desc">定番の 25/5 ポモドーロを開始するか、集中時間と休憩時間を自由に設定できます。円形リングが現在のフェーズと残り時間をひと目で示します。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="M4 6l1.2 1.2L7.5 4.8"/><path d="M4 12l1.2 1.2 2.3-2.4"/><path d="M4 18l1.2 1.2 2.3-2.4"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature2Title">ToDo リストとタスク</h3>
+          <p class="feature-desc" data-i18n="feature2Desc">ドラッグ＆ドロップでタスクを作成・並べ替え・完了できます。ToDo を集中セッションに紐づければ、計画と計測を同じ場所で行えます。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-6"/><path d="M2 20h20"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature3Title">集中統計</h3>
+          <p class="feature-desc" data-i18n="feature3Desc">日次・週次のグラフで集中時間、完了セッション、完了タスクを分解表示。時間がどこに使われたかが正確にわかります。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/><path d="M9.2 12.2l2 2 3.6-3.8"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature4Title">プライバシー優先</h3>
+          <p class="feature-desc" data-i18n="feature4Desc">アカウント不要、クラウド同期なし、タスクの追跡もなし。すべての ToDo と集中記録は、お使いの端末のブラウザローカルストレージに保存されます。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16v-5a6 6 0 10-12 0v5l-1.6 2.4h15.2L18 16z"/><path d="M10 20.2a2.2 2.2 0 004 0"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature5Title">集中リマインダー</h3>
+          <p class="feature-desc" data-i18n="feature5Desc">やさしい休憩リマインダーとモチベーションを高める言葉が、無理のないリズムを保ちます。深い集中が燃え尽きにつながることはありません。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.4 3.8 5.4 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3z"/></svg>
+          </span>
+          <h3 class="feature-title" data-i18n="feature6Title">テーマと言語</h3>
+          <p class="feature-desc" data-i18n="feature6Desc">クラシックブルー、シルバー、ダークのテーマを切り替えられます。拡張機能は英語・中国語・スペイン語・アラビア語などに対応し、ブラウザの言語に自動で追従します。</p>
+        </div>
+      </div>
+      
+      <!-- Product Showcase Image -->
+      <div class="product-showcase fade-in">
+        <div class="showcase-image-wrapper" id="showcaseCarousel">
+          <button class="carousel-btn carousel-prev" id="carouselPrev">❮</button>
+          <button class="carousel-btn carousel-next" id="carouselNext">❯</button>
+          <div class="carousel-images">
+            <img src="/resource/focus-reminder-popup-pur.webp" alt="集中リマインダー（パープル）" class="showcase-image active" width="1280" height="800" loading="lazy" decoding="async" data-i18n-attr="alt:altFocusReminderPurple">
+            <img src="/resource/focus-reminder-popup-red.webp" alt="集中リマインダー（レッド）" class="showcase-image" width="1280" height="800" loading="lazy" decoding="async" data-i18n-attr="alt:altFocusReminderRed">
+          </div>
+          <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+      </div>
+      
+
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews" id="reviews" aria-labelledby="reviewsTitle">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="reviews-eyebrow">
+          <span class="reviews-kicker" data-i18n="reviewsKicker">確認済みのレビュー</span>
+          <div class="reviews-summary" id="reviewsSummary" hidden></div>
+        </div>
+        <h2 class="section-title" id="reviewsTitle" data-i18n="reviewsTitle">本当に集中する人に愛されています</h2>
+        <p class="section-subtitle" data-i18n="reviewsSubtitle">Chrome、Edge、Firefox のストアに寄せられた実際のレビューを一か所にまとめ、あなたの言語に翻訳しています。</p>
+      </div>
+    </div>
+    <div class="reviews-marquee fade-in" id="reviewsMarquee" data-i18n-attr="aria-label:reviewsTitle" aria-label="本当に集中する人に愛されています">
+      <div class="reviews-track" id="reviewsTrack"></div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title" id="faqTitle" data-i18n="faqTitle">よくある質問</h2>
+      </div>
+      <div class="faq-list fade-in">
+        <details class="faq-item">
+          <summary data-i18n="faq1Q">MeTenk は無料ですか？</summary>
+          <div class="faq-answer" data-i18n="faq1A">はい。基本の拡張機能は Chrome ウェブストア、Microsoft Edge アドオン、Firefox アドオンから無料でインストールできます。任意の VIP コードで追加機能を解放できます。</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq2Q">データはどこに保存されますか？</summary>
+          <div class="faq-answer" data-i18n="faq2A">お使いの端末内です。タスク、集中セッション、設定はブラウザのローカルストレージに保存され、アカウントもクラウド同期もありません。いつでもバックアップの書き出しやデータの読み込みができます。</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq3Q">対応しているブラウザは？</summary>
+          <div class="faq-answer" data-i18n="faq3A">MeTenk は Chrome、Microsoft Edge、Firefox、および Chromium ベースの派生ブラウザで動作します。</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq4Q">ポモドーロの時間は変更できますか？</summary>
+          <div class="faq-answer" data-i18n="faq4A">はい。定番の 25/5 プリセットを使うか、集中時間と休憩時間を自由に設定できます。</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq5Q">オフラインでも使えますか？</summary>
+          <div class="faq-answer" data-i18n="faq5A">はい。タイマー、ToDo リスト、統計はインターネット接続なしで動作します。必要なのはインストールと更新のときだけです。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand-section">
+          <div class="footer-brand">Metenk</div>
+          <div class="footer-browser-buttons">
+            <a href="https://chromewebstore.google.com/detail/baefifnjmlmfcdkmbkdbjiijlpggkoic?utm_source=item-share-cb" 
+               target="_blank" 
+               class="browser-btn chrome" 
+               data-tooltip="Chrome に追加" data-i18n-attr="data-tooltip:tooltipChrome,aria-label:tooltipChrome" aria-label="Chrome に追加">
+              <img src="/resource/chromeicon.png" alt="Chrome" width="32" height="32">
+            </a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/dakmmioineojmhdipnflmmchhfachngc" 
+               target="_blank" 
+               class="browser-btn edge" 
+               data-tooltip="Edge に追加" data-i18n-attr="data-tooltip:tooltipEdge,aria-label:tooltipEdge" aria-label="Edge に追加">
+              <img src="/resource/edge_browser_logo_icon_152998.png" alt="Edge" width="32" height="32">
+            </a>
+            <a href="https://addons.mozilla.org/zh-CN/firefox/addon/metenk-todo-focus-timer/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" 
+               target="_blank"
+               class="browser-btn firefox" 
+               data-tooltip="Firefox 版をダウンロード" data-i18n-attr="data-tooltip:tooltipFirefox,aria-label:tooltipFirefox" aria-label="Firefox 版をダウンロード">
+              <img src="/resource/firefox_browser_logo_icon_152991.png" alt="Firefox" width="32" height="32">
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="/ja/vip-redeem-code.html" class="footer-link vip-link" target="_blank" rel="noopener noreferrer" data-i18n="linkVip">VIP コード</a>
+          <a href="/ja/clockmax.html" class="footer-link" data-i18n="linkClockMax">Clock Max</a>
+          <a href="/ja/privacy-policy.html" class="footer-link" target="_blank" data-i18n="linkPrivacy">プライバシーポリシー</a>
+          <a href="/ja/about.html" class="footer-link" id="footerAboutLink" data-i18n="linkAbout">私たちについて</a>
+          <a href="/ja/sponsor.html" class="footer-link" id="footerCoffeeLink" data-i18n="linkCoffee">コーヒーをおごる</a>
+        </div>
+        <div class="footer-copyright" data-i18n="copyright">© 2026 Metenk. すべての製品を心を込めて。</div>
+        <div class="i18n-lang-row" data-i18n-slot></div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="/welcome.js"></script>
+  <script defer src="/assets/locales/index.js"></script>
+  <script defer src="/assets/i18n.js"></script>
+  <script defer src="/assets/reviews-data.js"></script>
+  <script defer src="/assets/reviews.js"></script>
+</body>
+</html>
