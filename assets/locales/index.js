@@ -11,7 +11,6 @@ window.METENK_I18N = {
 
     heroTagline: 'The Ultimate Task Timer',
     heroSubtitle: 'Focus · To-Do · Timer · Productivity',
-    ctaNote: 'Free · No account · Data stays on your device',
 
     tooltipChrome: 'Install for Chrome',
     tooltipEdge: 'Install for Edge',
@@ -63,7 +62,6 @@ window.METENK_I18N = {
 
     heroTagline: '任务计时神器',
     heroSubtitle: '专注 · 待办 · 计时 · 效率',
-    ctaNote: '免费 · 无需注册 · 数据留在本地',
 
     tooltipChrome: '安装到 Chrome',
     tooltipEdge: '安装到 Edge',
