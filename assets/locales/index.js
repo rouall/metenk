@@ -32,6 +32,12 @@ window.METENK_I18N = {
     feature6Title: 'Themes & Multi-language',
     feature6Desc: 'Switch between classic blue, silver, and dark themes. Use the extension in English, Chinese, Spanish, Arabic, and more — it follows your browser language automatically.',
 
+    reviewsKicker: 'Verified reviews',
+    reviewsTitle: 'Loved by people who actually focus',
+    reviewsSubtitle: 'Real reviews from the Chrome, Edge and Firefox stores — collected in one place, translated into your language.',
+    reviewsSummary: '{rating} average',
+    reviewsVerified: 'Verified store review',
+
     faqTitle: 'Frequently Asked Questions',
     faq1Q: 'Is MeTenk free to use?',
     faq1A: 'Yes. The core extension is free to install from the Chrome Web Store, Microsoft Edge Add-ons, and Firefox Add-ons. An optional VIP redeem code unlocks extra features.',
@@ -82,6 +88,12 @@ window.METENK_I18N = {
     feature5Desc: '温和的休息提醒与励志语录，帮你维持可持续的节奏，让深度工作不等于透支。',
     feature6Title: '主题与多语言',
     feature6Desc: '经典蓝、优雅银、深色主题自由切换；支持英语、中文、西班牙语、阿拉伯语等语言，界面自动跟随浏览器设置。',
+
+    reviewsKicker: '真实评价',
+    reviewsTitle: '专注者的真实好评',
+    reviewsSubtitle: '来自 Chrome、Edge 与 Firefox 商店的真实评价，汇总于此，并已翻译为你的语言。',
+    reviewsSummary: '平均 {rating} 分',
+    reviewsVerified: '商店真实评价',
 
     faqTitle: '常见问题',
     faq1Q: 'MeTenk 免费吗？',
