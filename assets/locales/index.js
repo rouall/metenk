@@ -37,6 +37,8 @@ window.METENK_I18N = {
     reviewsSubtitle: 'Real reviews from the Chrome, Edge and Firefox stores — collected in one place, translated into your language.',
     reviewsSummary: '{rating} average',
     reviewsVerified: 'Verified store review',
+    reviewsMore: 'Read full review',
+    reviewsLess: 'Show less',
 
     faqTitle: 'Frequently Asked Questions',
     faq1Q: 'Is MeTenk free to use?',
@@ -94,6 +96,8 @@ window.METENK_I18N = {
     reviewsSubtitle: '来自 Chrome、Edge 与 Firefox 商店的真实评价，汇总于此，并已翻译为你的语言。',
     reviewsSummary: '平均 {rating} 分',
     reviewsVerified: '商店真实评价',
+    reviewsMore: '展开全文',
+    reviewsLess: '收起',
 
     faqTitle: '常见问题',
     faq1Q: 'MeTenk 免费吗？',
@@ -151,6 +155,8 @@ window.METENK_I18N = {
     reviewsSubtitle: 'Reseñas reales de las tiendas de Chrome, Edge y Firefox, reunidas en un solo lugar y traducidas a tu idioma.',
     reviewsSummary: '{rating} de media',
     reviewsVerified: 'Reseña verificada de la tienda',
+    reviewsMore: 'Leer reseña completa',
+    reviewsLess: 'Mostrar menos',
 
     faqTitle: 'Preguntas frecuentes',
     faq1Q: '¿MeTenk es gratis?',
@@ -208,6 +214,8 @@ window.METENK_I18N = {
     reviewsSubtitle: 'Avaliações reais das lojas do Chrome, Edge e Firefox — reunidas em um só lugar e traduzidas para o seu idioma.',
     reviewsSummary: 'média de {rating}',
     reviewsVerified: 'Avaliação verificada da loja',
+    reviewsMore: 'Ler avaliação completa',
+    reviewsLess: 'Mostrar menos',
 
     faqTitle: 'Perguntas frequentes',
     faq1Q: 'O MeTenk é gratuito?',
@@ -265,6 +273,8 @@ window.METENK_I18N = {
     reviewsSubtitle: 'Chrome、Edge、Firefox のストアに寄せられた実際のレビューを一か所にまとめ、あなたの言語に翻訳しています。',
     reviewsSummary: '平均 {rating}',
     reviewsVerified: 'ストアの確認済みレビュー',
+    reviewsMore: '全文を読む',
+    reviewsLess: '折りたたむ',
 
     faqTitle: 'よくある質問',
     faq1Q: 'MeTenk は無料ですか？',
@@ -322,6 +332,8 @@ window.METENK_I18N = {
     reviewsSubtitle: '來自 Chrome、Edge 與 Firefox 商店的真實評價，彙整於此，並已翻譯為你的語言。',
     reviewsSummary: '平均 {rating} 分',
     reviewsVerified: '商店真實評價',
+    reviewsMore: '展開全文',
+    reviewsLess: '收起',
 
     faqTitle: '常見問題',
     faq1Q: 'MeTenk 免費嗎？',

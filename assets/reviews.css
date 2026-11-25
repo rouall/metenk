@@ -100,7 +100,7 @@
 
 .reviews-track {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   width: max-content;
   padding: 24px 0 20px;
   animation-name: reviews-scroll;
@@ -116,7 +116,8 @@
 }
 
 .reviews-marquee:hover .reviews-track,
-.reviews-marquee:focus-within .reviews-track {
+.reviews-marquee:focus-within .reviews-track,
+.reviews-marquee.is-paused .reviews-track {
   animation-play-state: paused;
 }
 
@@ -128,7 +129,7 @@
   flex-direction: column;
   flex: 0 0 auto;
   width: 368px;
-  min-height: 268px;
+  height: 352px;
   margin-right: 18px;
   padding: 26px 26px 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -147,6 +148,12 @@
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
     0 18px 42px rgba(0, 0, 0, 0.34);
+}
+
+/* A folded card keeps the wall even; expanding reveals the full quote. */
+.review-card.is-expanded {
+  height: auto;
+  min-height: 352px;
 }
 
 .review-card-top {
@@ -190,14 +197,75 @@
   color: rgba(147, 197, 253, 0.26);
 }
 
+.review-body-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
+}
+
 .review-body {
-  margin: auto 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  width: 100%;
+  margin: 0;
   padding: 14px 0 6px;
+  overflow: hidden;
   color: #ced3db;
   font-size: 14.5px;
   line-height: 1.8;
   letter-spacing: 0.005em;
   word-break: break-word;
+}
+
+/* Fade the last line instead of cutting it with a hard edge. */
+.review-body.has-more {
+  -webkit-mask-image: linear-gradient(180deg, #000 76%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 76%, transparent 100%);
+}
+
+.review-card.is-expanded .review-body {
+  display: block;
+  overflow: visible;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.review-more {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 4px;
+  margin: 8px 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #9db4ff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.review-more[hidden] {
+  display: none;
+}
+
+.review-more:hover {
+  color: #c9d7ff;
+}
+
+.review-more svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s ease;
+}
+
+.review-card.is-expanded .review-more svg {
+  transform: rotate(180deg);
 }
 
 .review-card-foot {
@@ -289,9 +357,14 @@
 
   .review-card {
     width: 306px;
-    min-height: 244px;
+    height: 316px;
     margin-right: 16px;
     padding: 22px 20px 16px;
+  }
+
+  .review-card.is-expanded {
+    height: auto;
+    min-height: 316px;
   }
 
   .review-quote-mark {

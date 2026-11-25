@@ -164,6 +164,8 @@
     var card = document.createElement('article');
     card.className = 'review-card';
 
+    var quote = quoteFor(review);
+
     var top = el('div', 'review-card-top');
 
     var stars = el('div', 'review-stars');
@@ -177,7 +179,34 @@
     top.appendChild(mark);
 
     card.appendChild(top);
-    card.appendChild(el('p', 'review-body', quoteFor(review)));
+
+    var bodyWrap = el('div', 'review-body-wrap');
+    var body = el('p', 'review-body', quote);
+    bodyWrap.appendChild(body);
+    card.appendChild(bodyWrap);
+
+    var more = el('button', 'review-more');
+    more.type = 'button';
+    more.hidden = true;
+    more.setAttribute('aria-expanded', 'false');
+    more.innerHTML = '<span class="review-more-label"></span>' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+    more.querySelector('.review-more-label').textContent = t('reviewsMore', 'Read full review');
+
+    more.addEventListener('click', function () {
+      var expanded = card.classList.toggle('is-expanded');
+      more.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      more.querySelector('.review-more-label').textContent = expanded
+        ? t('reviewsLess', 'Show less')
+        : t('reviewsMore', 'Read full review');
+
+      if (els.marquee) {
+        var open = els.track && els.track.querySelector('.review-card.is-expanded');
+        els.marquee.classList.toggle('is-paused', !!open);
+      }
+    });
+
+    card.appendChild(more);
 
     var foot = el('div', 'review-card-foot');
     foot.appendChild(createAvatar(review));
@@ -202,6 +231,9 @@
         if (isClone) {
           card.dataset.clone = 'true';
           card.setAttribute('aria-hidden', 'true');
+          Array.prototype.forEach.call(card.querySelectorAll('button'), function (button) {
+            button.tabIndex = -1;
+          });
         }
         fragment.appendChild(card);
       });
@@ -209,11 +241,27 @@
     return fragment;
   }
 
+  /** Show the fold control only when the full quote cannot fit. */
+  function markOverflow(track) {
+    Array.prototype.forEach.call(track.querySelectorAll('.review-card'), function (card) {
+      if (card.classList.contains('is-expanded')) return;
+
+      var body = card.querySelector('.review-body');
+      var more = card.querySelector('.review-more');
+      if (!body || !more) return;
+
+      var overflowing = body.scrollHeight - body.clientHeight > 2;
+      body.classList.toggle('has-more', overflowing);
+      more.hidden = !overflowing;
+    });
+  }
+
   function renderMarquee() {
     var track = els.track;
     if (!track) return;
 
     track.innerHTML = '';
+    if (els.marquee) els.marquee.classList.remove('is-paused');
 
     // Measure one pass of the review list to decide how many copies are
     // needed to fully cover (and slightly overflow) the viewport.
@@ -227,6 +275,14 @@
     track.appendChild(buildHalf(repeats, false));
     var halfWidth = track.scrollWidth;
     track.appendChild(buildHalf(repeats, true));
+    markOverflow(track);
+
+    // Web fonts can change line breaks after first paint.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        if (lastViewportWidth === viewport) markOverflow(track);
+      });
+    }
 
     // Constant perceived speed (~54px/s), clamped for very long walls.
     var duration = halfWidth > 0 ? Math.round(halfWidth / 54) : 60;
