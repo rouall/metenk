@@ -14,10 +14,10 @@ window.METENK_I18N = {
     logoAlt: 'MeTenk Logo',
     eyebrow: 'About Metenk',
     pageTitle: 'About MeTenk',
-    subtitle: 'Focus task timer: focus, to-do list, timer, productivity',
+    subtitle: 'Focus task timer - reminders, quick notes, tasks, productivity',
 
     philosophyTitle: "Our Team's Philosophy",
-    philosophySub: 'Four principles guide every decision we make.',
+    philosophySub: 'Five principles guide every decision we make.',
     philosophyText: 'Safety, Practicality, Minimalism, and Efficiency',
 
     valueSafety: 'Safety',
@@ -28,6 +28,8 @@ window.METENK_I18N = {
     valueMinimalismDesc: 'A calm interface with no clutter, no ads, and no account walls.',
     valueEfficiency: 'Efficiency',
     valueEfficiencyDesc: 'Built to be fast: open, focus, and get back to work in seconds.',
+    valueDedication: 'Care',
+    valueDedicationDesc: 'Every detail is polished as if it were our own work, and every piece of feedback gets a careful response.',
 
     buildTitle: 'What we build',
     buildDesc: 'MeTenk is a free browser extension for Chrome, Edge, and Firefox that combines a Pomodoro timer, a to-do list, and focus statistics in one lightweight tool.',
@@ -53,10 +55,10 @@ window.METENK_I18N = {
     logoAlt: 'MeTenk 标志',
     eyebrow: '关于 Metenk',
     pageTitle: '关于 MeTenk',
-    subtitle: '专注任务计时神器，专注、待办清单、计时器、效率提升',
+    subtitle: '专注任务计时神器 - 提醒 速记 任务 效率',
 
     philosophyTitle: '我们团队的理念',
-    philosophySub: '四条原则贯穿我们的每一个决定。',
+    philosophySub: '五条原则贯穿我们的每一个决定。',
     philosophyText: '安全、实用、极简、高效',
 
     valueSafety: '安全',
@@ -67,6 +69,8 @@ window.METENK_I18N = {
     valueMinimalismDesc: '界面安静克制，没有广告，也没有账号门槛。',
     valueEfficiency: '高效',
     valueEfficiencyDesc: '打开即用，几秒内进入专注，不打断您的节奏。',
+    valueDedication: '用心',
+    valueDedicationDesc: '每个细节都当作自己的作品来打磨，认真对待用户的每一条反馈。',
 
     buildTitle: '我们做什么',
     buildDesc: 'MeTenk 是一款免费的浏览器扩展，兼容 Chrome、Edge 与 Firefox，把番茄钟、待办清单与专注统计整合进一个轻量工具。',
@@ -92,10 +96,10 @@ window.METENK_I18N = {
     logoAlt: 'Logotipo de MeTenk',
     eyebrow: 'Acerca de Metenk',
     pageTitle: 'Acerca de MeTenk',
-    subtitle: 'Temporizador de tareas: enfoque, lista de tareas, temporizador, productividad',
+    subtitle: 'Temporizador de tareas - recordatorios, notas rápidas, tareas, productividad',
 
     philosophyTitle: 'La filosofía de nuestro equipo',
-    philosophySub: 'Cuatro principios guían cada decisión que tomamos.',
+    philosophySub: 'Cinco principios guían cada decisión que tomamos.',
     philosophyText: 'Seguridad, practicidad, minimalismo y eficiencia',
 
     valueSafety: 'Seguridad',
@@ -106,6 +110,8 @@ window.METENK_I18N = {
     valueMinimalismDesc: 'Una interfaz tranquila, sin desorden, sin anuncios y sin muros de registro.',
     valueEfficiency: 'Eficiencia',
     valueEfficiencyDesc: 'Hecho para ser rápido: abre, concéntrate y vuelve al trabajo en segundos.',
+    valueDedication: 'Esmero',
+    valueDedicationDesc: 'Cada detalle se pule como si fuera nuestra propia obra, y cada comentario recibe una respuesta cuidadosa.',
 
     buildTitle: 'Lo que creamos',
     buildDesc: 'MeTenk es una extensión de navegador gratuita para Chrome, Edge y Firefox que combina un temporizador Pomodoro, una lista de tareas y estadísticas de enfoque en una sola herramienta ligera.',
@@ -131,10 +137,10 @@ window.METENK_I18N = {
     logoAlt: 'Logotipo do MeTenk',
     eyebrow: 'Sobre o Metenk',
     pageTitle: 'Sobre o MeTenk',
-    subtitle: 'Timer de tarefas: foco, lista de tarefas, timer, produtividade',
+    subtitle: 'Timer de tarefas - lembretes, notas rápidas, tarefas, produtividade',
 
     philosophyTitle: 'A filosofia da nossa equipe',
-    philosophySub: 'Quatro princípios orientam cada decisão que tomamos.',
+    philosophySub: 'Cinco princípios orientam cada decisão que tomamos.',
     philosophyText: 'Segurança, praticidade, minimalismo e eficiência',
 
     valueSafety: 'Segurança',
@@ -145,6 +151,8 @@ window.METENK_I18N = {
     valueMinimalismDesc: 'Uma interface tranquila, sem poluição, sem anúncios e sem exigência de conta.',
     valueEfficiency: 'Eficiência',
     valueEfficiencyDesc: 'Feito para ser rápido: abra, concentre-se e volte ao trabalho em segundos.',
+    valueDedication: 'Cuidado',
+    valueDedicationDesc: 'Cada detalhe é polido como se fosse nossa própria obra, e cada feedback recebe uma resposta atenta.',
 
     buildTitle: 'O que criamos',
     buildDesc: 'O MeTenk é uma extensão de navegador gratuita para Chrome, Edge e Firefox que reúne um timer Pomodoro, uma lista de tarefas e estatísticas de foco em uma ferramenta leve.',
@@ -170,10 +178,10 @@ window.METENK_I18N = {
     logoAlt: 'MeTenk のロゴ',
     eyebrow: 'Metenk について',
     pageTitle: 'MeTenk について',
-    subtitle: '集中タスクタイマー：集中、ToDo リスト、タイマー、生産性',
+    subtitle: '集中タスクタイマー - リマインダー、クイックメモ、タスク、生産性',
 
     philosophyTitle: 'チームの理念',
-    philosophySub: '4 つの原則がすべての判断の基準です。',
+    philosophySub: '5 つの原則がすべての判断の基準です。',
     philosophyText: '安全性、実用性、ミニマリズム、効率',
 
     valueSafety: '安全性',
@@ -184,6 +192,8 @@ window.METENK_I18N = {
     valueMinimalismDesc: '余計なものがなく、広告もアカウント登録の壁もない静かなインターフェースです。',
     valueEfficiency: '効率',
     valueEfficiencyDesc: 'とにかく速く。開いて、集中して、数秒で仕事に戻れます。',
+    valueDedication: '心を込める',
+    valueDedicationDesc: '細部の一つひとつを自分の作品のように磨き、すべてのフィードバックに真摯に向き合います。',
 
     buildTitle: '私たちが作っているもの',
     buildDesc: 'MeTenk は Chrome、Edge、Firefox 向けの無料ブラウザ拡張機能で、ポモドーロタイマー、ToDo リスト、集中統計を一つの軽量ツールにまとめています。',
@@ -209,10 +219,10 @@ window.METENK_I18N = {
     logoAlt: 'MeTenk 標誌',
     eyebrow: '關於 Metenk',
     pageTitle: '關於 MeTenk',
-    subtitle: '專注任務計時神器，專注、待辦清單、計時器、效率提升',
+    subtitle: '專注任務計時神器 - 提醒 速記 任務 效率',
 
     philosophyTitle: '我們團隊的理念',
-    philosophySub: '四條原則貫穿我們的每一個決定。',
+    philosophySub: '五條原則貫穿我們的每一個決定。',
     philosophyText: '安全、實用、極簡、高效',
 
     valueSafety: '安全',
@@ -223,6 +233,8 @@ window.METENK_I18N = {
     valueMinimalismDesc: '介面安靜克制，沒有廣告，也沒有帳號門檻。',
     valueEfficiency: '高效',
     valueEfficiencyDesc: '開啟即用，幾秒內進入專注，不打斷你的節奏。',
+    valueDedication: '用心',
+    valueDedicationDesc: '每個細節都當作自己的作品來打磨，認真對待使用者的每一條回饋。',
 
     buildTitle: '我們做什麼',
     buildDesc: 'MeTenk 是一款免費的瀏覽器擴充功能，相容 Chrome、Edge 與 Firefox，把番茄鐘、待辦清單與專注統計整合進一個輕量工具。',

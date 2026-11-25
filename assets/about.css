@@ -235,6 +235,40 @@ main {
   color: var(--text-muted);
 }
 
+/* The lead principle spans the whole row — it outranks the rest. */
+.value-card--feature {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 24px;
+  border-color: rgba(103, 136, 255, 0.26);
+  background:
+    linear-gradient(120deg, rgba(67, 97, 238, 0.12) 0%, rgba(255, 255, 255, 0.025) 55%, rgba(67, 97, 238, 0.06) 100%);
+}
+
+.value-card--feature:hover {
+  background:
+    linear-gradient(120deg, rgba(67, 97, 238, 0.18) 0%, rgba(255, 255, 255, 0.04) 55%, rgba(67, 97, 238, 0.09) 100%);
+}
+
+.value-card--feature .value-icon {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.value-card--feature .value-copy {
+  min-width: 0;
+}
+
+.value-card--feature .value-name {
+  margin-bottom: 4px;
+}
+
+.value-card--feature .value-desc {
+  max-width: 660px;
+}
+
 /* ---------- Product panel ---------- */
 
 .build-panel {
@@ -458,6 +492,11 @@ main {
 
   .value-card {
     padding: 20px 16px;
+  }
+
+  .value-card--feature {
+    gap: 14px;
+    padding: 18px 16px;
   }
 
   .btn-primary {
