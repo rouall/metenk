@@ -19,18 +19,9 @@
   var DATA = global.METENK_REVIEWS;
   if (!DATA || !DATA.reviews || !DATA.reviews.length) return;
 
-  // Muted, low-contrast monograms: they support the quote instead of
-  // competing with the real avatars shown on some reviews.
-  var AVATAR_GRADIENTS = [
-    'linear-gradient(135deg, #3b4252, #242a35)',
-    'linear-gradient(135deg, #423b44, #28242c)',
-    'linear-gradient(135deg, #364249, #222b30)',
-    'linear-gradient(135deg, #453f36, #2a2722)',
-    'linear-gradient(135deg, #39413b, #232823)'
-  ];
-
   var STAR_PATH = 'M12 2.6l2.9 5.88 6.49.94-4.7 4.58 1.11 6.46L12 17.4l-5.8 3.06 1.11-6.46-4.7-4.58 6.49-.94z';
   var VERIFIED_PATH = 'M12 2.5l2.2 1.6 2.7-.2 1 2.5 2.3 1.4-.7 2.6.7 2.6-2.3 1.4-1 2.5-2.7-.2L12 21.5l-2.2-1.6-2.7.2-1-2.5-2.3-1.4.7-2.6-.7-2.6 2.3-1.4 1-2.5 2.7.2z';
+  var PERSON_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="9" r="3.2"/><path d="M6.4 19.4c0-2.9 2.5-4.7 5.6-4.7s5.6 1.8 5.6 4.7"/></svg>';
 
   var els = {};
   var lastViewportWidth = 0;
@@ -55,17 +46,6 @@
     });
   }
 
-  function initialOf(name) {
-    var chars = Array.from ? Array.from(String(name)) : String(name).split('');
-    return chars.length ? chars[0] : '?';
-  }
-
-  function avatarGradient(name) {
-    var sum = 0;
-    for (var i = 0; i < name.length; i++) sum += name.charCodeAt(i);
-    return AVATAR_GRADIENTS[sum % AVATAR_GRADIENTS.length];
-  }
-
   /**
    * Quote in the visitor's language. Falls back to English (the shared
    * translation) before the original wording, so a locale that is still
@@ -85,19 +65,18 @@
     return node;
   }
 
-  function applyLetterAvatar(node, review) {
+  function applyDefaultAvatar(node) {
     node.classList.remove('review-avatar--photo');
-    node.textContent = initialOf(review.author);
-    node.style.backgroundImage = avatarGradient(review.author);
+    node.innerHTML = PERSON_ICON;
   }
 
-  /** Real photo when the data provides one, otherwise a stable monogram. */
+  /** Real photo when available, otherwise a quiet generic silhouette. */
   function createAvatar(review) {
     var node = el('span', 'review-avatar');
     node.setAttribute('aria-hidden', 'true');
 
     if (!review.avatar) {
-      applyLetterAvatar(node, review);
+      applyDefaultAvatar(node);
       return node;
     }
 
@@ -107,7 +86,7 @@
     img.alt = '';
     img.decoding = 'async';
     img.addEventListener('error', function () {
-      applyLetterAvatar(node, review);
+      applyDefaultAvatar(node);
     });
     node.appendChild(img);
     return node;

@@ -21,7 +21,7 @@
  *   translation  optional localized versions keyed by site language
  *   avatar       optional local image path, e.g. "assets/reviews/avatars/id.jpg"
  *                (store images are copied into the repo — never hotlinked)
- *                when omitted or failing to load, the monogram is used
+ *                when omitted or failing to load, a subtle silhouette is used
  *
  * SUMMARY
  *   rating  weighted average across the live store ratings
