@@ -19,12 +19,14 @@
   var DATA = global.METENK_REVIEWS;
   if (!DATA || !DATA.reviews || !DATA.reviews.length) return;
 
+  // Muted, low-contrast monograms: they support the quote instead of
+  // competing with the real avatars shown on some reviews.
   var AVATAR_GRADIENTS = [
-    'linear-gradient(135deg, #4361ee, #4895ef)',
-    'linear-gradient(135deg, #7c3aed, #a855f7)',
-    'linear-gradient(135deg, #0ea5e9, #22d3ee)',
-    'linear-gradient(135deg, #f97316, #f43f5e)',
-    'linear-gradient(135deg, #10b981, #34d399)'
+    'linear-gradient(135deg, #3b4252, #242a35)',
+    'linear-gradient(135deg, #423b44, #28242c)',
+    'linear-gradient(135deg, #364249, #222b30)',
+    'linear-gradient(135deg, #453f36, #2a2722)',
+    'linear-gradient(135deg, #39413b, #232823)'
   ];
 
   var STAR_PATH = 'M12 2.6l2.9 5.88 6.49.94-4.7 4.58 1.11 6.46L12 17.4l-5.8 3.06 1.11-6.46-4.7-4.58 6.49-.94z';
@@ -80,6 +82,34 @@
     var node = document.createElement(tag);
     if (className) node.className = className;
     if (text != null) node.textContent = text;
+    return node;
+  }
+
+  function applyLetterAvatar(node, review) {
+    node.classList.remove('review-avatar--photo');
+    node.textContent = initialOf(review.author);
+    node.style.backgroundImage = avatarGradient(review.author);
+  }
+
+  /** Real photo when the data provides one, otherwise a stable monogram. */
+  function createAvatar(review) {
+    var node = el('span', 'review-avatar');
+    node.setAttribute('aria-hidden', 'true');
+
+    if (!review.avatar) {
+      applyLetterAvatar(node, review);
+      return node;
+    }
+
+    node.classList.add('review-avatar--photo');
+    var img = document.createElement('img');
+    img.src = review.avatar;
+    img.alt = '';
+    img.decoding = 'async';
+    img.addEventListener('error', function () {
+      applyLetterAvatar(node, review);
+    });
+    node.appendChild(img);
     return node;
   }
 
@@ -150,11 +180,7 @@
     card.appendChild(el('p', 'review-body', quoteFor(review)));
 
     var foot = el('div', 'review-card-foot');
-
-    var avatar = el('span', 'review-avatar', initialOf(review.author));
-    avatar.setAttribute('aria-hidden', 'true');
-    avatar.style.backgroundImage = avatarGradient(review.author);
-    foot.appendChild(avatar);
+    foot.appendChild(createAvatar(review));
 
     foot.appendChild(el('span', 'review-author', review.author));
 

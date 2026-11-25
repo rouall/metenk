@@ -18,6 +18,9 @@
  *   date         ISO date (YYYY-MM-DD), provenance only
  *   body         original text (excerpts end with "…")
  *   translation  optional localized versions keyed by site language
+ *   avatar       optional local image path, e.g. "assets/reviews/avatars/id.jpg"
+ *                (store images are copied into the repo — never hotlinked)
+ *                when omitted or failing to load, the monogram is used
  *
  * SUMMARY
  *   rating  weighted average across the live store ratings
@@ -37,6 +40,7 @@ window.METENK_REVIEWS = {
       rating: 5,
       lang: 'en',
       date: '2026-11-15',
+      avatar: 'assets/reviews/avatars/snehal-b.jpg',
       body: 'Absolutely great!! I suffer from ADHD so the pomodoro timer gives me control. I also liked the activity chart to see my progress visually, and the to-do list integration.',
       translation: {
         zh: '非常棒！！我有 ADHD，番茄钟让我重新掌控节奏。我也很喜欢用活动图表直观看到自己的进度，以及把任务和计时整合在一起的待办清单。',
@@ -133,6 +137,7 @@ window.METENK_REVIEWS = {
       rating: 5,
       lang: 'ru',
       date: '2026-02-25',
+      avatar: 'assets/reviews/avatars/red-linx.jpg',
       body: 'Хорошая идея объединить с таскером. Удобно что все в одном месте',
       translation: {
         en: 'A great idea to combine it with a task manager. It is convenient to have everything in one place.',
@@ -150,6 +155,7 @@ window.METENK_REVIEWS = {
       rating: 5,
       lang: 'en',
       date: '2025-11-30',
+      avatar: 'assets/reviews/avatars/tuxrio.jpg',
       body: 'Absolutely essential. One of the first things I always install! 👍🏻',
       translation: {
         zh: '绝对必备，是我每次都会最先安装的扩展之一！👍🏻',
@@ -198,6 +204,7 @@ window.METENK_REVIEWS = {
       rating: 5,
       lang: 'hr',
       date: '2025-11-30',
+      avatar: 'assets/reviews/avatars/mac.jpg',
       body: 'Jako dobro proširenje',
       translation: {
         en: 'A very good extension.',
