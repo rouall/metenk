@@ -17,368 +17,7 @@
     <meta name="twitter:title" content="支持我们 - MeTenk">
     <meta name="twitter:description" content="支持 MeTenk 这款免费专注与效率浏览器扩展的开发。您的赞助将帮助我们为所有人打造更好的工具。">
     <meta name="twitter:image" content="https://metenk.com/resource/og-image.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            animation: float 3s ease-in-out infinite;
-            filter: drop-shadow(0 10px 30px rgba(100, 100, 100, 0.3));
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .title {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -1px;
-        }
-
-        .subtitle {
-            font-size: 20px;
-            color: #9ca3af;
-            font-weight: 300;
-        }
-
-        .content {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 50px 40px;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, rgba(100, 100, 100, 0.8), rgba(120, 120, 120, 0.8));
-            border-radius: 24px 24px 0 0;
-        }
-
-        .coffee-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .coffee-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-            display: block;
-            animation: steam 2s ease-in-out infinite;
-        }
-
-        @keyframes steam {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
-
-        .coffee-title {
-            font-size: 32px;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        .coffee-description {
-            font-size: 18px;
-            color: #9ca3af;
-            margin-bottom: 40px;
-            line-height: 1.7;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .payment-methods {
-            text-align: center;
-            padding: 30px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .payment-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 30px;
-        }
-
-        .qr-section {
-            margin-bottom: 40px;
-        }
-
-        .qr-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        .qr-codes {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 30px;
-        }
-
-        .qr-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .qr-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .qr-image:hover {
-            border-color: rgba(120, 120, 120, 0.4);
-            background: rgba(120, 120, 120, 0.1);
-            transform: scale(1.05);
-        }
-
-        .qr-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .qr-placeholder {
-            text-align: center;
-            color: #9ca3af;
-        }
-
-        .qr-placeholder span {
-            font-size: 32px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .qr-placeholder p {
-            font-size: 14px;
-            line-height: 1.3;
-        }
-
-        .qr-label {
-            font-size: 16px;
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        .online-payments {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
-        }
-
-        .payment-subtitle {
-            font-size: 18px;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        .payment-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .payment-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #666666 0%, #888888 100%);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(100, 100, 100, 0.3);
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .payment-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.5);
-        }
-
-        .payment-btn.stripe {
-            background: linear-gradient(135deg, #0066ff 0%, #0040ff 100%);
-        }
-
-        .payment-btn.crypto {
-            background: linear-gradient(135deg, #f7931a 0%, #ff6b35 100%);
-        }
-
-        .back-link {
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #9ca3af;
-            text-decoration: none;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 25px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .back-link:hover {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateX(-5px);
-        }
-
-        .thank-you {
-            text-align: center;
-            margin-top: 30px;
-            padding: 25px;
-            background: rgba(100, 100, 100, 0.1);
-            border-radius: 16px;
-            border: 1px solid rgba(100, 100, 100, 0.2);
-        }
-
-        .thank-you-text {
-            font-size: 16px;
-            color: #e5e7eb;
-            font-weight: 400;
-            line-height: 1.6;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 15px;
-            }
-
-            .title {
-                font-size: 36px;
-            }
-
-            .subtitle {
-                font-size: 18px;
-            }
-
-            .content {
-                padding: 30px 25px;
-            }
-
-            .coffee-icon {
-                font-size: 48px;
-            }
-
-            .coffee-title {
-                font-size: 28px;
-            }
-
-            .coffee-description {
-                font-size: 16px;
-            }
-
-            .payment-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .payment-btn {
-                width: 100%;
-                max-width: 280px;
-                justify-content: center;
-            }
-
-            .qr-codes {
-                flex-direction: column;
-                align-items: center;
-                gap: 25px;
-            }
-
-            .qr-image {
-                width: 120px;
-                height: 120px;
-            }
-
-            .qr-placeholder span {
-                font-size: 24px;
-            }
-
-            .qr-placeholder p {
-                font-size: 12px;
-            }
-
-            .back-link {
-                top: 20px;
-                left: 20px;
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/sponsor.css">
     <link rel="stylesheet" href="/assets/i18n.css">
   <!-- i18n:head:start -->
   <link rel="canonical" href="https://metenk.com/zh/sponsor.html">
@@ -398,73 +37,89 @@
   <meta property="og:locale:alternate" content="ja_JP">
   <!-- i18n:head:end -->
 </head>
-<body>
-    <a href="/zh/" class="back-link" data-i18n-html="backLink">← 返回首页</a>
+<body class="sponsor-page">
+    <a href="/zh/" class="sponsor-back" data-i18n-html="backLink">← 返回首页</a>
 
-    <main class="container">
-        <header class="header">
-            <div class="logo">
-                <img src="/resource/icon128.png" alt="MeTenk 标志" data-i18n-attr="alt:logoAlt">
-            </div>
-            <h1 class="title" data-i18n="pageTitle">支持 MeTenk</h1>
+    <main class="sponsor-main">
+        <header class="sponsor-hero">
+            <span class="sponsor-eyebrow" data-i18n="eyebrow">支持这个项目</span>
+            <img class="sponsor-logo" src="/resource/icon128.png" alt="MeTenk 标志" data-i18n-attr="alt:logoAlt" width="58" height="58">
+            <h1 class="sponsor-title" data-i18n="pageTitle">支持 MeTenk</h1>
+            <p class="sponsor-lede" data-i18n="lede">MeTenk 完全免费、没有广告，数据只留在你的设备上。如果它帮你更专注，欢迎请我们喝杯咖啡，让它继续变好。</p>
+            <ul class="sponsor-stats">
+                <li class="sponsor-stat"><strong>3</strong><span data-i18n="statBrowsers">浏览器平台</span></li>
+                <li class="sponsor-stat"><strong>0</strong><span data-i18n="statAds">广告与追踪</span></li>
+                <li class="sponsor-stat"><strong>100%</strong><span data-i18n="statLocal">数据留在本地</span></li>
+            </ul>
         </header>
 
-        <div class="content">
-            <div class="coffee-section">
-                <span class="coffee-icon">☕</span>
-                <h2 class="coffee-title" data-i18n="coffeeTitle">请我喝杯咖啡</h2>
-            </div>
-
-            <div class="payment-methods">
-                <!-- QR Code Section -->
-                <div class="qr-section">
-                    <div class="qr-codes">
-                        <div class="qr-item">
-                            <div class="qr-image">
-                                <img src="/resource/sponsorscan/wechat-scan.webp" alt="微信支付收款码" data-i18n-attr="alt:wechatQrAlt" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="qr-placeholder" style="display: none;">
-                                    <span>💰</span>
-                                    <p data-i18n-html="wechatQrPlaceholder">微信支付<br>收款码</p>
-                                </div>
-                            </div>
-                            <p class="qr-label" data-i18n="wechatLabel">微信支付</p>
-                        </div>
-                        <div class="qr-item">
-                            <div class="qr-image">
-                                <img src="/resource/sponsorscan/alipay-scan.webp" alt="支付宝收款码" data-i18n-attr="alt:alipayQrAlt" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="qr-placeholder" style="display: none;">
-                                    <span>💳</span>
-                                    <p data-i18n-html="alipayQrPlaceholder">支付宝<br>收款码</p>
-                                </div>
-                            </div>
-                            <p class="qr-label" data-i18n="alipayLabel">支付宝</p>
-                        </div>
-                    </div>
+        <div class="donate-grid">
+            <section class="donate-card" aria-labelledby="donateQrTitle">
+                <div class="donate-head">
+                    <h2 class="donate-title" id="donateQrTitle" data-i18n="donateTitle">打赏支持</h2>
+                    <p class="donate-sub" data-i18n="donateSub">扫码即可，金额随意。</p>
                 </div>
-
-                <!-- Online Payment Buttons -->
-                <div class="online-payments">
-                    <div class="payment-buttons">
-                        <a href="https://buy.stripe.com/cNi4gr5gs2tIaDz3QY5c400" target="_blank" class="payment-btn stripe" data-i18n="stripeLabel">💳 Stripe</a>
-                    </div>
+                <div class="qr-grid">
+                    <figure class="qr-card">
+                        <div class="qr-frame">
+                            <img src="/resource/sponsorscan/wechat-scan.webp" alt="微信支付收款码" data-i18n-attr="alt:wechatQrAlt" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="qr-fallback"><span>💰</span><p data-i18n-html="wechatQrPlaceholder">微信支付<br>收款码</p></div>
+                        </div>
+                        <figcaption class="qr-meta">
+                            <span class="qr-name" data-i18n="wechatLabel">微信支付</span>
+                            <span class="qr-hint" data-i18n="qrWechatHint">打开微信扫一扫</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="qr-card">
+                        <div class="qr-frame">
+                            <img src="/resource/sponsorscan/alipay-scan.webp" alt="支付宝收款码" data-i18n-attr="alt:alipayQrAlt" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="qr-fallback"><span>💳</span><p data-i18n-html="alipayQrPlaceholder">支付宝<br>收款码</p></div>
+                        </div>
+                        <figcaption class="qr-meta">
+                            <span class="qr-name" data-i18n="alipayLabel">支付宝</span>
+                            <span class="qr-hint" data-i18n="qrAlipayHint">打开支付宝扫一扫</span>
+                        </figcaption>
+                    </figure>
                 </div>
-            </div>
+            </section>
 
-            <div class="thank-you">
-                <p class="thank-you-text" data-i18n-html="thankYouText">您的支持对我们意义重大！这让我们能投入更多时间打磨 MeTenk，并持续推出提升效率的新功能。感谢您成为我们社区的一员！🙏<br><br>联系方式：colintenk@gmail.com</p>
-            </div>
+            <section class="donate-card" aria-labelledby="donatePayTitle">
+                <div class="donate-head">
+                    <h2 class="donate-title" id="donatePayTitle" data-i18n="stripeTitle">在线打赏</h2>
+                    <p class="donate-sub" data-i18n="stripeSub">使用银行卡或 Apple Pay，几秒完成。</p>
+                </div>
+                <ul class="pay-perks">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><path d="M8.4 12.2l2.3 2.3 4.9-5"/></svg><span data-i18n="perk1">支持新功能开发</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><path d="M8.4 12.2l2.3 2.3 4.9-5"/></svg><span data-i18n="perk2">支持细节打磨与问题修复</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.8"/><path d="M8.4 12.2l2.3 2.3 4.9-5"/></svg><span data-i18n="perk3">支持更多语言与平台</span></li>
+                </ul>
+                <div class="pay-block">
+                    <a class="pay-btn" href="https://buy.stripe.com/cNi4gr5gs2tIaDz3QY5c400" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.8" y="5.2" width="18.4" height="13.6" rx="2.6"/><path d="M2.8 9.8h18.4"/></svg>
+                        <span data-i18n="stripeCta">通过 Stripe 打赏</span>
+                        <svg class="pay-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12h14"/><path d="M12.5 5.8l6.2 6.2-6.2 6.2"/></svg>
+                    </a>
+                    <p class="pay-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.8" y="10.4" width="14.4" height="9.2" rx="2.2"/><path d="M8.2 10.4V7.9a3.8 3.8 0 0 1 7.6 0v2.5"/></svg><span data-i18n="stripeNote">安全跳转 Stripe，无需注册</span></p>
+                </div>
+            </section>
         </div>
+
+        <section class="thanks-card">
+            <span class="thanks-heart" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 22l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <div class="thanks-body">
+                <h2 class="thanks-title" data-i18n="thanksTitle">谢谢你</h2>
+                <p class="thanks-text" data-i18n-html="thankYouText">您的支持对我们意义重大！这让我们能投入更多时间打磨 MeTenk，并持续推出提升效率的新功能。感谢您成为我们社区的一员！🙏<br><br>联系方式：colintenk@gmail.com</p>
+            </div>
+        </section>
     </main>
 
-    <footer class="i18n-footer">
-        <span>&copy; 2025 Metenk</span>
-        <span class="i18n-footer-sep" aria-hidden="true">&middot;</span>
-        <span data-i18n-slot></span>
+    <footer class="sponsor-footer">
+        <div class="i18n-footer">
+            <span>&copy; 2025 Metenk</span>
+            <span class="i18n-footer-sep" aria-hidden="true">&middot;</span>
+            <span data-i18n-slot></span>
+        </div>
     </footer>
-
-    <script>
-        // Simple page functionality - no amount selection needed
-    </script>
 
     <script defer src="/assets/locales/sponsor.js"></script>
     <script defer src="/assets/i18n.js"></script>
