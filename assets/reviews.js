@@ -1,8 +1,8 @@
 /*!
  * MeTenk landing page — real review marquee
  * ---------------------------------------------------------------------------
- * Renders window.METENK_REVIEWS (assets/reviews-data.js) as a calm,
- * seamlessly scrolling wall of real store feedback.
+ * Renders window.METI_REVIEWS (Clock Max) or window.METENK_REVIEWS (MeTenk)
+ * as a calm, seamlessly scrolling wall of real store feedback.
  *
  * Design rules
  *   - One mixed wall: Chrome / Edge / Firefox reviews are not labelled.
@@ -11,12 +11,13 @@
  *   - Duplicated list keeps the CSS translateX(-50%) loop seamless.
  *   - Hover pauses the motion; prefers-reduced-motion gets a static row (CSS).
  *
- * Depends on: assets/reviews-data.js, assets/i18n.js (optional but expected)
+ * Depends on: assets/reviews-data.js or assets/reviews-data-clockmax.js,
+ *             assets/i18n.js (optional but expected)
  */
 (function (global) {
   'use strict';
 
-  var DATA = global.METENK_REVIEWS;
+  var DATA = global.METI_REVIEWS || global.METENK_REVIEWS;
   if (!DATA || !DATA.reviews || !DATA.reviews.length) return;
 
   var STAR_PATH = 'M12 2.6l2.9 5.88 6.49.94-4.7 4.58 1.11 6.46L12 17.4l-5.8 3.06 1.11-6.46-4.7-4.58 6.49-.94z';
@@ -27,9 +28,24 @@
   var lastViewportWidth = 0;
   var resizeTimer = null;
 
+  // Review data stores avatar paths relative to the site root, while the
+  // pages themselves may live one level deep (/zh/, /ja/ …). Anchor them to
+  // this script's own URL so photos resolve on every localized page too.
+  var assetBase = (function () {
+    var script = document.currentScript;
+    var src = script && script.src;
+    if (!src) return '';
+    return src.replace(/assets\/reviews\.js(?:\?.*)?$/, '');
+  })();
+
   /* ------------------------------------------------------------------ *
    * Helpers
    * ------------------------------------------------------------------ */
+
+  function assetUrl(path) {
+    if (!path || path.charAt(0) === '/' || /^(?:[a-z]+:)?\/\//i.test(path)) return path;
+    return assetBase + path;
+  }
 
   function lang() {
     return (global.MetiI18n && global.MetiI18n.lang) || 'en';
@@ -47,15 +63,35 @@
   }
 
   /**
-   * Quote in the visitor's language. Falls back to English (the shared
-   * translation) before the original wording, so a locale that is still
-   * missing a translation never surfaces a third language on the page.
+   * Quote in the visitor's language. Falls back through the closest
+   * language variant (e.g. zh-TW → zh) and then English (the shared
+   * translation) before the original wording.
    */
+  var LANG_FALLBACKS = {
+    'zh': ['zh-TW'],
+    'zh-TW': ['zh'],
+    'pt': ['pt-BR'],
+    'pt-BR': ['pt']
+  };
+
+  function sameLanguage(a, b) {
+    if (!a || !b) return false;
+    return a === b || a.split('-')[0] === b.split('-')[0];
+  }
+
   function quoteFor(review) {
     var active = lang();
-    if (review.lang === active) return review.body;
     var translations = review.translation || {};
-    return translations[active] || translations.en || review.body;
+
+    if (translations[active]) return translations[active];
+    if (sameLanguage(review.lang, active)) return review.body;
+
+    var siblings = LANG_FALLBACKS[active] || [];
+    for (var i = 0; i < siblings.length; i++) {
+      if (translations[siblings[i]]) return translations[siblings[i]];
+    }
+
+    return translations.en || review.body;
   }
 
   function el(tag, className, text) {
@@ -82,7 +118,7 @@
 
     node.classList.add('review-avatar--photo');
     var img = document.createElement('img');
-    img.src = review.avatar;
+    img.src = assetUrl(review.avatar);
     img.alt = '';
     img.decoding = 'async';
     img.addEventListener('error', function () {

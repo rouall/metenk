@@ -11,7 +11,7 @@
 
 .reviews {
   position: relative;
-  padding: 120px 0 116px;
+  padding: 88px 0 76px;
   border-top: 1px solid rgba(255, 255, 255, 0.04);
   background:
     radial-gradient(760px 300px at 50% 0%, rgba(67, 97, 238, 0.1), transparent 72%),
@@ -21,7 +21,21 @@
 
 .reviews .section-header {
   padding: 0 20px;
-  margin-bottom: 52px;
+  margin-bottom: 30px;
+}
+
+/* Social proof is a quieter band than the feature sections above it. */
+.reviews .section-title {
+  margin-bottom: 10px;
+  font-size: clamp(28px, 3vw, 38px);
+  text-wrap: balance;
+}
+
+.reviews .section-subtitle {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .reviews-eyebrow {
@@ -29,7 +43,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .reviews-kicker {
@@ -102,7 +116,7 @@
   display: flex;
   align-items: flex-start;
   width: max-content;
-  padding: 24px 0 20px;
+  padding: 8px 0 6px;
   animation-name: reviews-scroll;
   animation-duration: 96s;
   animation-timing-function: linear;
@@ -128,12 +142,12 @@
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
-  width: 368px;
-  height: 352px;
-  margin-right: 18px;
-  padding: 26px 26px 20px;
+  width: 332px;
+  height: 244px;
+  margin-right: 14px;
+  padding: 20px 20px 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border-radius: 10px;
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.018) 58%, rgba(67, 97, 238, 0.04) 100%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -141,7 +155,7 @@
 }
 
 .review-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: rgba(103, 136, 255, 0.3);
   background:
     linear-gradient(160deg, rgba(67, 97, 238, 0.11) 0%, rgba(255, 255, 255, 0.03) 58%, rgba(67, 97, 238, 0.06) 100%);
@@ -153,7 +167,7 @@
 /* A folded card keeps the wall even; expanding reveals the full quote. */
 .review-card.is-expanded {
   height: auto;
-  min-height: 352px;
+  min-height: 244px;
 }
 
 .review-card-top {
@@ -166,14 +180,14 @@
 .review-stars {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding-top: 3px;
+  gap: 3px;
+  padding-top: 2px;
   color: #fbbf24;
 }
 
 .review-stars svg {
-  width: 14px;
-  height: 14px;
+  width: 12.5px;
+  height: 12.5px;
   display: block;
   filter: drop-shadow(0 1px 3px rgba(251, 191, 36, 0.18));
 }
@@ -184,10 +198,10 @@
 }
 
 .review-quote-mark {
-  margin-top: -12px;
-  color: rgba(147, 197, 253, 0.16);
+  margin-top: -9px;
+  color: rgba(147, 197, 253, 0.15);
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 58px;
+  font-size: 44px;
   line-height: 1;
   user-select: none;
   transition: color 0.3s ease;
@@ -199,7 +213,7 @@
 
 .review-body-wrap {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex: 1;
   min-height: 0;
 }
@@ -207,22 +221,22 @@
 .review-body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 5;
   width: 100%;
   margin: 0;
-  padding: 14px 0 6px;
+  padding: 10px 0 0;
   overflow: hidden;
-  color: #ced3db;
-  font-size: 14.5px;
-  line-height: 1.8;
+  color: #c7ccd4;
+  font-size: 13.5px;
+  line-height: 1.62;
   letter-spacing: 0.005em;
   word-break: break-word;
 }
 
 /* Fade the last line instead of cutting it with a hard edge. */
 .review-body.has-more {
-  -webkit-mask-image: linear-gradient(180deg, #000 76%, transparent 100%);
-  mask-image: linear-gradient(180deg, #000 76%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
 }
 
 .review-card.is-expanded .review-body {
@@ -237,13 +251,13 @@
   align-items: center;
   align-self: flex-start;
   gap: 4px;
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   padding: 0;
   border: 0;
   background: none;
   color: #9db4ff;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 0.01em;
   cursor: pointer;
@@ -259,8 +273,8 @@
 }
 
 .review-more svg {
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   transition: transform 0.2s ease;
 }
 
@@ -272,9 +286,15 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   margin-top: auto;
-  padding-top: 16px;
+  padding-top: 11px;
+  opacity: 0.82;
+  transition: opacity 0.3s ease;
+}
+
+.review-card:hover .review-card-foot {
+  opacity: 1;
 }
 
 .review-card-foot::before {
@@ -284,7 +304,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.015));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.015));
 }
 
 .review-avatar {
@@ -292,18 +312,18 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
+  width: 19px;
+  height: 19px;
+  border-radius: 5px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.055);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
-  color: rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .review-avatar svg {
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
   display: block;
 }
 
@@ -321,10 +341,10 @@
 .review-author {
   min-width: 0;
   overflow: hidden;
-  color: #eceef2;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  color: #c3c8d1;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.015em;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -333,24 +353,53 @@
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  color: #6b9bff;
+  color: rgba(107, 155, 255, 0.72);
 }
 
 .review-verified svg {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   display: block;
+}
+
+/* ---------- Clock Max page ---------- */
+
+.reviews--clockmax {
+  padding: 72px 0 40px;
+}
+
+.reviews--clockmax .section-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.reviews--clockmax .section-title {
+  margin-bottom: 10px;
+  font-size: clamp(26px, 3.4vw, 34px);
+  text-wrap: balance;
+}
+
+.reviews--clockmax .section-subtitle {
+  max-width: 600px;
+  margin: 8px auto 0;
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.65;
 }
 
 /* ---------- Responsive ---------- */
 
 @media (max-width: 768px) {
   .reviews {
-    padding: 80px 0;
+    padding: 58px 0 50px;
   }
 
   .reviews .section-header {
-    margin-bottom: 36px;
+    margin-bottom: 22px;
+  }
+
+  .reviews-eyebrow {
+    margin-bottom: 12px;
   }
 
   .reviews-summary {
@@ -359,30 +408,39 @@
   }
 
   .review-card {
-    width: 306px;
-    height: 316px;
-    margin-right: 16px;
-    padding: 22px 20px 16px;
+    width: 286px;
+    height: 222px;
+    margin-right: 12px;
+    padding: 17px 17px 13px;
   }
 
   .review-card.is-expanded {
     height: auto;
-    min-height: 316px;
+    min-height: 222px;
   }
 
   .review-quote-mark {
-    font-size: 48px;
-    margin-top: -8px;
+    font-size: 36px;
+    margin-top: -7px;
   }
 
   .review-body {
-    padding: 12px 0 4px;
-    font-size: 13.5px;
+    padding: 8px 0 0;
+    font-size: 12.5px;
+    line-height: 1.6;
   }
 
   .review-avatar {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .review-author {
+    font-size: 11px;
+  }
+
+  .reviews--clockmax {
+    padding: 56px 0 36px;
   }
 }
 

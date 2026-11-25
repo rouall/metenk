@@ -131,6 +131,7 @@
 
   <link rel="stylesheet" href="/clockmax-wel.css">
   <link rel="stylesheet" href="/assets/i18n.css">
+  <link rel="stylesheet" href="/assets/reviews.css">
   <!-- i18n:head:start -->
   <link rel="canonical" href="https://metenk.com/zh-tw/clockmax.html">
   <link rel="alternate" hreflang="en" href="https://metenk.com/clockmax.html">
@@ -449,6 +450,23 @@
       </div>
     </section>
 
+    <!-- Reviews Section -->
+    <section class="reviews reviews--clockmax" id="reviews" aria-labelledby="reviewsTitle">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="reviews-eyebrow">
+            <span class="reviews-kicker" data-i18n="reviewsKicker">商店真實評價</span>
+            <div class="reviews-summary" id="reviewsSummary" hidden></div>
+          </div>
+          <h2 class="section-title" id="reviewsTitle" data-i18n="reviewsTitle">Clock Max 使用者怎麼說</h2>
+          <p class="section-subtitle" data-i18n="reviewsSubtitle">來自 Chrome 應用商店的真實評價，集中展示，並自動翻譯為你的語言。</p>
+        </div>
+      </div>
+      <div class="reviews-marquee fade-in" id="reviewsMarquee" data-i18n-attr="aria-label:reviewsTitle" aria-label="Clock Max 使用者怎麼說">
+        <div class="reviews-track" id="reviewsTrack"></div>
+      </div>
+    </section>
+
     <section class="section" id="faq" aria-labelledby="faqTitle">
       <div class="container">
         <div class="section-head">
@@ -510,6 +528,8 @@
 
   <script src="/clockmax-wel.js"></script>
   <script defer src="/assets/locales/clockmax.js"></script>
+  <script defer src="/assets/reviews-data-clockmax.js"></script>
   <script defer src="/assets/i18n.js"></script>
+  <script defer src="/assets/reviews.js"></script>
 </body>
 </html>
